@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Verkaufte Menüs",
+      "category" : "Statistik",
+      "comment" : "Anzahl der an dem Tag verkauften Menüs, per Shop"
+    },
+    "EN" : {
+      "name" : "Menus sold",
+      "category" : "Statistics",
+      "comment" : "Number of menus sold during the day, per shop"
+    },
+    "FR" : {
+      "name" : "Menus vendus",
+      "category" : "Statistiques",
+      "comment" : "Nombre de menus vendus au cours de la journée, par établissement"
+    }
+  },
+  "name" : "Menus vendus",
+  "category" : "Statistiques",
+  "comment" : "Nombre de menus vendus au cours de la journée, par établissement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`MENU_COUNT`",
+  "path" : "tcpos.SHO_S.MENU_COUNT",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

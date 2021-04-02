@@ -1,0 +1,36 @@
+{
+  "paths" : [ "permissions.hq", "graph.tcpos", "scheme.*" ],
+  "name" : "System administrator",
+  "comment" : "This set of permissions gives all administrative privileges",
+  "translations" : {
+    "EN" : {
+      "name" : "Administrator",
+      "comment" : "This set of permissions grants all administrative privileges to its users"
+    },
+    "FR" : {
+      "name" : "Administrateur",
+      "comment" : "Ce groupe de permissions accorde tous les privilèges à ses utilisateurs"
+    }
+  },
+  "alias" : "sys_admin",
+  "admin_profile" : {
+    "regular_sharer" : true,
+    "mandatory_sharer" : true,
+    "document_editor" : true,
+    "limited_exporter" : true,
+    "full_exporter" : true,
+    "execution_delegator" : true,
+    "user_manager" : true,
+    "debugger" : true,
+    "task_editor" : true
+  },
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "company" : "tekoe_tokudb"
+}

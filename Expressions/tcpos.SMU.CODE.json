@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Masseinheitscode",
+      "category" : "Bestand"
+    },
+    "EN" : {
+      "name" : "Unit of measurement code",
+      "category" : "Inventory"
+    },
+    "FR" : {
+      "name" : "Code unité de mesure",
+      "category" : "Stocks"
+    }
+  },
+  "name" : "Code unité de mesure",
+  "category" : "Stocks",
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SMU}}.`CODE`",
+  "path" : "tcpos.SMU.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

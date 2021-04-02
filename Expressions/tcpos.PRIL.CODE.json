@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Preisniveau Code",
+      "category" : "Ticket - Zeilen"
+    },
+    "EN" : {
+      "name" : "Price level code",
+      "category" : "Ticket lines"
+    },
+    "FR" : {
+      "name" : "Code niveau de prix",
+      "category" : "Tickets - lignes"
+    }
+  },
+  "name" : "Code niveau de prix",
+  "category" : "Tickets - lignes",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{PRIL}}.`CODE`",
+  "path" : "tcpos.PRIL.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

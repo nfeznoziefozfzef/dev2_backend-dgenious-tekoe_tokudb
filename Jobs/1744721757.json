@@ -1,0 +1,17 @@
+{
+  "actions" : [ {
+    "command_line" : [ "/opt/dgenious/tomcat8/dbcopy/DbCopy.jar", "--include", "ARTICLE_CAUSALS", "ARTICLES", "COMPANIES", "COST_CENTERS", "CUSTOMERS", "DISCOUNTS", "GROUPS", "MENUS", "PAYMENT_TYPES", "PROMOTIONS", "STD_CREDIT_CARDS", "STD_PAYMENTS", "STD_VATS", "SUBSIDIES", "TRANS_ARTICLE_DISCOUNTS", "TRANS_ARTICLE_PROMOTIONS", "TRANS_ARTICLES", "TRANS_CARDS", "TRANS_PAYMENTS", "TRANS_SUBSIDIES", "TRANSACTIONS", "VOUCHERS", "IND_IN_WEB_DEB", "--where", "BOOKKEEPING_DATE>date_add(current_date, interval -1 MONTH)", "--recycle", "--new_engine", "innodb", "--force", "--empty", "--keys", "BOOKKEEPING_DATE", "--source", "farm-01.eldora_data", "--destination", "maria-01.eldora_replica", "--databases", "/opt/dgenious/tomcat8/dbcopy/databases.txt", "--verbose", "terse" ],
+    "name" : "dbcopy",
+    "type" : "COMMAND_LINE"
+  } ],
+  "company" : "tekoe_tokudb",
+  "db_log_level" : "INFO",
+  "job" : 1744721757,
+  "name" : "another job",
+  "production" : false,
+  "schedule" : {
+    "frequency" : "DAILY",
+    "include_weekend" : true,
+    "time" : "01:00:00"
+  }
+}

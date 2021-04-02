@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Betrag der Linie ohne Rabatt",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Betrag der Linie vor Rabatt, Nulltarif oder Angeboten"
+    },
+    "EN" : {
+      "name" : "Line amount before discounts",
+      "category" : "Ticket lines",
+      "comment" : "Line amount before gratuities, discounts and promotions"
+    },
+    "FR" : {
+      "name" : "Montant ligne sans remise",
+      "category" : "Tickets - lignes",
+      "comment" : "Montant de la ligne, avant application des gratuités, rabais et promotions"
+    }
+  },
+  "name" : "Montant ligne sans remise",
+  "category" : "Tickets - lignes",
+  "comment" : "Montant de la ligne, avant application des gratuités, rabais et promotions",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`PRICE`",
+  "path" : "tcpos.TRA_ART.PRICE",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

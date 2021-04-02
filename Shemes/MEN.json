@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.MEN", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.MEN" ],
+  "name" : "Articles - menus",
+  "comment" : "Ce schéma donne accès à la liste des menus dans le système",
+  "translations" : {
+    "DE" : {
+      "name" : "Menüs",
+      "comment" : "Listet alle Menüs im System auf."
+    },
+    "EN" : {
+      "name" : "Menus",
+      "comment" : "Lists all menus in the system and their groups."
+    },
+    "FR" : {
+      "name" : "Articles - menus",
+      "comment" : "Ce schéma donne accès à la liste des menus dans le système"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "MEN",
+  "entry_table" : "MEN",
+  "company" : "tekoe_tokudb"
+}

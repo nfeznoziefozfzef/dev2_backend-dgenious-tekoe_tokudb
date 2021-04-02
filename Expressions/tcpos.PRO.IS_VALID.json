@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiges Angebot",
+      "category" : "Angebote",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob das Angebot gültig ist"
+    },
+    "EN" : {
+      "name" : "Valid promotion",
+      "category" : "Promotions",
+      "comment" : "Value of type TRUE/FALSE indicating if the promotion is valid"
+    },
+    "FR" : {
+      "name" : "Promotion valide",
+      "category" : "Promotions",
+      "comment" : "Valeur vrai/faux qui indique si la promotion est valide"
+    }
+  },
+  "name" : "Promotion valide",
+  "category" : "Promotions",
+  "comment" : "Valeur vrai/faux qui indique si la promotion est valide",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | _SYS_",
+  "sql" : "{{PRO}}.`IS_VALID`",
+  "path" : "tcpos.PRO.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

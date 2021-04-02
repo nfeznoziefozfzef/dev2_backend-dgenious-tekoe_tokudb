@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppencode",
+      "category" : "Gruppen"
+    },
+    "EN" : {
+      "name" : "Group Code",
+      "category" : "Groups"
+    },
+    "FR" : {
+      "name" : "Code Groupe",
+      "category" : "Groupes"
+    }
+  },
+  "name" : "Code Groupe",
+  "category" : "Groupes",
+  "requires" : "graph.tcpos;auth.scheme.GRP | _SYS_",
+  "sql" : "{{GRP}}.`CODE`",
+  "path" : "tcpos.GRP.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

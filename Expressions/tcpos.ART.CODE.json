@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel Code",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Article Code",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Code Article",
+      "category" : "Articles"
+    }
+  },
+  "name" : "Code Article",
+  "category" : "Articles",
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ART}}.`CODE`",
+  "path" : "tcpos.ART.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

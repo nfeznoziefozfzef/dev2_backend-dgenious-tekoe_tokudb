@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_ART_PRO" ],
+  "grants" : [ "auth.scheme.TRA_ART_PRO" ],
+  "name" : "Tickets - promotions lignes",
+  "comment" : "Ce schéma part des tables, pour aller aux tickets et aux clients.  Il ne donne aucune information sur le contenu des tickets",
+  "translations" : {
+    "DE" : {
+      "name" : "Tickets - Linien-Aktionen",
+      "comment" : "Dieses Schema zeigt die innerhalb eines Angebots verkauften Artikel an und ermöglicht den Übergang zu den Tickets und Kunden."
+    },
+    "EN" : {
+      "name" : "Ticket line promotions",
+      "comment" : "Starts from the articles sold under a promotion, and links into tickets and customers"
+    },
+    "FR" : {
+      "name" : "Tickets - promotions lignes",
+      "comment" : "Ce schéma part des articles vendus en promotion, pour aller aux tickets et aux clients. Il ne donne aucune information sur le contenu des tickets"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_ART_PRO",
+  "entry_table" : "TRA_ART_PRO",
+  "company" : "tekoe_tokudb"
+}

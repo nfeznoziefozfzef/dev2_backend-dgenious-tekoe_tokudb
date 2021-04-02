@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.SWA_ART", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.SWA_ART" ],
+  "name" : "Stocks",
+  "comment" : "Ce schéma donne accès aux articles en stock dans les différents entrepôts",
+  "translations" : {
+    "DE" : {
+      "name" : "Bestand",
+      "comment" : "Dieses Schema zeig die Liste der Bestandsposten in den verschiedenen Lagern"
+    },
+    "EN" : {
+      "name" : "Stocks",
+      "comment" : "Lists the current stocks in all stock warehouses"
+    },
+    "FR" : {
+      "name" : "Stocks",
+      "comment" : "Ce schéma donne accès aux articles en stock dans les différents entrepôts"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "SWA_ART",
+  "entry_table" : "SWA_ART",
+  "company" : "tekoe_tokudb"
+}

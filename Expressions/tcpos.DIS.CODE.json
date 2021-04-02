@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Rabattcode",
+      "category" : "Rabatte"
+    },
+    "EN" : {
+      "name" : "Discount code",
+      "category" : "Discounts"
+    },
+    "FR" : {
+      "name" : "Code remise",
+      "category" : "Remises"
+    }
+  },
+  "name" : "Code remise",
+  "category" : "Remises",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{DIS}}.`CODE`",
+  "path" : "tcpos.DIS.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

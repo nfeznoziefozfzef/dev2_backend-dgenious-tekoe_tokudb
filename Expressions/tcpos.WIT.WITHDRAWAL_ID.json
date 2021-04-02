@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Abhebung / Einzahlung",
+      "category" : "Abhebung / Einzahlung"
+    },
+    "EN" : {
+      "name" : "UID withdrawals/deposits",
+      "category" : "Withdrawals or deposits"
+    },
+    "FR" : {
+      "name" : "UID retrait/dépôts",
+      "category" : "Retraits ou dépôts"
+    }
+  },
+  "name" : "UID retrait/dépôts",
+  "category" : "Retraits ou dépôts",
+  "requires" : "graph.tcpos;auth.scheme.WIT | auth.scheme.WIT_TRA | _SYS_",
+  "sql" : "{{WIT}}.`WITHDRAWAL_ID`",
+  "path" : "tcpos.WIT.WITHDRAWAL_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "WIT_TRA" : "{{WIT_TRA}}.`WITHDRAWAL_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

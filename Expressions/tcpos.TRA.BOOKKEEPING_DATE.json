@@ -1,0 +1,39 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Datum",
+      "category" : "Tickets",
+      "comment" : "Buchhaltungsdatum"
+    },
+    "EN" : {
+      "name" : "Date",
+      "category" : "Tickets",
+      "comment" : "Accounting date"
+    },
+    "FR" : {
+      "name" : "Date",
+      "category" : "Tickets",
+      "comment" : "Date comptable"
+    }
+  },
+  "name" : "Date",
+  "category" : "Tickets",
+  "comment" : "Date comptable",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`BOOKKEEPING_DATE`",
+  "path" : "tcpos.TRA.BOOKKEEPING_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_CAR" : "{{TRA_CAR}}.`BOOKKEEPING_DATE`",
+    "TRA_TAB" : "{{TRA_TAB}}.`BOOKKEEPING_DATE`",
+    "TRA_MEN" : "{{TRA_MEN}}.`BOOKKEEPING_DATE`",
+    "TRA_PAY" : "{{TRA_PAY}}.`BOOKKEEPING_DATE`",
+    "TRA_POI" : "{{TRA_POI}}.`BOOKKEEPING_DATE`",
+    "TRA_ART_DIS" : "{{TRA_ART_DIS}}.`BOOKKEEPING_DATE`",
+    "TRA_ART_PRO" : "{{TRA_ART_PRO}}.`BOOKKEEPING_DATE`",
+    "TRA_ART" : "{{TRA_ART}}.`BOOKKEEPING_DATE`"
+  },
+  "company" : "tekoe_tokudb"
+}

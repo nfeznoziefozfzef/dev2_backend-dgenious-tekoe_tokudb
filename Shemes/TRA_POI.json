@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.TRA_POI", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.TRA_POI" ],
+  "name" : "Tickets - mutations des points",
+  "comment" : "Ce schéma part des accumulations et utilisations des points, et permet de passer aux transactions et aux clients",
+  "translations" : {
+    "DE" : {
+      "name" : "Punktebewegungen",
+      "comment" : "Dieses Schema zeigt die Ansammlung und Benutzung der Punkte an und ermöglicht den Übergang zu den Transaktionen"
+    },
+    "EN" : {
+      "name" : "Tickets - point-related entries",
+      "comment" : "Lists all accumulations and usages of points, and links to transactions and customers"
+    },
+    "FR" : {
+      "name" : "Tickets - mutations des points",
+      "comment" : "Ce schéma part des accumulations et utilisations des points, et permet de passer aux transactions et aux clients"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_POI",
+  "entry_table" : "TRA_POI",
+  "company" : "tekoe_tokudb"
+}

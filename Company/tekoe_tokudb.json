@@ -1,0 +1,12 @@
+{
+  "name" : "tcpos (reg)",
+  "languages" : [ "FR", "DE", "EN" ],
+  "grants" : [ "graph.tcpos" ],
+  "enabled" : true,
+  "production" : true,
+  "company" : "tekoe_tokudb",
+  "admin_profile_restrictions" : {
+    "template_sharer" : false
+  },
+  "graphs" : [ "tcpos" ]
+}

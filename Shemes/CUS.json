@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.CUS", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.CUS" ],
+  "name" : "Clients",
+  "comment" : "Ce schéma donne la liste des clients",
+  "translations" : {
+    "DE" : {
+      "name" : "Kunden",
+      "comment" : "Diese Schema zeigt die Liste aller Kunden"
+    },
+    "EN" : {
+      "name" : "Customers",
+      "comment" : "Lists all customers and their characteristics"
+    },
+    "FR" : {
+      "name" : "Clients",
+      "comment" : "Ce schéma donne la liste des clients"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "CUS",
+  "entry_table" : "CUS",
+  "company" : "tekoe_tokudb"
+}

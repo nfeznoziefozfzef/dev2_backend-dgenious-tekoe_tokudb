@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.VAT" ],
+  "grants" : [ "auth.scheme.VAT" ],
+  "name" : "TVA",
+  "comment" : "Liste des différents taux de TVA",
+  "translations" : {
+    "DE" : {
+      "name" : "MwSt.",
+      "comment" : "Liste der verschiedenen Mehrwertsteuersätzen"
+    },
+    "EN" : {
+      "name" : "VAT",
+      "comment" : "Lists the various VAT rates in the system"
+    },
+    "FR" : {
+      "name" : "TVA",
+      "comment" : "Liste des différents taux de TVA"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "VAT",
+  "entry_table" : "VAT",
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Zahlungsmittel",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "Means of payment",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "Moyen de paiement",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "Moyen de paiement",
+  "category" : "Paiements",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{PAY}}.`DESCRIPTION`",
+  "path" : "tcpos.PAY.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

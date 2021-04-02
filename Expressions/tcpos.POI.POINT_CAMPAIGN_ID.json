@@ -1,0 +1,30 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Punktekampagne",
+      "category" : "Punkte"
+    },
+    "EN" : {
+      "name" : "UID point campaign",
+      "category" : "Points",
+      "comment" : "Value of type TRUE/FALSE indicating if the campaign is valid"
+    },
+    "FR" : {
+      "name" : "UID campagne de points",
+      "category" : "Points"
+    }
+  },
+  "name" : "UID campagne de points",
+  "category" : "Points",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | _SYS_",
+  "sql" : "{{POI}}.`POINT_CAMPAIGN_ID`",
+  "path" : "tcpos.POI.POINT_CAMPAIGN_ID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_POI" : "{{TRA_POI}}.`POINT_CAMPAIGN_ID`",
+    "TRA_POI_LAST" : "{{TRA_POI_LAST}}.`POINT_CAMPAIGN_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

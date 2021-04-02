@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiges Menü",
+      "category" : "Menüs",
+      "comment" : "Wert des Typs WAHR/FALSCH der angibt, ob das Menü als gültig markiert ist."
+    },
+    "EN" : {
+      "name" : "Valid Menu",
+      "category" : "Menus",
+      "comment" : "Value of type TRUE/FALSE indicating if the menu is valid"
+    },
+    "FR" : {
+      "name" : "Menu valide",
+      "category" : "Menus",
+      "comment" : "Valeur de type vrai/faux qui indique si le menu est marqué comme valide"
+    }
+  },
+  "name" : "Menu valide",
+  "category" : "Menus",
+  "comment" : "Valeur de type vrai/faux qui indique si le menu est marqué comme valide",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{MEN}}.`IS_VALID`",
+  "path" : "tcpos.MEN.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

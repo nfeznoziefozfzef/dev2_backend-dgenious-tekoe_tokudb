@@ -1,0 +1,27 @@
+{
+  "translations" : {
+    "DE" : {
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Card type",
+      "category" : "Customers",
+      "comment" : "The customer card type. Values are: 1 - The customer is in credit mode. Customer can spend now and pay later. 2 - The customer is in prepayment mode. Customer must pay first and spend later.3 - The customer is in prepayment mode but can switch to credit mode. 4 - The card is used for identification only. The customer does not pay with the card but with something else (cash, vouchers, etc). 5 - The card is in credit mode but can switch to prepayment mode."
+    },
+    "FR" : {
+      "name" : "Type de carte",
+      "category" : "Clients",
+      "comment" : "Type de carte: 1: mode crédit - 2: mode prépaiement - 3: mode prépaiement avec possibilité de passer en mode crédit - 4: carte d'identification uniquement - 5: carte de crédit avec possibilité de passer en mode prépaiement"
+    }
+  },
+  "name" : "Type de carte",
+  "category" : "Clients",
+  "comment" : "Type de carte: 1: mode crédit - 2: mode prépaiement - 3: mode prépaiement avec possibilité de passer en mode crédit - 4: carte d'identification uniquement - 5: carte de crédit avec possibilité de passer en mode prépaiement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`CARD_TYPE`",
+  "path" : "tcpos.CUS.CARD_TYPE",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

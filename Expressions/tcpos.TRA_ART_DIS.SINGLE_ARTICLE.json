@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel alleine",
+      "category" : "Rabatte"
+    },
+    "EN" : {
+      "name" : "Single article",
+      "category" : "Discounts"
+    },
+    "FR" : {
+      "name" : "Article seul",
+      "category" : "Remises"
+    }
+  },
+  "name" : "Article seul",
+  "category" : "Remises",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{TRA_ART_DIS}}.`SINGLE_ARTICLE`",
+  "path" : "tcpos.TRA_ART_DIS.SINGLE_ARTICLE",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

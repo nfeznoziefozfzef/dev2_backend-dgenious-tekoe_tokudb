@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gezählte Kreditkarten",
+      "category" : "Kassenladenzählung",
+      "comment" : "Betrag der Kreditkarteneinnahmen"
+    },
+    "EN" : {
+      "name" : "Counted credit cards",
+      "category" : "Drawer Counts",
+      "comment" : "Counted credit cards amount"
+    },
+    "FR" : {
+      "name" : "Décompte des Paiements en Cartes de Crédit",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Décompte des paiements en cartes de crédit"
+    }
+  },
+  "name" : "Décompte des Paiements en Cartes de Crédit",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Décompte des paiements en cartes de crédit",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`COUNTED_CREDITCARDS_AMOUNT`",
+  "path" : "tcpos.DRA.COUNTED_CREDITCARDS_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

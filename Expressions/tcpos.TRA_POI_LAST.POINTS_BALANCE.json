@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Letzte Punktebilanz",
+      "category" : "Punkte",
+      "comment" : "Punktebilanz für diese Punktekampagne, so wie sie nach der letzten Transaktion des Kunden erscheint. Die aktuelle Anzahl der Punkte kann abweichen, wenn Punkte abgelaufen sind."
+    },
+    "EN" : {
+      "name" : "Last points balance",
+      "category" : "Points",
+      "comment" : "Point balance for this point campaign, as it appeared after the last transaction with this customer. The current balance may be different if points have expired since then"
+    },
+    "FR" : {
+      "name" : "Dernier solde",
+      "category" : "Points",
+      "comment" : "Solde de points pour cette campagne de points tel qu'il apparaissait après la dernière transaction de ce client. Le solde actuel peut être différent si des points ont expiré"
+    }
+  },
+  "name" : "Dernier solde",
+  "category" : "Points",
+  "comment" : "Solde de points pour cette campagne de points tel qu'il apparaissait après la dernière transaction de ce client.  Le solde actuel peut être différent si des points ont expiré",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI_LAST | _SYS_",
+  "sql" : "{{TRA_POI_LAST}}.`POINTS_BALANCE`",
+  "path" : "tcpos.TRA_POI_LAST.POINTS_BALANCE",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

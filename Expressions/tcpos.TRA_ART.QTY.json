@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menge",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Verkaufte Menge für diese Linie auf dem Ticket, in der Einheit des Artikels (Einheit, Kilo,…)"
+    },
+    "EN" : {
+      "name" : "Quantity",
+      "category" : "Ticket lines",
+      "comment" : "Quantity of this article sold in this ticket line, expressed in the article unit (units, kilos,...)"
+    },
+    "FR" : {
+      "name" : "Quantité",
+      "category" : "Tickets - lignes",
+      "comment" : "Quantité vendue dans cette ligne du ticket, exprimée dans l'unité de l'article (unités, kilos, ...)"
+    }
+  },
+  "name" : "Quantité",
+  "category" : "Tickets - lignes",
+  "comment" : "Quantité vendue dans cette ligne du ticket, exprimée dans l'unité de l'article (unités, kilos, ...)",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`QTY`",
+  "path" : "tcpos.TRA_ART.QTY",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

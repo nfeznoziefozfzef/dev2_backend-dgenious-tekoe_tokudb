@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Verkauft nach Gewicht",
+      "category" : "Artikel",
+      "comment" : "Zeigt an, ob der Artikel nach Gewicht (=WAHR) oder pro Einheit (FALSCH) verkauft wird"
+    },
+    "EN" : {
+      "name" : "Sold by weight",
+      "category" : "Articles",
+      "comment" : "Indicates if the article is sold by weight (=TRUE) or by unit (FALSE)"
+    },
+    "FR" : {
+      "name" : "Vendu au poids",
+      "category" : "Articles",
+      "comment" : "Indique si l'article est vendu au poids (valeur colonne=TRUE) ou à l'unité (valeur colonne=FALSE)"
+    }
+  },
+  "name" : "Vendu au poids",
+  "category" : "Articles",
+  "comment" : "Indique si l'article est vendu au poids (valeur colonne=TRUE) ou à l'unité (valeur colonne=FALSE)",
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ART}}.`SOLD_BY_WEIGHT`",
+  "path" : "tcpos.ART.SOLD_BY_WEIGHT",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

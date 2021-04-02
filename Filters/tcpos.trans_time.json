@@ -1,0 +1,39 @@
+{
+  "name" : "Heure",
+  "category" : "Date et heure",
+  "comment" : "Heure de la transaction",
+  "mappings" : {
+    "TRA_CAR" : "tcpos.TRA.TRANS_TIME",
+    "TRA_TAB" : "tcpos.TRA.TRANS_TIME",
+    "TRA" : "tcpos.TRA.TRANS_TIME",
+    "TRA_MEN" : "tcpos.TRA.TRANS_TIME",
+    "TRA_PAY" : "tcpos.TRA.TRANS_TIME",
+    "TRA_POI" : "tcpos.TRA.TRANS_TIME",
+    "TRA_ART_DIS" : "tcpos.TRA.TRANS_TIME",
+    "TRA_ART_PRO" : "tcpos.TRA.TRANS_TIME",
+    "TRA_ART" : "tcpos.TRA.TRANS_TIME"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Zeit",
+      "category" : "Datum und Zeit",
+      "comment" : "Zeit der Transaktion"
+    },
+    "EN" : {
+      "name" : "Time",
+      "category" : "Date and time",
+      "comment" : "Time of the transaction"
+    },
+    "FR" : {
+      "name" : "Heure",
+      "category" : "Date et heure",
+      "comment" : "Heure de la transaction"
+    }
+  },
+  "path" : "tcpos.trans_time",
+  "data_type" : "TIME",
+  "auto_mappings" : [ "tcpos.TRA.TRANS_TIME" ],
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

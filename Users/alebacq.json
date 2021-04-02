@@ -1,0 +1,19 @@
+{
+  "username" : "alebacq",
+  "company" : "tekoe_tokudb",
+  "name" : "Antoine Lebacq",
+  "language" : "FR",
+  "email" : "a.lebacq@dgenious.com",
+  "phone" : "+41 78 831 60 03",
+  "visible" : true,
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : -887163590,
+  "editable" : true
+}

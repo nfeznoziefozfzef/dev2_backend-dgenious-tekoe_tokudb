@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Tagesumsatz",
+      "category" : "Statistik",
+      "comment" : "Tagesumsatz, inkl. MwSt., Rabatte, Gratisartikel und Angebote abgezogen. Dieser Betrag enthält keine Elemente, die nicht zum Umsatz zählen, wie z.B. das Aufladen von Kundenkarten"
+    },
+    "EN" : {
+      "name" : "Turnover of the day",
+      "category" : "Statistics",
+      "comment" : "Turnover of the day, including VAT, gratuities, discounts and promotions deduced. This amount does not include elements that are not part of the turnover, such as charging of client cards."
+    },
+    "FR" : {
+      "name" : "Chiffre d'affaires jour",
+      "category" : "Statistiques",
+      "comment" : "Chiffre d'affaire du jour TVA comprise, déduction faite des gratuités, rabais et promotions. Ce montant ne comprend pas les éléments hors CA tels que chargements de cartes"
+    }
+  },
+  "name" : "Chiffre d'affaires jour",
+  "category" : "Statistiques",
+  "comment" : "Chiffre d'affaire du ticket, TVA comprise, déduction faite des gratuités, rabais et promotions. Ce montant ne comprend pas les éléments hors CA tels que chargements de cartes",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`TURNOVER_AMOUNT`",
+  "path" : "tcpos.SHO_S.TURNOVER_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

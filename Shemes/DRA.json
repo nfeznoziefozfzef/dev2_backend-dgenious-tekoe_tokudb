@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.DRA", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.DRA" ],
+  "name" : "Comptages Tiroirs",
+  "comment" : "Ce schéma donne accès aux décomptes des tiroirs caisse",
+  "translations" : {
+    "DE" : {
+      "name" : "Bargeldzählungen",
+      "comment" : "Dieses Diagramm ermöglicht den Zugriff auf die Endabrechnungen der Kassenschubladen."
+    },
+    "EN" : {
+      "name" : "Drawer counts",
+      "comment" : "This scheme gives access to the details of final drawer counts"
+    },
+    "FR" : {
+      "name" : "Comptages de caisse",
+      "comment" : "Ce schéma donne accès aux décomptes finaux des tiroirs caisse"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "DRA",
+  "entry_table" : "DRA",
+  "company" : "tekoe_tokudb"
+}

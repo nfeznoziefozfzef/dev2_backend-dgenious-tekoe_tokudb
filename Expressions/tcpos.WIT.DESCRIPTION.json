@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Abhebung / Einzahlung",
+      "category" : "Abhebung / Einzahlung"
+    },
+    "EN" : {
+      "name" : "Withdrawals/deposits",
+      "category" : "Withdrawals or deposits"
+    },
+    "FR" : {
+      "name" : "retrait/dépôts",
+      "category" : "Retraits ou dépôts"
+    }
+  },
+  "name" : "retrait/dépôts",
+  "category" : "Retraits ou dépôts",
+  "requires" : "graph.tcpos;auth.scheme.WIT | auth.scheme.WIT_TRA | _SYS_",
+  "sql" : "{{WIT}}.`DESCRIPTION`",
+  "path" : "tcpos.WIT.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

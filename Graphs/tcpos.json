@@ -1,0 +1,1791 @@
+{
+  "name" : "tcpos",
+  "tables" : [ {
+    "name" : "ARTICLE_CAUSALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "CAUSAL_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "ARC"
+    } ]
+  }, {
+    "name" : "ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_D_ID",
+      "type" : "ID"
+    }, {
+      "name" : "ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "SOLD_BY_WEIGHT",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "IS_TURNOVER",
+      "type" : "BOOLEAN"
+    } ],
+    "mappings" : [ {
+      "alias" : "ART"
+    } ]
+  }, {
+    "name" : "COMPANIES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "COMPANY_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "COM"
+    } ]
+  }, {
+    "name" : "CREDIT_CARDS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "CRE"
+    } ]
+  }, {
+    "name" : "CUSTOMERS",
+    "fields" : [ {
+      "name" : "ANNIVERSARY",
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "CARD_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "CATEGORY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CITY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "COMPANY_ID",
+      "type" : "ID"
+    }, {
+      "name" : "COST_CENTER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "COUNTRY",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "EMAIL",
+      "type" : "TEXT"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "LANGUAGE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "NATION",
+      "type" : "TEXT"
+    }, {
+      "name" : "OTHER_INFOS",
+      "type" : "TEXT"
+    }, {
+      "name" : "PHONE",
+      "type" : "TEXT"
+    }, {
+      "name" : "PREPAY_BALANCE_CASH",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "STREET",
+      "type" : "TEXT"
+    }, {
+      "name" : "TITLE",
+      "type" : "TEXT"
+    }, {
+      "name" : "ZIP_CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "LAST_TRANSACTION",
+      "type" : "DATE"
+    } ],
+    "mappings" : [ {
+      "alias" : "CUS"
+    } ]
+  }, {
+    "name" : "DISCOUNTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "DISCOUNT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    } ],
+    "mappings" : [ {
+      "alias" : "DIS"
+    } ]
+  }, {
+    "name" : "DRAWER_COUNTS",
+    "fields" : [ {
+      "name" : "CLOSING_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CLOSING_TIME",
+      "type" : "TIME"
+    }, {
+      "name" : "CLOSING_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "COUNTED_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "DEPOSITS_TOTAL",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DRAWER_COUNT_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DRAWER_COUNT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "INITIAL_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "INITIAL_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "INITIAL_OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPENING_TIME",
+      "type" : "TIME"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PREPAY_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PREPAY_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PREPAY_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PREPAY_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "RETRIES",
+      "type" : "INTEGER"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SOLD_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CUSTOMERCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_DEBITORS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_SUBSIDIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TIME",
+      "type" : "TIME"
+    }, {
+      "name" : "WITHDRAWALS_CHEQUES",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_CREDITCARDS",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_CURRENCIES",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_DEBITORS",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_TOTAL",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_VOUCHERS",
+      "type" : "DECIMAL"
+    } ],
+    "mappings" : [ {
+      "alias" : "DRA"
+    } ]
+  }, {
+    "name" : "GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "GRP"
+    }, {
+      "alias" : "GRA"
+    }, {
+      "alias" : "GRB"
+    }, {
+      "alias" : "GRC"
+    }, {
+      "alias" : "GRD"
+    }, {
+      "alias" : "GRA_MEN"
+    }, {
+      "alias" : "GRB_MEN"
+    }, {
+      "alias" : "GRC_MEN"
+    }, {
+      "alias" : "GRD_MEN"
+    } ]
+  }, {
+    "name" : "HIST_STOCKS",
+    "fields" : [ {
+      "name" : "AVERAGE_COST",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "QUANTITY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "STOCK_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "HIST_STO"
+    } ]
+  }, {
+    "name" : "LANGUAGES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "LANGUAGE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "LAN"
+    } ]
+  }, {
+    "name" : "LOCATIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "LOCATION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "REGION_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "LOC"
+    } ]
+  }, {
+    "name" : "MENUS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "type" : "DECIMAL"
+    } ],
+    "mappings" : [ {
+      "alias" : "MEN"
+    } ]
+  }, {
+    "name" : "OPERATORS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ENABLED",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "OPE"
+    }, {
+      "alias" : "OPE_DRA_OPEN"
+    }, {
+      "alias" : "OPE_DRA_CLOSE"
+    }, {
+      "alias" : "OPE_SEC"
+    }, {
+      "alias" : "OPE_DEL"
+    } ]
+  }, {
+    "name" : "PAYMENTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PAYMENT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "PAY"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "PAYMENT_TYPES",
+    "fields" : [ {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "PAYT"
+    } ]
+  }, {
+    "name" : "POINT_CAMPAIGNS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "POINT_CAMPAIGN_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    } ],
+    "mappings" : [ {
+      "alias" : "POI"
+    } ]
+  }, {
+    "name" : "PRICELEVELS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "PRIL"
+    } ]
+  }, {
+    "name" : "PROMOTIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PROMOTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "VALID_FROM",
+      "type" : "DATE"
+    }, {
+      "name" : "VALID_TO",
+      "type" : "DATE"
+    } ],
+    "mappings" : [ {
+      "alias" : "PRO"
+    } ]
+  }, {
+    "name" : "REGIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "REGION_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "REG"
+    } ]
+  }, {
+    "name" : "SHOPS",
+    "fields" : [ {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "LOCATION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SHO"
+    } ]
+  }, {
+    "name" : "SHOPS_SHOP_TYPES",
+    "fields" : [ {
+      "name" : "SHOP_SHOP_TYPE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SHO_SHO_T"
+    } ]
+  }, {
+    "name" : "SHOP_STATS",
+    "fields" : [ {
+      "name" : "ARTICLE_COUNT",
+      "type" : "DECIMAL",
+      "default" : 0
+    }, {
+      "name" : "AVG_GUEST_TURNOVER",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "AVG_TABLE_SIZE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "GUEST_COUNT",
+      "type" : "INTEGER",
+      "default" : 0
+    }, {
+      "name" : "MENU_COUNT",
+      "type" : "INTEGER",
+      "default" : 0
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TABLE_COUNT",
+      "type" : "INTEGER",
+      "default" : 0
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "type" : "DECIMAL",
+      "default" : 0
+    }, {
+      "name" : "TRANSACTION_COUNT",
+      "type" : "INTEGER",
+      "default" : 0
+    }, {
+      "name" : "TURNOVER_AMOUNT",
+      "type" : "DECIMAL",
+      "default" : 0
+    } ],
+    "mappings" : [ {
+      "alias" : "SHO_S"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "SHOP_TYPES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SHO_T"
+    } ]
+  }, {
+    "name" : "STOCK_ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_D_ID",
+      "type" : "ID"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "MEASURE_UNIT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PRICE",
+      "type" : "DECIMAL"
+    } ],
+    "mappings" : [ {
+      "alias" : "SART"
+    } ]
+  }, {
+    "name" : "STOCK_GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "STOCK_GROUP_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SGR"
+    }, {
+      "alias" : "SGRA"
+    }, {
+      "alias" : "SGRB"
+    }, {
+      "alias" : "SGRC"
+    }, {
+      "alias" : "SGRD"
+    } ]
+  }, {
+    "name" : "STOCK_MEASURE_UNITS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "STOCK_MEASURE_UNIT_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SMU"
+    } ]
+  }, {
+    "name" : "STOCK_WAREHOUSE_ARTICLES",
+    "fields" : [ {
+      "name" : "AVERAGE_COST",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DELIVERY_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "ORDERED_QUANTITY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REALTIME_STOCK",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SWA_ART"
+    } ]
+  }, {
+    "name" : "STOCK_WAREHOUSES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "SWA"
+    } ]
+  }, {
+    "name" : "TILLS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ENABLED",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "TIL"
+    } ]
+  }, {
+    "name" : "TRANSACTIONS",
+    "fields" : [ {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "GUESTS_NUM",
+      "type" : "INTEGER"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_NUM",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    }, {
+      "name" : "ARTICLE_COUNT",
+      "type" : "DECIMAL",
+      "default" : 0
+    }, {
+      "name" : "CUSTOMER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TOTAL_REBATE",
+      "type" : "DECIMAL",
+      "default" : 0
+    }, {
+      "name" : "TURNOVER_AMOUNT",
+      "type" : "DECIMAL",
+      "default" : 0
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_ARTICLES",
+    "fields" : [ {
+      "name" : "ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OWNER_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SUBSIDIZED",
+      "type" : "INTEGER"
+    }, {
+      "name" : "SUBSIDIZED_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_PERCENT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WEIGHT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REBATE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GUESTS_NUM",
+      "type" : "INTEGER"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "QTY",
+      "type" : "DECIMAL",
+      "default" : 0
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_NUM",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_ART"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_ARTICLE_DISCOUNTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "ARTICLE_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNTED_QUANTITY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "MANUAL_INPUT",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "PROMOTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SINGLE_ARTICLE",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_ART_DIS"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_ARTICLE_PROMOTIONS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "ARTICLE_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "FREE_QUANTITY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PROMOTED_QUANTITY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PROMOTION_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SINGLE_ARTICLE",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_ART_PRO"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_CARDS",
+    "fields" : [ {
+      "name" : "BONUS_BALANCE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_BALANCE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_LOAD",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CARD_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "CUST_COST_CENTER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_CAR"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_MENUS",
+    "fields" : [ {
+      "name" : "CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "QTY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REBATE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_MEN"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_PAYMENTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "type" : "ID"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "IS_PREPAYMENT",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "PAYMENT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VOUCHER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_NUM",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_PAY"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_PAYMENTS_AGGR",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PAYMENT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_PREPAYMENT",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_PAY_AGG"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_POINT_CAMPAIGNS",
+    "fields" : [ {
+      "name" : "POINT_CAMPAIGN_ID",
+      "type" : "ID"
+    }, {
+      "name" : "POINTS_BALANCE",
+      "type" : "INTEGER"
+    }, {
+      "name" : "POINTS_GAINED",
+      "type" : "INTEGER"
+    }, {
+      "name" : "POINTS_SPENT",
+      "type" : "INTEGER"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_POI"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_POINT_LAST",
+    "fields" : [ {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "POINT_CAMPAIGN_ID",
+      "type" : "ID"
+    }, {
+      "name" : "POINTS_BALANCE",
+      "type" : "INTEGER"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_POI_LAST"
+    } ]
+  }, {
+    "name" : "TRANS_TABLES",
+    "fields" : [ {
+      "name" : "OPENING_TIME",
+      "type" : "TIME"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TABLE_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "type" : "TIME"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_TAB"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "TRANS_VATS_AGGR",
+    "fields" : [ {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "GROSS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "VAT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_PERCENT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "VAT_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "TRA_VAT_AGG"
+    } ]
+  }, {
+    "name" : "VATS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "VAT_ID",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "VAT"
+    }, {
+      "alias" : "VAT_TRA_ART"
+    } ]
+  }, {
+    "name" : "WITHDRAWAL_TRANSACTIONS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "COMMENT_TEXT",
+      "type" : "TEXT"
+    }, {
+      "name" : "CURRENCY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CURRENCY_RATIO",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWAL_TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_NUM",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "WIT_TRA"
+    } ],
+    "content" : "FACTS"
+  }, {
+    "name" : "WITHDRAWALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "WITHDRAWAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_TYPE",
+      "type" : "ID"
+    } ],
+    "mappings" : [ {
+      "alias" : "WIT"
+    } ],
+    "content" : "FACTS"
+  } ],
+  "joins" : [ {
+    "on" : "left.GROUP_A_ID=right.GROUP_ID",
+    "left" : "ART",
+    "right" : "GRA",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_B_ID=right.GROUP_ID",
+    "left" : "ART",
+    "right" : "GRB",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_C_ID=right.GROUP_ID",
+    "left" : "ART",
+    "right" : "GRC",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_D_ID=right.GROUP_ID",
+    "left" : "ART",
+    "right" : "GRD",
+    "outer" : true
+  }, {
+    "on" : "left.COMPANY_ID=right.COMPANY_ID",
+    "left" : "CUS",
+    "right" : "COM",
+    "outer" : true
+  }, {
+    "on" : "left.LANGUAGE_ID=right.LANGUAGE_ID",
+    "left" : "CUS",
+    "right" : "LAN",
+    "outer" : true
+  }, {
+    "on" : "left.INITIAL_OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "DRA",
+    "right" : "OPE_DRA_OPEN",
+    "outer" : true
+  }, {
+    "on" : "left.OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "DRA",
+    "right" : "OPE_DRA_CLOSE",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "DRA",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.TILL_ID=right.TILL_ID",
+    "left" : "DRA",
+    "right" : "TIL",
+    "outer" : false
+  }, {
+    "on" : "left.STOCK_ARTICLE_ID=right.STOCK_ARTICLE_ID",
+    "left" : "HIST_STO",
+    "right" : "SART",
+    "outer" : false
+  }, {
+    "on" : "left.STOCK_WAREHOUSE_ID=right.STOCK_WAREHOUSE_ID",
+    "left" : "HIST_STO",
+    "right" : "SWA",
+    "outer" : false
+  }, {
+    "on" : "left.REGION_ID=right.REGION_ID",
+    "left" : "LOC",
+    "right" : "REG",
+    "outer" : false
+  }, {
+    "on" : "left.GROUP_A_ID=right.GROUP_ID",
+    "left" : "MEN",
+    "right" : "GRA_MEN",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_B_ID=right.GROUP_ID",
+    "left" : "MEN",
+    "right" : "GRB_MEN",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_C_ID=right.GROUP_ID",
+    "left" : "MEN",
+    "right" : "GRC_MEN",
+    "outer" : true
+  }, {
+    "on" : "left.PAYMENT_TYPE=right.PAYMENT_TYPE",
+    "left" : "PAY",
+    "right" : "PAYT",
+    "outer" : false
+  }, {
+    "on" : "left.LOCATION_ID=right.LOCATION_ID",
+    "left" : "SHO",
+    "right" : "LOC",
+    "outer" : false
+  }, {
+    "on" : "left.SHOP_TYPE_ID=right.SHOP_TYPE_ID",
+    "left" : "SHO",
+    "right" : "SHO_T",
+    "outer" : false
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "SHO_SHO_T",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.SHOP_TYPE_ID=right.SHOP_TYPE_ID",
+    "left" : "SHO_SHO_T",
+    "right" : "SHO_T",
+    "outer" : false
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "SHO_S",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.GROUP_A_ID=right.STOCK_GROUP_ID",
+    "left" : "SART",
+    "right" : "SGRA",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_B_ID=right.STOCK_GROUP_ID",
+    "left" : "SART",
+    "right" : "SGRB",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_C_ID=right.STOCK_GROUP_ID",
+    "left" : "SART",
+    "right" : "SGRC",
+    "outer" : true
+  }, {
+    "on" : "left.GROUP_D_ID=right.STOCK_GROUP_ID",
+    "left" : "SART",
+    "right" : "SGRD",
+    "outer" : true
+  }, {
+    "on" : "left.MEASURE_UNIT_ID=right.STOCK_MEASURE_UNIT_ID",
+    "left" : "SART",
+    "right" : "SMU",
+    "outer" : false
+  }, {
+    "on" : "left.STOCK_ARTICLE_ID=right.STOCK_ARTICLE_ID",
+    "left" : "SWA_ART",
+    "right" : "SART",
+    "outer" : false
+  }, {
+    "on" : "left.STOCK_WAREHOUSE_ID=right.STOCK_WAREHOUSE_ID",
+    "left" : "SWA_ART",
+    "right" : "SWA",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA",
+    "right" : "TRA_TAB",
+    "outer" : true
+  }, {
+    "on" : "left.CUSTOMER_ID=right.CUSTOMER_ID",
+    "left" : "TRA",
+    "right" : "CUS",
+    "outer" : true
+  }, {
+    "on" : "left.OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "TRA",
+    "right" : "OPE",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.TILL_ID=right.TILL_ID",
+    "left" : "TRA",
+    "right" : "TIL",
+    "outer" : false
+  }, {
+    "on" : "left.ARTICLE_ID=right.ARTICLE_ID",
+    "left" : "TRA_ART",
+    "right" : "ART",
+    "outer" : false
+  }, {
+    "on" : "left.CAUSAL_ID=right.CAUSAL_ID",
+    "left" : "TRA_ART",
+    "right" : "ARC",
+    "outer" : true
+  }, {
+    "on" : "left.CUSTOMER_ID=right.CUSTOMER_ID",
+    "left" : "TRA_ART",
+    "right" : "CUS",
+    "outer" : true
+  }, {
+    "on" : "left.PRICELEVEL_ID=right.PRICELEVEL_ID",
+    "left" : "TRA_ART",
+    "right" : "PRIL",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_ART",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_ART",
+    "right" : "TRA",
+    "outer" : false
+  }, {
+    "on" : "left.VAT_ID=right.VAT_ID",
+    "left" : "TRA_ART",
+    "right" : "VAT_TRA_ART",
+    "outer" : true
+  }, {
+    "on" : "left.MENU_ID=right.MENU_ID",
+    "left" : "TRA_ART",
+    "right" : "MEN",
+    "outer" : true
+  }, {
+    "on" : "left.OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "TRA_ART",
+    "right" : "OPE",
+    "outer" : true
+  }, {
+    "on" : "left.TILL_ID=right.TILL_ID",
+    "left" : "TRA_ART",
+    "right" : "TIL",
+    "outer" : false
+  }, {
+    "on" : "left.DISCOUNT_ID=right.DISCOUNT_ID",
+    "left" : "TRA_ART_DIS",
+    "right" : "DIS",
+    "outer" : false
+  }, {
+    "on" : "left.PROMOTION_ID=right.PROMOTION_ID",
+    "left" : "TRA_ART_DIS",
+    "right" : "PRO",
+    "outer" : true
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID and left.ARTICLE_HASH_CODE=right.HASH_CODE",
+    "left" : "TRA_ART_DIS",
+    "right" : "TRA_ART",
+    "outer" : false
+  }, {
+    "on" : "left.PROMOTION_ID=right.PROMOTION_ID",
+    "left" : "TRA_ART_PRO",
+    "right" : "PRO",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID and left.ARTICLE_HASH_CODE=right.HASH_CODE",
+    "left" : "TRA_ART_PRO",
+    "right" : "TRA_ART",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_CAR",
+    "right" : "TRA",
+    "outer" : false
+  }, {
+    "on" : "left.CUSTOMER_ID=right.CUSTOMER_ID",
+    "left" : "TRA_CAR",
+    "right" : "CUS",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_CAR",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.MENU_ID=right.MENU_ID",
+    "left" : "TRA_MEN",
+    "right" : "MEN",
+    "outer" : true
+  }, {
+    "on" : "left.CAUSAL_ID=right.CAUSAL_ID",
+    "left" : "TRA_MEN",
+    "right" : "ARC",
+    "outer" : true
+  }, {
+    "on" : "left.CUSTOMER_ID=right.CUSTOMER_ID",
+    "left" : "TRA_MEN",
+    "right" : "CUS",
+    "outer" : true
+  }, {
+    "on" : "left.PRICELEVEL_ID=right.PRICELEVEL_ID",
+    "left" : "TRA_MEN",
+    "right" : "PRIL",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_MEN",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_MEN",
+    "right" : "TRA",
+    "outer" : false
+  }, {
+    "on" : "left.CREDIT_CARD_ID=right.CREDIT_CARD_ID",
+    "left" : "TRA_PAY",
+    "right" : "CRE",
+    "outer" : true
+  }, {
+    "on" : "left.PAYMENT_ID=right.PAYMENT_ID",
+    "left" : "TRA_PAY",
+    "right" : "PAY",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_PAY",
+    "right" : "TRA",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_PAY",
+    "right" : "TRA_CAR",
+    "outer" : false
+  }, {
+    "on" : "left.CUSTOMER_ID=right.CUSTOMER_ID",
+    "left" : "TRA_PAY",
+    "right" : "CUS",
+    "outer" : true
+  }, {
+    "on" : "left.OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "TRA_PAY",
+    "right" : "OPE",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_PAY",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.TILL_ID=right.TILL_ID",
+    "left" : "TRA_PAY",
+    "right" : "TIL",
+    "outer" : false
+  }, {
+    "on" : "left.PAYMENT_ID=right.PAYMENT_ID",
+    "left" : "TRA_PAY_AGG",
+    "right" : "PAY",
+    "outer" : false
+  }, {
+    "on" : "left.BOOKKEEPING_DATE=right.BOOKKEEPING_DATE and left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_PAY_AGG",
+    "right" : "SHO_S",
+    "outer" : false
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_PAY_AGG",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.POINT_CAMPAIGN_ID=right.POINT_CAMPAIGN_ID",
+    "left" : "TRA_POI",
+    "right" : "POI",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_POI",
+    "right" : "TRA",
+    "outer" : false
+  }, {
+    "on" : "left.CARD_NUM=right.CARD_NUM",
+    "left" : "TRA_POI",
+    "right" : "CUS",
+    "outer" : false
+  }, {
+    "on" : "left.CARD_NUM=right.CARD_NUM",
+    "left" : "TRA_POI_LAST",
+    "right" : "CUS",
+    "outer" : false
+  }, {
+    "on" : "left.POINT_CAMPAIGN_ID=right.POINT_CAMPAIGN_ID",
+    "left" : "TRA_POI_LAST",
+    "right" : "POI",
+    "outer" : false
+  }, {
+    "on" : "left.TRANSACTION_ID=right.TRANSACTION_ID",
+    "left" : "TRA_TAB",
+    "right" : "TRA",
+    "outer" : false
+  }, {
+    "on" : "left.OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "TRA_TAB",
+    "right" : "OPE",
+    "outer" : false
+  }, {
+    "on" : "left.BOOKKEEPING_DATE=right.BOOKKEEPING_DATE and left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_VAT_AGG",
+    "right" : "SHO_S",
+    "outer" : false
+  }, {
+    "on" : "left.VAT_ID=right.VAT_ID",
+    "left" : "TRA_VAT_AGG",
+    "right" : "VAT",
+    "outer" : false
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "TRA_VAT_AGG",
+    "right" : "SHO",
+    "outer" : false
+  }, {
+    "on" : "left.OPERATOR_ID=right.OPERATOR_ID",
+    "left" : "WIT_TRA",
+    "right" : "OPE",
+    "outer" : true
+  }, {
+    "on" : "left.SHOP_ID=right.SHOP_ID",
+    "left" : "WIT_TRA",
+    "right" : "SHO",
+    "outer" : true
+  }, {
+    "on" : "left.TILL_ID=right.TILL_ID",
+    "left" : "WIT_TRA",
+    "right" : "TIL",
+    "outer" : true
+  }, {
+    "on" : "left.WITHDRAWAL_ID=right.WITHDRAWAL_ID",
+    "left" : "WIT_TRA",
+    "right" : "WIT",
+    "outer" : false
+  }, {
+    "on" : "left.WITHDRAWAL_TYPE=right.WITHDRAWAL_TYPE",
+    "left" : "WIT_TRA",
+    "right" : "WIT",
+    "outer" : false
+  } ],
+  "path" : "tcpos",
+  "company" : "tekoe_tokudb"
+}

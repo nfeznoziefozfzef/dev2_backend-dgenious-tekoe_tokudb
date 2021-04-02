@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_TAB" ],
+  "grants" : [ "auth.scheme.TRA_TAB" ],
+  "name" : "Tickets - sur place",
+  "comment" : "Ce shema détaille les transactions faites au restaurant et les champs spécifiques qui s'y rapportent",
+  "translations" : {
+    "DE" : {
+      "name" : "Tickets - vor Ort",
+      "comment" : "Dieses Schema beschreibt die im Restaurant getätigten Transaktionen und die damit verbundenen spezifischen Felder."
+    },
+    "EN" : {
+      "name" : "Restaurant tickets",
+      "comment" : "This scheme details the tickets printed at the restaurant and its related fields"
+    },
+    "FR" : {
+      "name" : "Tickets - sur place",
+      "comment" : "Ce shema détaille les transactions faites au restaurant et les champs spécifiques qui s'y rapportent"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_TAB",
+  "entry_table" : "TRA_TAB",
+  "company" : "tekoe_tokudb"
+}

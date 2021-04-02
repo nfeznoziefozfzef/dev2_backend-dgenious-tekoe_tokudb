@@ -1,0 +1,31 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Kreditkartentyp",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "UID credit card",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "UID carte de crédit",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "UID carte de crédit",
+  "category" : "Paiements",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{CRE}}.`CREDIT_CARD_ID`",
+  "path" : "tcpos.CRE.CREDIT_CARD_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_PAY" : "{{TRA_PAY}}.`CREDIT_CARD_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

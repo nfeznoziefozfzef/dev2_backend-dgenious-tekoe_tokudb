@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe D",
+      "category" : "Bestandsposten"
+    },
+    "EN" : {
+      "name" : "Group D",
+      "category" : "Inventory items"
+    },
+    "FR" : {
+      "name" : "Groupe D",
+      "category" : "Articles du stock"
+    }
+  },
+  "name" : "Groupe D",
+  "category" : "Articles du stock",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SGRD}}.`DESCRIPTION`",
+  "path" : "tcpos.SGRD.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Öffnungszeitpunkt des Tisches",
+      "category" : "Tische",
+      "comment" : "Uhrzeit, zu welcher das Ticket geöffnet wurde"
+    },
+    "EN" : {
+      "name" : "Table opening time",
+      "category" : "Tables",
+      "comment" : "Time at which the ticket was opened for this table"
+    },
+    "FR" : {
+      "name" : "Heure ouverture de table",
+      "category" : "Tables",
+      "comment" : "Heure à laquelle le ticket de la table a été ouvert"
+    }
+  },
+  "name" : "Heure ouverture de table",
+  "category" : "Tables",
+  "comment" : "Heure à laquelle le ticket de la table a été ouvert",
+  "properties" : {
+    "format" : "HH:mm:ss"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_TAB}}.`OPENING_TIME`",
+  "path" : "tcpos.TRA_TAB.OPENING_TIME",
+  "type" : "TIME",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

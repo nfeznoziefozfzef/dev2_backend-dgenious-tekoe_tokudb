@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Wiederholversuche",
+      "category" : "Kassenladenzählung",
+      "comment" : "Anzahl Änderungsversuche"
+    },
+    "EN" : {
+      "name" : "Retries",
+      "category" : "Drawer Counts",
+      "comment" : "Number of modification trials"
+    },
+    "FR" : {
+      "name" : "Tentatives",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Nombre de tentatives d'amendement"
+    }
+  },
+  "name" : "Tentatives",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Nombre de tentatives d'amendement",
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`RETRIES`",
+  "path" : "tcpos.DRA.RETRIES",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

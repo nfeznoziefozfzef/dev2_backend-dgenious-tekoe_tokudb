@@ -1,0 +1,33 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Datum",
+      "category" : "Statistik",
+      "comment" : "Datum des Tages"
+    },
+    "EN" : {
+      "name" : "Date",
+      "category" : "Statistics",
+      "comment" : "Accounting date"
+    },
+    "FR" : {
+      "name" : "Date",
+      "category" : "Statistiques",
+      "comment" : "Date comptable"
+    }
+  },
+  "name" : "Date",
+  "category" : "Statistiques",
+  "comment" : "Date comptable du jour",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`BOOKKEEPING_DATE`",
+  "path" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_VAT_AGG" : "{{TRA_VAT_AGG}}.`BOOKKEEPING_DATE`",
+    "TRA_PAY_AGG" : "{{TRA_PAY_AGG}}.`BOOKKEEPING_DATE`"
+  },
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Angebote",
+      "category" : "Angebote"
+    },
+    "EN" : {
+      "name" : "UID promotion",
+      "category" : "Promotions"
+    },
+    "FR" : {
+      "name" : "UID promotion",
+      "category" : "Promotions"
+    }
+  },
+  "name" : "UID promotion",
+  "category" : "Promotions",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | _SYS_",
+  "sql" : "{{PRO}}.`PROMOTION_ID`",
+  "path" : "tcpos.PRO.PROMOTION_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_ART_DIS" : "{{TRA_ART_DIS}}.`PROMOTION_ID`",
+    "TRA_ART_PRO" : "{{TRA_ART_PRO}}.`PROMOTION_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Nationalität",
+      "category" : "Kunden",
+      "comment" : "Nationalität des Kunden"
+    },
+    "EN" : {
+      "name" : "Nationality",
+      "category" : "Customers",
+      "comment" : "Nationality of the customer"
+    },
+    "FR" : {
+      "name" : "Nationalité",
+      "category" : "Clients",
+      "comment" : "Nationalité du client"
+    }
+  },
+  "name" : "Nationalité",
+  "category" : "Clients",
+  "comment" : "Nationalité du client",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`NATION`",
+  "path" : "tcpos.CUS.NATION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Aktions-Menge",
+      "category" : "Rabatte"
+    },
+    "EN" : {
+      "name" : "Promoted quantity",
+      "category" : "Discounts"
+    },
+    "FR" : {
+      "name" : "Quantité remisée",
+      "category" : "Remises"
+    }
+  },
+  "name" : "Quantité remisée",
+  "category" : "Remises",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{TRA_ART_DIS}}.`DISCOUNTED_QUANTITY`",
+  "path" : "tcpos.TRA_ART_DIS.DISCOUNTED_QUANTITY",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

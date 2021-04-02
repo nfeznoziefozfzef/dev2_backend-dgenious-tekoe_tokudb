@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiger Artikel",
+      "category" : "Bestand",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob der Artikel in diesem Lagerhaus gültig ist"
+    },
+    "EN" : {
+      "name" : "Valid Article",
+      "category" : "Inventory",
+      "comment" : "Value of type TRUE/FALSE indicating if the article is valid in this warehouse"
+    },
+    "FR" : {
+      "name" : "Article valide",
+      "category" : "Stocks",
+      "comment" : "Valeur de type vrai/faux qui indique si cet article est valide dans cet entrepôt"
+    }
+  },
+  "name" : "Article valide",
+  "category" : "Stocks",
+  "comment" : "Valeur de type vrai/faux qui indique si cet article est valide dans cet entrepôt",
+  "requires" : "graph.tcpos;auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SWA_ART}}.`IS_VALID`",
+  "path" : "tcpos.SWA_ART.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

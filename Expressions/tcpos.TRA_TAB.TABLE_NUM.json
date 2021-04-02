@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Tisch Name",
+      "category" : "Tische",
+      "comment" : "Name des Tisches (Tisch 3, Fenstertisch,...)"
+    },
+    "EN" : {
+      "name" : "Table name",
+      "category" : "Tables",
+      "comment" : "Name of the table (table 3, window, ...)"
+    },
+    "FR" : {
+      "name" : "Nom table",
+      "category" : "Tables",
+      "comment" : "Nom de la table"
+    }
+  },
+  "name" : "Nom table",
+  "category" : "Tables",
+  "comment" : "Nom de la table",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_TAB}}.`TABLE_NUM`",
+  "path" : "tcpos.TRA_TAB.TABLE_NUM",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

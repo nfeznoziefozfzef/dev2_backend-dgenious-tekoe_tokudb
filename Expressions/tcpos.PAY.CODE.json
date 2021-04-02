@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Zahlungsmittel Code",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "Code means of payment",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "Code moyen de paiement",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "Code moyen de paiement",
+  "category" : "Paiements",
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{PAY}}.`CODE`",
+  "path" : "tcpos.PAY.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

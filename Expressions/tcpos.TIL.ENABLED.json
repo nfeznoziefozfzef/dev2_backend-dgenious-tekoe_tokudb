@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Aktive Kasse",
+      "category" : "Kassen",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob die Kasse aktiv ist"
+    },
+    "EN" : {
+      "name" : "Active cash desk",
+      "category" : "Cash desks",
+      "comment" : "Value of type TRUE/FALSE indicating if the cash desk is active"
+    },
+    "FR" : {
+      "name" : "Caisse active",
+      "category" : "Caisses",
+      "comment" : "Valeur de type vrai/faux qui indique si la caisse est active"
+    }
+  },
+  "name" : "Caisse active",
+  "category" : "Caisses",
+  "comment" : "Valeur de type vrai/faux qui indique si la caisse est active",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.DRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TIL | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.WIT_TRA | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TIL}}.`ENABLED`",
+  "path" : "tcpos.TIL.ENABLED",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "MwSt.-Betrag",
+      "category" : "MwSt.",
+      "comment" : "MwSt.-Betrag, zu diesem Satz, für diesen Shop und dieses Datum"
+    },
+    "EN" : {
+      "name" : "VAT amount",
+      "category" : "VAT",
+      "comment" : "Vat amount at this rate, for this shop and this date"
+    },
+    "FR" : {
+      "name" : "Montant TVA",
+      "category" : "TVA",
+      "comment" : "Montant de TVA à ce taux pour cet établissement et ce jour"
+    }
+  },
+  "name" : "Montant TVA",
+  "category" : "TVA",
+  "comment" : "Montant de TVA à ce taux pour cet établissement et ce jour",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | _SYS_",
+  "sql" : "{{TRA_VAT_AGG}}.`VAT_AMOUNT`",
+  "path" : "tcpos.TRA_VAT_AGG.VAT_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

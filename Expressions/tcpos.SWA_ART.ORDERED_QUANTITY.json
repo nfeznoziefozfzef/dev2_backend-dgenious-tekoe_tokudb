@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Bestellte Menge",
+      "category" : "Bestand",
+      "comment" : "Für dieses Lager bestellte Menge"
+    },
+    "EN" : {
+      "name" : "Quantity on order",
+      "category" : "Inventory",
+      "comment" : "Quantity on order for the warehouse"
+    },
+    "FR" : {
+      "name" : "Quantité en commande",
+      "category" : "Stocks",
+      "comment" : "Quantité en commande pour cet entrepôt"
+    }
+  },
+  "name" : "Quantité en commande",
+  "category" : "Stocks",
+  "comment" : "Quantité en commande pour cet entrepôt",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SWA_ART}}.`ORDERED_QUANTITY`",
+  "path" : "tcpos.SWA_ART.ORDERED_QUANTITY",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

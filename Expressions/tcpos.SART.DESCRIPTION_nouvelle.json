@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel mit Rabatt",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt ob, ein Rabatt auf dieser Linie angewendet wurde"
+    },
+    "EN" : {
+      "name" : "Article with discount",
+      "category" : "Ticket lines",
+      "comment" : "Value of type TRUE/FALSE indicating whether a discount was granted on this ticket line"
+    },
+    "FR" : {
+      "name" : "Article avec rabais",
+      "category" : "Tickets - lignes",
+      "comment" : "Valeur de type vrai/faux qui indique si un rabais a été appliqué sur cette ligne"
+    }
+  },
+  "name" : "Article avec rabais",
+  "category" : "Tickets - lignes",
+  "comment" : "Valeur de type vrai/faux qui indique si un rabais a été appliqué sur cette ligne",
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SART}}.`DESCRIPTION`",
+  "path" : "tcpos.SART.DESCRIPTION_nouvelle",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

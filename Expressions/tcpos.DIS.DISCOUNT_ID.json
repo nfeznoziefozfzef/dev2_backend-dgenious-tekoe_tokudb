@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID-Rabatt",
+      "category" : "Rabatte"
+    },
+    "EN" : {
+      "name" : "UID discount",
+      "category" : "Discounts"
+    },
+    "FR" : {
+      "name" : "UID remise",
+      "category" : "Remises"
+    }
+  },
+  "name" : "UID remise",
+  "category" : "Remises",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{DIS}}.`DISCOUNT_ID`",
+  "path" : "tcpos.DIS.DISCOUNT_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_ART_DIS" : "{{TRA_ART_DIS}}.`DISCOUNT_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

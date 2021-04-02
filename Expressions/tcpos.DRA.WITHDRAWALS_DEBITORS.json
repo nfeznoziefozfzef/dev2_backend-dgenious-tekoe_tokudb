@@ -1,0 +1,33 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Entnahme Kreditkarten",
+      "category" : "Kassenladenzählung"
+    },
+    "EN" : {
+      "name" : "Withdrawals in debit",
+      "category" : "Drawer Counts"
+    },
+    "FR" : {
+      "name" : "Retraits en débit",
+      "category" : "Comptages Tiroirs"
+    }
+  },
+  "name" : "Retraits en débit",
+  "category" : "Comptages Tiroirs",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`WITHDRAWALS_DEBITORS`",
+  "path" : "tcpos.DRA.WITHDRAWALS_DEBITORS",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

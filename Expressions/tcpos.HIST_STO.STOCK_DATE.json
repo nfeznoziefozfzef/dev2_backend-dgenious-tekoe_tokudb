@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Bestandsdatum",
+      "category" : "Historischer Bestand",
+      "comment" : "Datum, an dem der Lagerartikel gemessen wurde. Die Messung erfolgt vor Beginn des Tages."
+    },
+    "EN" : {
+      "name" : "Stock date",
+      "category" : "Historic stock",
+      "comment" : "Date on which the stock item was measured. The measurement is made before the beginning of the day"
+    },
+    "FR" : {
+      "name" : "Date du stock",
+      "category" : "Stock historique",
+      "comment" : "Date à laquelle l'élément du stock a été mesuré. La mesure se fait avant le début de la journée"
+    }
+  },
+  "name" : "Date du stock",
+  "category" : "Stock historique",
+  "comment" : "Date à laquelle l'élément du stock a été mesuré. La mesure se fait avant le début de la journée",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | _SYS_",
+  "sql" : "{{HIST_STO}}.`STOCK_DATE`",
+  "path" : "tcpos.HIST_STO.STOCK_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

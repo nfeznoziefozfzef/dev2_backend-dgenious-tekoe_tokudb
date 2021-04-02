@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Angebote und Verluste",
+      "category" : "Rabatte"
+    },
+    "EN" : {
+      "name" : "UID gratuity",
+      "category" : "Discounts"
+    },
+    "FR" : {
+      "name" : "UID offres et pertes",
+      "category" : "Discounts"
+    }
+  },
+  "name" : "UID offres et pertes",
+  "category" : "Discounts",
+  "requires" : "graph.tcpos;auth.scheme.ARC | auth.scheme.TRA_MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ARC}}.`CAUSAL_ID`",
+  "path" : "tcpos.ARC.CAUSAL_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_MEN" : "{{TRA_MEN}}.`CAUSAL_ID`",
+    "TRA_ART" : "{{TRA_ART}}.`CAUSAL_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

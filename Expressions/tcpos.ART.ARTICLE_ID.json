@@ -1,0 +1,31 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Artikel",
+      "category" : "Artikel",
+      "comment" : "Einzigartiger Identifikator des Artikels"
+    },
+    "EN" : {
+      "name" : "UID Article",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "UID article",
+      "category" : "Articles",
+      "comment" : "Identifiant unique de l'article"
+    }
+  },
+  "name" : "UID article",
+  "category" : "Articles",
+  "comment" : "Identifiant unique de l'article",
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ART}}.`ARTICLE_ID`",
+  "path" : "tcpos.ART.ARTICLE_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_ART" : "{{TRA_ART}}.`ARTICLE_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

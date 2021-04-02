@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Verkaufte Artikel",
+      "category" : "Statistik",
+      "comment" : "Anzahl verkaufter Artikel am Tag, per Shop"
+    },
+    "EN" : {
+      "name" : "Articles sold",
+      "category" : "Statistics",
+      "comment" : "Quantity of articles sold during the day per shop"
+    },
+    "FR" : {
+      "name" : "Articles vendus",
+      "category" : "Statistiques",
+      "comment" : "Quantité d'articles vendus au cours de la journée, par établissement"
+    }
+  },
+  "name" : "Articles vendus",
+  "category" : "Statistiques",
+  "comment" : "Quantité d'articles vendus au cours de la journée, par établissement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`ARTICLE_COUNT`",
+  "path" : "tcpos.SHO_S.ARTICLE_COUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

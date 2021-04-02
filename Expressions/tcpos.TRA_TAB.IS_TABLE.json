@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Ticket am Tisch",
+      "category" : "Tische",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob das Ticket zu einem Tisch gehört"
+    },
+    "EN" : {
+      "name" : "Ticket on a table",
+      "category" : "Tables",
+      "comment" : "Value of type TRUE/FALSE indicating whether this ticket is linked to a table"
+    },
+    "FR" : {
+      "name" : "Ticket à table",
+      "category" : "Tables",
+      "comment" : "Valeur de type vrai/faux qui indique si le ticket est lié à une table"
+    }
+  },
+  "name" : "Ticket à table",
+  "category" : "Tables",
+  "comment" : "Valeur de type vrai/faux qui indique si le ticket est lié à une table",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "case when {{TRA_TAB}}.TRANSACTION_ID is not null then 1 else 0 end",
+  "path" : "tcpos.TRA_TAB.IS_TABLE",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

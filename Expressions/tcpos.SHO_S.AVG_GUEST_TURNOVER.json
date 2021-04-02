@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Durchschnittlicher Umsatz pro Gedeck",
+      "category" : "Statistik",
+      "comment" : "Durchschnittlicher Umsatz pro Gedeck für den Tag. Berechnet für Tickets, die einem Tisch zugeordnet sind und mit einer Anzahl Gästen die grösser als null ist."
+    },
+    "EN" : {
+      "name" : "Average turnover per place setting",
+      "category" : "Statistics",
+      "comment" : "Average turnover per place setting for the day. Calculation based on tickets assigned to a table with a number of hosts superior to zero"
+    },
+    "FR" : {
+      "name" : "CA moyen par couvert",
+      "category" : "Statistiques",
+      "comment" : "CA moyen par couvert pour la journée. Calculé sur les tickets affectés à une table et avec un nombre d'hôtes supérieur à zéro"
+    }
+  },
+  "name" : "CA moyen par couvert",
+  "category" : "Statistiques",
+  "comment" : "CA moyen par couvert pour la journée. Calculé sur les tickets affectés à une table et avec un nombre d'hôtes supérieur à zéro",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`AVG_GUEST_TURNOVER`",
+  "path" : "tcpos.SHO_S.AVG_GUEST_TURNOVER",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Ticket Rabatt",
+      "category" : "Tickets",
+      "comment" : "Gesamter Rabatt für diese Ticket, d.h. der Betrag den der Kunde hätte bezahlen sollen, ohne Rabatt, minus dem tatsächlich bezahlten Betrag"
+    },
+    "EN" : {
+      "name" : "Ticket discount",
+      "category" : "Tickets",
+      "comment" : "Total discount for this ticket, i.e. the difference between the total amount the customer should have paid without any discounts minus the amount actually paid"
+    },
+    "FR" : {
+      "name" : "Rabais ticket",
+      "category" : "Tickets",
+      "comment" : "Total des rabais du ticket, soit la différence entre le montant que le client aurait dû payer sans les rabais, moins le montant effectivement payé"
+    }
+  },
+  "name" : "Rabais ticket",
+  "category" : "Tickets",
+  "comment" : "Total des rabais du ticket, soit la différence entre le montant que le client aurait dû payer sans les rabais, moins le montant effectivement payé",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`TOTAL_REBATE`",
+  "path" : "tcpos.TRA.TOTAL_REBATE",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

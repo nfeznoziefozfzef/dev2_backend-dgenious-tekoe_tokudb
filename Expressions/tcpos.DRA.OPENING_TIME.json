@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Schichtbeginn",
+      "category" : "Kassenladenzählung"
+    },
+    "EN" : {
+      "name" : "Shift opening time",
+      "category" : "Drawer Counts"
+    },
+    "FR" : {
+      "name" : "Heure ouverture Session",
+      "category" : "Comptages Tiroirs"
+    }
+  },
+  "name" : "Heure ouverture Session",
+  "category" : "Comptages Tiroirs",
+  "properties" : {
+    "format" : "HH:mm"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`OPENING_TIME`",
+  "path" : "tcpos.DRA.OPENING_TIME",
+  "type" : "TIME",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

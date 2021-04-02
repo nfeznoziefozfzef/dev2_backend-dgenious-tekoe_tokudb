@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel in einem Menu",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob der Artikel als Teil eines Menus verkauft wurde"
+    },
+    "EN" : {
+      "name" : "Article in menu",
+      "category" : "Ticket lines",
+      "comment" : "Value of type TRUE/FALSE indicating if this article was part of a menu"
+    },
+    "FR" : {
+      "name" : "Article dans menu",
+      "category" : "Tickets - lignes",
+      "comment" : "Valeur de type vrai/faux qui indique si cet article faisait partie d'un menu"
+    }
+  },
+  "name" : "Article dans menu",
+  "category" : "Tickets - lignes",
+  "comment" : "Valeur de type vrai/faux qui indique si cet article faisait partie d'un menu",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "IF(ISNULL({{TRA_ART}}.`MENU_ID`),0,1)",
+  "path" : "tcpos.TRA_ART.IS_MENU",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

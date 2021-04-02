@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Firmencode",
+      "category" : "Kunden",
+      "comment" : "Code der Firma, mit der der Kunde verbunden ist"
+    },
+    "EN" : {
+      "name" : "Company code",
+      "category" : "Customers",
+      "comment" : "Company code to which the customer is linked"
+    },
+    "FR" : {
+      "name" : "Code entreprise",
+      "category" : "Clients",
+      "comment" : "Code de l'entreprise à laquelle est reliée le client"
+    }
+  },
+  "name" : "Code entreprise",
+  "category" : "Clients",
+  "comment" : "Code de l'entreprise à laquelle est reliée le client",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{COM}}.`CODE`",
+  "path" : "tcpos.COM.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

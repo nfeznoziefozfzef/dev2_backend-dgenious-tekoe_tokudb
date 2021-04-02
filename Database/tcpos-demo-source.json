@@ -1,0 +1,1121 @@
+{
+  "name" : "tcpos-demo-source",
+  "comment" : "tekoe_tokudb source database",
+  "tables" : [ {
+    "name" : "ARTICLE_CAUSALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "CAUSAL_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "CAUSAL_ID" ]
+    }
+  }, {
+    "name" : "ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_D_ID",
+      "type" : "ID"
+    }, {
+      "name" : "ARTICLE_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "SOLD_BY_WEIGHT",
+      "sql" : "case when MEASURE_UNIT=1 then 0 else 1 end",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "sql" : "PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "IS_TURNOVER",
+      "sql" : "case when ARTICLE_TYPE=1 then 1 else 0 end",
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "ARTICLE_ID" ]
+    },
+    "from" : "select art.*,pri.PRICE from <db>.ARTICLES art left join (<db>.PRICES pri join <db>.PRICELEVELS pril on pri.PRICELEVEL_ID=pril.ID and pril.GLOBAL_PRICELEVEL=1) on art.ID=pri.ARTICLE_ID"
+  }, {
+    "name" : "COMPANIES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "COMPANY_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "COMPANY_ID" ]
+    }
+  }, {
+    "name" : "CREDIT_CARDS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "CREDIT_CARD_ID" ]
+    }
+  }, {
+    "name" : "CUSTOMERS",
+    "fields" : [ {
+      "name" : "ANNIVERSARY",
+      "sql" : "trunc(ANNIVERSARY)",
+      "type" : "DATE",
+      "null_filter" : ">1900-01-01;<2020-01-01"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "CARD_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "CATEGORY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CITY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "COMPANY_ID",
+      "type" : "ID"
+    }, {
+      "name" : "COST_CENTER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "COUNTRY",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "EMAIL",
+      "type" : "TEXT"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "LANGUAGE_ID",
+      "sql" : "LANGUAGE",
+      "type" : "ID",
+      "null_filter" : ">0"
+    }, {
+      "name" : "NATION",
+      "type" : "TEXT"
+    }, {
+      "name" : "OTHER_INFOS",
+      "type" : "TEXT"
+    }, {
+      "name" : "PHONE",
+      "type" : "TEXT"
+    }, {
+      "name" : "PREPAY_BALANCE_CASH",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "STREET",
+      "type" : "TEXT"
+    }, {
+      "name" : "TITLE",
+      "type" : "TEXT"
+    }, {
+      "name" : "ZIP_CODE",
+      "type" : "TEXT"
+    } ],
+    "pks" : {
+      "fields" : [ "CUSTOMER_ID" ]
+    }
+  }, {
+    "name" : "DISCOUNTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "DISCOUNT_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "DISCOUNT_ID" ]
+    }
+  }, {
+    "name" : "DRAWER_COUNTS",
+    "fields" : [ {
+      "name" : "CLOSING_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CLOSING_TIME",
+      "sql" : "case when CLOSING_DATE is null then null else to_char(CLOSING_DATE, 'HH24:MI:SS') end",
+      "type" : "TIME"
+    }, {
+      "name" : "CLOSING_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "COUNTED_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "COUNTED_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DATE",
+      "sql" : "trunc(TIMESTAMP)",
+      "type" : "DATE"
+    }, {
+      "name" : "DEPOSITS_TOTAL",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DIFFERENCE_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DRAWER_COUNT_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DRAWER_COUNT_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "INITIAL_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "INITIAL_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "INITIAL_OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPENING_TIME",
+      "sql" : "to_char(OPENING_DATE, 'HH24:MI:SS')",
+      "type" : "TIME"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PREPAY_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PREPAY_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PREPAY_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PREPAY_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "RETRIES",
+      "type" : "INTEGER"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SOLD_CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CHEQUES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CREDITCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CURRENCIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_CUSTOMERCARDS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_DEBITORS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_SUBSIDIES_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SOLD_VOUCHERS_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TIME",
+      "sql" : "to_char(TIMESTAMP, 'HH24:MI:SS')",
+      "type" : "TIME"
+    }, {
+      "name" : "WITHDRAWALS_CHEQUES",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_CREDITCARDS",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_CURRENCIES",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_DEBITORS",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_TOTAL",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWALS_VOUCHERS",
+      "type" : "DECIMAL"
+    } ],
+    "pks" : {
+      "fields" : [ "DRAWER_COUNT_ID" ]
+    },
+    "from" : "select dra.*,clo.closing_type, clo.closing_date,clo.opening_date,clo.shop_id,clo.till_id, dra2.operator_id as initial_operator_id from <db>.DRAWER_COUNTS dra left join <db>.CLOSINGS clo on dra.CLOSING_ID=clo.ID LEFT JOIN (Select operator_id, closing_id from <db>.DRAWER_COUNTS where is_init_drawer_count = 1) dra2 on dra.closing_id = dra2.closing_id",
+    "where" : "IS_INIT_DRAWER_COUNT = 0"
+  }, {
+    "name" : "GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "GROUP_ID" ]
+    }
+  }, {
+    "name" : "LOCATIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "LOCATION_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "REGION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "LOCATION_ID" ]
+    }
+  }, {
+    "name" : "MENUS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "sql" : "PRICE",
+      "type" : "DECIMAL"
+    } ],
+    "pks" : {
+      "fields" : [ "MENU_ID" ]
+    },
+    "from" : "select men.code, men.description,men.group_a_id, men.group_b_id, men.group_c_id, men.id, men.is_valid,pri.PRICE from <db>.MENUS men left join (<db>.MENU_PRICES pri join <db>.PRICELEVELS pril on pri.PRICELEVEL_ID=pril.ID and pril.GLOBAL_PRICELEVEL=1) on men.ID=pri.MENU_ID"
+  }, {
+    "name" : "OPERATORS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ENABLED",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "OPERATOR_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "OPERATOR_ID" ]
+    }
+  }, {
+    "name" : "PAYMENTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PAYMENT_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "PAYMENT_ID" ]
+    }
+  }, {
+    "name" : "PAYMENT_TYPES",
+    "fields" : [ {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "PAYMENT_TYPE" ]
+    }
+  }, {
+    "name" : "POINT_CAMPAIGNS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "POINT_CAMPAIGN_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "POINT_CAMPAIGN_ID" ]
+    }
+  }, {
+    "name" : "PRICELEVELS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "PRICELEVEL_ID" ]
+    }
+  }, {
+    "name" : "PROMOTIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "PROMOTION_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "VALID_FROM",
+      "type" : "DATE"
+    }, {
+      "name" : "VALID_TO",
+      "type" : "DATE"
+    } ],
+    "pks" : {
+      "fields" : [ "PROMOTION_ID" ]
+    }
+  }, {
+    "name" : "REGIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "REGION_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "REGION_ID" ]
+    }
+  }, {
+    "name" : "SHOPS",
+    "fields" : [ {
+      "name" : "SHOP_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "LOCATION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "SHOP_ID" ]
+    },
+    "from" : "select sho.*,sht.shop_type_id from <db>.SHOPS sho left join <db>.SHOPS_SHOP_TYPES sht on sho.id = sht.shop_id"
+  }, {
+    "name" : "SHOPS_SHOP_TYPES",
+    "fields" : [ {
+      "name" : "SHOP_SHOP_TYPE_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "SHOP_SHOP_TYPE_ID" ]
+    }
+  }, {
+    "name" : "SHOP_TYPES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "SHOP_TYPE_ID" ]
+    }
+  }, {
+    "name" : "STOCK_ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "GROUP_A_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_B_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_C_ID",
+      "type" : "ID"
+    }, {
+      "name" : "GROUP_D_ID",
+      "type" : "ID"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "MEASURE_UNIT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PRICE",
+      "type" : "DECIMAL"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_ARTICLE_ID" ]
+    }
+  }, {
+    "name" : "STOCK_GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "STOCK_GROUP_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_GROUP_ID" ]
+    }
+  }, {
+    "name" : "STOCK_MEASURE_UNITS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "STOCK_MEASURE_UNIT_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_MEASURE_UNIT_ID" ]
+    }
+  }, {
+    "name" : "STOCK_WAREHOUSE_ARTICLES",
+    "fields" : [ {
+      "name" : "AVERAGE_COST",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "DELIVERY_DATE",
+      "type" : "DATE"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ARTICLE_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "IS_VALID",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "ORDERED_QUANTITY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REALTIME_STOCK",
+      "sql" : "nvl(CURRENT_STOCK,0)+nvl(REALTIME_OFFSET,0)",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_WAREHOUSE_ARTICLE_ID", "STOCK_WAREHOUSE_ID" ]
+    },
+    "from" : "select  swa.*, trunc(next_order.DELIVERY_DATE) as DELIVERY_DATE from <db>.STOCK_WAREHOUSE_ARTICLES swa left join  (     select     sod.STOCK_ARTICLE_ID,     so.STOCK_WAREHOUSE_ID,     min(so.DELIVERY_DATE) as DELIVERY_DATE     from <db>.STOCK_ORDERS so     join <db>.STOCK_ORDER_DETAILS sod on so.ID=sod.STOCK_ORDER_ID     where      so.DELIVERY_DATE is not null     and so.ORDER_STATUS=2  /* confirmed */     and so.CANCELLATION_DATE is null     and sod.ITEM_STATUS=1 /* not yet delivered */     group by sod.STOCK_ARTICLE_ID,so.STOCK_WAREHOUSE_ID ) next_order on swa.STOCK_ARTICLE_ID=next_order.STOCK_ARTICLE_ID and swa.STOCK_WAREHOUSE_ID=next_order.STOCK_WAREHOUSE_ID"
+  }, {
+    "name" : "STOCK_WAREHOUSES",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_WAREHOUSE_ID" ]
+    }
+  }, {
+    "name" : "TILLS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "ENABLED",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TILL_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TILL_ID" ]
+    }
+  }, {
+    "name" : "TRANSACTIONS",
+    "fields" : [ {
+      "name" : "BOOKKEEPING_DATE",
+      "sql" : "trunc(BOOKKEEPING_DATE)",
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "GUESTS_NUM",
+      "type" : "INTEGER",
+      "null_filter" : ">0"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "sql" : "case when TRANSACTION_CAUSAL_ID is not null then 0 else TOTAL_AMOUNT end",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_DATE",
+      "sql" : "trunc(TRANS_DATE)",
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_NUM",
+      "type" : "ID"
+    }, {
+      "name" : "TRANS_TIME",
+      "sql" : "to_char(TRANS_DATE, 'HH24:MI:SS')",
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID" ]
+    }
+  }, {
+    "name" : "TRANS_ARTICLES",
+    "fields" : [ {
+      "name" : "ARTICLE_ID",
+      "type" : "ID"
+    }, {
+      "name" : "CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT",
+      "sql" : "-DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "type" : "ID"
+    }, {
+      "name" : "OWNER_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "sql" : "-PROMOTION_DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "SUBSIDIZED",
+      "type" : "INTEGER"
+    }, {
+      "name" : "SUBSIDIZED_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VAT_PERCENT",
+      "sql" : "0.01*VAT_PERCENT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WEIGHT",
+      "sql" : "QTY_WEIGHT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "AMOUNT",
+      "sql" : "case when CAUSAL_ID is not null then 0 else PRICE+nvl(DISCOUNT,0)+nvl(PROMOTION_DISCOUNT,0) end",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REBATE",
+      "sql" : "case when CAUSAL_ID is not null then -PRICE else -nvl(DISCOUNT,0)-nvl(PROMOTION_DISCOUNT,0) end",
+      "type" : "DECIMAL"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    }
+  }, {
+    "name" : "TRANS_ARTICLE_DISCOUNTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL",
+      "null_filter" : "<>0"
+    }, {
+      "name" : "ARTICLE_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNTED_QUANTITY",
+      "type" : "DECIMAL",
+      "null_filter" : "<>0"
+    }, {
+      "name" : "MANUAL_INPUT",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "PROMOTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SINGLE_ARTICLE",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "ARTICLE_HASH_CODE", "DISCOUNT_HASH_CODE" ]
+    }
+  }, {
+    "name" : "TRANS_ARTICLE_PROMOTIONS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL",
+      "null_filter" : "<>0"
+    }, {
+      "name" : "ARTICLE_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "FREE_QUANTITY",
+      "type" : "DECIMAL",
+      "null_filter" : "<>0"
+    }, {
+      "name" : "PROMOTED_QUANTITY",
+      "type" : "DECIMAL",
+      "null_filter" : "<>0"
+    }, {
+      "name" : "PROMOTION_HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SINGLE_ARTICLE",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "ARTICLE_HASH_CODE", "PROMOTION_HASH_CODE" ]
+    }
+  }, {
+    "name" : "TRANS_CARDS",
+    "fields" : [ {
+      "name" : "BONUS_BALANCE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_BALANCE",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CASH_LOAD",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CARD_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "CUST_COST_CENTER_ID",
+      "type" : "ID"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    }
+  }, {
+    "name" : "TRANS_MENUS",
+    "fields" : [ {
+      "name" : "CAUSAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "MENU_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "QTY",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "AMOUNT",
+      "sql" : "case when CAUSAL_ID is not null then 0 else AMOUNT+nvl(DISCOUNT,0)+nvl(PROMOTION_DISCOUNT,0) end",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "REBATE",
+      "sql" : "case when CAUSAL_ID is not null then -AMOUNT else -nvl(DISCOUNT,0)-nvl(PROMOTION_DISCOUNT,0) end",
+      "type" : "DECIMAL"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    }
+  }, {
+    "name" : "TRANS_PAYMENTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "type" : "ID"
+    }, {
+      "name" : "HASH_CODE",
+      "type" : "ID"
+    }, {
+      "name" : "IS_PREPAYMENT",
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "PAYMENT_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    }, {
+      "name" : "VOUCHER_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    }
+  }, {
+    "name" : "TRANS_POINT_CAMPAIGNS",
+    "fields" : [ {
+      "name" : "POINT_CAMPAIGN_ID",
+      "type" : "ID"
+    }, {
+      "name" : "POINTS_BALANCE",
+      "type" : "INTEGER"
+    }, {
+      "name" : "POINTS_GAINED",
+      "type" : "INTEGER"
+    }, {
+      "name" : "POINTS_SPENT",
+      "type" : "INTEGER"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "POINT_CAMPAIGN_ID" ]
+    }
+  }, {
+    "name" : "TRANS_TABLES",
+    "fields" : [ {
+      "name" : "OPENING_TIME",
+      "sql" : "to_char(OPENING_TIME, 'HH24:MI:SS')",
+      "type" : "TIME"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TABLE_NUM",
+      "type" : "TEXT"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID" ]
+    }
+  }, {
+    "name" : "VATS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "VAT_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "VAT_ID" ]
+    }
+  }, {
+    "name" : "WITHDRAWAL_TRANSACTIONS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "sql" : "trunc(BOOKKEEPING_DATE)",
+      "type" : "DATE"
+    }, {
+      "name" : "COMMENT_TEXT",
+      "type" : "TEXT"
+    }, {
+      "name" : "CURRENCY",
+      "type" : "TEXT"
+    }, {
+      "name" : "CURRENCY_RATIO",
+      "type" : "DECIMAL"
+    }, {
+      "name" : "WITHDRAWAL_TRANSACTION_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "OPERATOR_ID",
+      "type" : "ID"
+    }, {
+      "name" : "SHOP_ID",
+      "type" : "ID"
+    }, {
+      "name" : "TILL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_TYPE",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_ID",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_NUM",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "WITHDRAWAL_TRANSACTION_ID" ]
+    }
+  }, {
+    "name" : "WITHDRAWALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "type" : "TEXT"
+    }, {
+      "name" : "DESCRIPTION",
+      "type" : "TEXT"
+    }, {
+      "name" : "WITHDRAWAL_ID",
+      "sql" : "ID",
+      "type" : "ID"
+    }, {
+      "name" : "WITHDRAWAL_TYPE",
+      "type" : "ID"
+    } ],
+    "pks" : {
+      "fields" : [ "WITHDRAWAL_ID" ]
+    }
+  } ],
+  "company" : "tekoe_tokudb"
+}

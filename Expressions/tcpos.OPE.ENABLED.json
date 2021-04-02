@@ -1,0 +1,27 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiger Benutzer",
+      "category" : "Benutzer",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob der Benutzer gültig ist"
+    },
+    "EN" : {
+      "name" : "Valid operator",
+      "category" : "Operators",
+      "comment" : "Value of type TRUE/FALSE indicating if the operator is valid"
+    },
+    "FR" : {
+      "name" : "Opérateur valide",
+      "category" : "Opérateurs"
+    }
+  },
+  "name" : "Opérateur valide",
+  "category" : "Opérateurs",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.OPE | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.WIT_TRA | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{OPE}}.`ENABLED`",
+  "path" : "tcpos.OPE.ENABLED",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

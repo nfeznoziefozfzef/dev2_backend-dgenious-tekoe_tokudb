@@ -1,0 +1,38 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID shop",
+      "category" : "Shops"
+    },
+    "EN" : {
+      "name" : "UID shop",
+      "category" : "Shops"
+    },
+    "FR" : {
+      "name" : "UID etablissement",
+      "category" : "Etablissements"
+    }
+  },
+  "name" : "UID etablissement",
+  "category" : "Etablissements",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA_VAT_AGG | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.SHO_SHO_T | auth.scheme.DRA | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.WIT_TRA | auth.scheme.TRA_ART_PRO | auth.scheme.SHO | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{SHO}}.`SHOP_ID`",
+  "path" : "tcpos.SHO.SHOP_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_CAR" : "{{TRA_CAR}}.`SHOP_ID`",
+    "TRA_VAT_AGG" : "{{TRA_VAT_AGG}}.`SHOP_ID`",
+    "TRA" : "{{TRA}}.`SHOP_ID`",
+    "DRA" : "{{DRA}}.`SHOP_ID`",
+    "TRA_MEN" : "{{TRA_MEN}}.`SHOP_ID`",
+    "TRA_PAY" : "{{TRA_PAY}}.`SHOP_ID`",
+    "SHO_SHO_T" : "{{SHO_SHO_T}}.`SHOP_ID`",
+    "WIT_TRA" : "{{WIT_TRA}}.`SHOP_ID`",
+    "SHO_S" : "{{SHO_S}}.`SHOP_ID`",
+    "TRA_PAY_AGG" : "{{TRA_PAY_AGG}}.`SHOP_ID`",
+    "TRA_ART" : "{{TRA_ART}}.`SHOP_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

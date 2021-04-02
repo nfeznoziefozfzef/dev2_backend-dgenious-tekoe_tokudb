@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menü-Code",
+      "category" : "Menüs"
+    },
+    "EN" : {
+      "name" : "Menu code",
+      "category" : "Menus"
+    },
+    "FR" : {
+      "name" : "Code Menu",
+      "category" : "Menus"
+    }
+  },
+  "name" : "Code Menu",
+  "category" : "Menus",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{MEN}}.`CODE`",
+  "path" : "tcpos.MEN.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menü mit Promotion",
+      "category" : "Tickets - Menüs",
+      "comment" : "Wert vom TypWAHR/FALSCH, der angibt, ob eine Aktion auf diese Ticketzeile angewendet wurde."
+    },
+    "EN" : {
+      "name" : "Menu with promotion",
+      "category" : "Tickets - menus",
+      "comment" : "Value of type TRUE/FALSE indicating if a promotion was applied to this ticket line"
+    },
+    "FR" : {
+      "name" : "menu avec promotion",
+      "category" : "Tickets - menus",
+      "comment" : "Valeur de type vrai/faux qui indique si une promotion a été appliquée sur cette ligne"
+    }
+  },
+  "name" : "menu avec promotion",
+  "category" : "Tickets - menus",
+  "comment" : "Valeur de type vrai/faux qui indique si une promotion a été appliquée sur cette ligne",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | _SYS_",
+  "sql" : "case when coalesce({{TRA_MEN}}.`PROMOTION_DISCOUNT`, 0) = 0 then 0 else 1 end",
+  "path" : "tcpos.TRA_MEN.IS_PROMOTION",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

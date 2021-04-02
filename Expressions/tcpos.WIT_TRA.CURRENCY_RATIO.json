@@ -1,0 +1,24 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Umwandlungsrate"
+    },
+    "EN" : {
+      "name" : "Conversion rate",
+      "category" : "Withdrawals"
+    },
+    "FR" : {
+      "name" : "Taux de conversion",
+      "category" : "Retraits"
+    }
+  },
+  "name" : "Taux de conversion",
+  "category" : "Retraits",
+  "requires" : "graph.tcpos;auth.scheme.WIT_TRA | _SYS_",
+  "sql" : "{{WIT_TRA}}.`CURRENCY_RATIO`",
+  "path" : "tcpos.WIT_TRA.CURRENCY_RATIO",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

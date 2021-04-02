@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Verkauf Schecks",
+      "category" : "Kassenladenzählung",
+      "comment" : "Betrag der Verkäufe, die mit Schecks bezahlt wurden"
+    },
+    "EN" : {
+      "name" : "Sales in cheques",
+      "category" : "Drawer Counts",
+      "comment" : "Amount of sales paid in cheques"
+    },
+    "FR" : {
+      "name" : "Montant des ventes en chèques",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Montant des ventes en chèques"
+    }
+  },
+  "name" : "Montant des ventes en chèques",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Montant des ventes en chèques",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`SOLD_CHEQUES_AMOUNT`",
+  "path" : "tcpos.DRA.SOLD_CHEQUES_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

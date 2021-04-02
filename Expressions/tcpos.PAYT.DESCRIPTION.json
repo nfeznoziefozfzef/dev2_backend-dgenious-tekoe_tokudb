@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Zahlungsart",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "Payment type",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "Type de paiement",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "Type de paiement",
+  "category" : "Paiements",
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{PAYT}}.`DESCRIPTION`",
+  "path" : "tcpos.PAYT.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

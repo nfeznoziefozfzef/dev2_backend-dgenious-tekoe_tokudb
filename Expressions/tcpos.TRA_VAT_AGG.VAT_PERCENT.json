@@ -1,0 +1,33 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Mehrwertsteuersatz",
+      "category" : "MwSt.",
+      "comment" : "Tatsächlich angewandter Mehrwertsteuersatz"
+    },
+    "EN" : {
+      "name" : "VAT rate",
+      "category" : "VAT",
+      "comment" : "VAT rate effectively applied"
+    },
+    "FR" : {
+      "name" : "Taux TVA appliqué",
+      "category" : "TVA",
+      "comment" : "Taux de TVA effectivement appliqué"
+    }
+  },
+  "name" : "Taux TVA appliqué",
+  "category" : "TVA",
+  "comment" : "Taux de TVA effectivement appliqué",
+  "properties" : {
+    "format" : "0.00%",
+    "format_type" : "percent"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | _SYS_",
+  "sql" : "{{TRA_VAT_AGG}}.`VAT_PERCENT`",
+  "path" : "tcpos.TRA_VAT_AGG.VAT_PERCENT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

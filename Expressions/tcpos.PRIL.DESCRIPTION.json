@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Preisniveau",
+      "category" : "Ticket - Zeilen"
+    },
+    "EN" : {
+      "name" : "Price level",
+      "category" : "Ticket lines"
+    },
+    "FR" : {
+      "name" : "Niveau de prix",
+      "category" : "Tickets - lignes"
+    }
+  },
+  "name" : "Niveau de prix",
+  "category" : "Tickets - lignes",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{PRIL}}.`DESCRIPTION`",
+  "path" : "tcpos.PRIL.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

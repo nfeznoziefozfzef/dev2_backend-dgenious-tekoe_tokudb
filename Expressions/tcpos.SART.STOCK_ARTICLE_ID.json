@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Bestandsposten",
+      "category" : "Bestandsposten"
+    },
+    "EN" : {
+      "name" : "UID inventory item",
+      "category" : "Inventory items"
+    },
+    "FR" : {
+      "name" : "UID article du stock",
+      "category" : "Articles du stock"
+    }
+  },
+  "name" : "UID article du stock",
+  "category" : "Articles du stock",
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SART}}.`STOCK_ARTICLE_ID`",
+  "path" : "tcpos.SART.STOCK_ARTICLE_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "HIST_STO" : "{{HIST_STO}}.`STOCK_ARTICLE_ID`",
+    "SWA_ART" : "{{SWA_ART}}.`STOCK_ARTICLE_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

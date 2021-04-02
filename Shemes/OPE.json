@@ -1,0 +1,20 @@
+{
+  "requires" : [ "scheme.OPE", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.OPE" ],
+  "name" : "Opérateurs",
+  "translations" : {
+    "DE" : {
+      "name" : "Benutzer"
+    },
+    "EN" : {
+      "name" : "Operators"
+    },
+    "FR" : {
+      "name" : "Opérateurs"
+    }
+  },
+  "graph" : "tcpos",
+  "scheme" : "OPE",
+  "entry_table" : "OPE",
+  "company" : "tekoe_tokudb"
+}

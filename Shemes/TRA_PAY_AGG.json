@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_PAY_AGG" ],
+  "grants" : [ "auth.scheme.TRA_PAY_AGG" ],
+  "name" : "Statistiques - paiements par jour par établissement",
+  "comment" : "Ce schéma permet de voir les totaux par type de paiement par établissement et par jour",
+  "translations" : {
+    "DE" : {
+      "name" : "Zahlungsstatistik",
+      "comment" : "Diese Schema zeigt die Gesamtbeträge pro Zahlungstyp, Shop und Tag"
+    },
+    "EN" : {
+      "name" : "Statistics - payments",
+      "comment" : "Shows the amounts for each payment type per shop and per day"
+    },
+    "FR" : {
+      "name" : "Statistiques - paiements par jour par établissement",
+      "comment" : "Ce schéma permet de voir les totaux par type de paiement par établissement et par jour"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_PAY_AGG",
+  "entry_table" : "TRA_PAY_AGG",
+  "company" : "tekoe_tokudb"
+}

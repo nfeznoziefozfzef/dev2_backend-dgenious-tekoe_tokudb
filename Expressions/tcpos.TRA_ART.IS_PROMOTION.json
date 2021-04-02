@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel mit Angebot",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob ein spezielles Angebot auf dieser Linie angewendet wurde"
+    },
+    "EN" : {
+      "name" : "Article with promotion",
+      "category" : "Ticket lines",
+      "comment" : "Value of type TRUE/FALSE indicating if a promotion was applied to this ticket line"
+    },
+    "FR" : {
+      "name" : "Article avec promotion",
+      "category" : "Tickets - lignes",
+      "comment" : "Valeur de type vrai/faux qui indique si une promotion a été appliquée sur cette ligne"
+    }
+  },
+  "name" : "Article avec promotion",
+  "category" : "Tickets - lignes",
+  "comment" : "Valeur de type vrai/faux qui indique si une promotion a été appliquée sur cette ligne",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "IF(coalesce({{TRA_ART}}.`PROMOTION_DISCOUNT` ,0)=0,0,1)",
+  "path" : "tcpos.TRA_ART.IS_PROMOTION",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

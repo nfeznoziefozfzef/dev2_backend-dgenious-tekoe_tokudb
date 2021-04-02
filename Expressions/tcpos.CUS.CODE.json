@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kundencode",
+      "category" : "Kunden",
+      "comment" : "Code der dem Kunden zugeordnet wird, typischerweise ein EAN-code"
+    },
+    "EN" : {
+      "name" : "Customer code",
+      "category" : "Customers",
+      "comment" : "Code assigned to customer, typically and EAN code"
+    },
+    "FR" : {
+      "name" : "Code client",
+      "category" : "Clients",
+      "comment" : "Code assigné au client, typiquement un code EAN"
+    }
+  },
+  "name" : "Code client",
+  "category" : "Clients",
+  "comment" : "Code assigné au client, typiquement un code EAN",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`CODE`",
+  "path" : "tcpos.CUS.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe A",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group A",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe A",
+      "category" : "Articles"
+    }
+  },
+  "name" : "Groupe A",
+  "category" : "Articles",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{GRA}}.`DESCRIPTION`",
+  "path" : "tcpos.GRA.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Anrede",
+      "category" : "Kunden",
+      "comment" : "Anrede des Kunden (Frau, Herr, …)"
+    },
+    "EN" : {
+      "name" : "Title",
+      "category" : "Customers",
+      "comment" : "Title of the customer (Mrs, Mr, …)"
+    },
+    "FR" : {
+      "name" : "Titre client",
+      "category" : "Clients",
+      "comment" : "Titre du client (Monsieur, Madame, ...)"
+    }
+  },
+  "name" : "Titre client",
+  "category" : "Clients",
+  "comment" : "Titre du client (Monsieur, Madame, ...)",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`TITLE`",
+  "path" : "tcpos.CUS.TITLE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

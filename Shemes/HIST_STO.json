@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.HIST_STO" ],
+  "grants" : [ "auth.scheme.HIST_STO" ],
+  "name" : "Stock historique",
+  "comment" : "Ce schéma donne accès à l'historique du stock dans les différents entrepôts",
+  "translations" : {
+    "DE" : {
+      "name" : "Historischer Bestand",
+      "comment" : "Diese Schema zeigt den Bestand im Verlauf der Zeit in den verschiedenen Lagern an"
+    },
+    "EN" : {
+      "name" : "Historical stocks",
+      "comment" : "Lists the stocks in all warehouses, as they were recorded in the past"
+    },
+    "FR" : {
+      "name" : "Stocks historiques",
+      "comment" : "Ce schéma donne accès à l'historique du stock dans les différents entrepôts"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "HIST_STO",
+  "entry_table" : "HIST_STO",
+  "company" : "tekoe_tokudb"
+}

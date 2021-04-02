@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Lagerhaus",
+      "category" : "Bestand"
+    },
+    "EN" : {
+      "name" : "Warehouse",
+      "category" : "Inventory"
+    },
+    "FR" : {
+      "name" : "Entrepôt",
+      "category" : "Stocks"
+    }
+  },
+  "name" : "Entrepôt",
+  "category" : "Stocks",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | auth.scheme.SWA | _SYS_",
+  "sql" : "{{SWA}}.`DESCRIPTION`",
+  "path" : "tcpos.SWA.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

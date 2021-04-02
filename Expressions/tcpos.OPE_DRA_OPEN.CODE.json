@@ -1,0 +1,26 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Öffnender Benutzer Code",
+      "category" : "Kassenladenzählung",
+      "comment" : "Code des Benutzers, der verantwortlich für die Zählung der Lade bei der Öffnung der Kasse ist"
+    },
+    "EN" : {
+      "name" : "Opening operator code",
+      "category" : "Drawer Counts"
+    },
+    "FR" : {
+      "name" : "Code opérateur ouverture",
+      "category" : "Comptage tiroirs"
+    }
+  },
+  "name" : "Code opérateur ouverture",
+  "category" : "Comptage tiroirs",
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{OPE_DRA_OPEN}}.`CODE`",
+  "path" : "tcpos.OPE_DRA_OPEN.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

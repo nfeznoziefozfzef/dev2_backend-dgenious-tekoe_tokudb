@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.SHO" ],
+  "grants" : [ "auth.scheme.SHO" ],
+  "name" : "Etablissements",
+  "comment" : "Ce schéma donne la liste des établissement",
+  "translations" : {
+    "DE" : {
+      "name" : "Shops",
+      "comment" : "Liste aller Shops"
+    },
+    "EN" : {
+      "name" : "Shops",
+      "comment" : "Lists all shops"
+    },
+    "FR" : {
+      "name" : "Etablissements",
+      "comment" : "Ce schéma donne la liste des établissement"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "SHO",
+  "entry_table" : "SHO",
+  "company" : "tekoe_tokudb"
+}

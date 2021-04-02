@@ -1,0 +1,44 @@
+{
+  "name" : "Date",
+  "category" : "Date et heure",
+  "comment" : "Date de la transaction",
+  "mappings" : {
+    "TRA_VAT_AGG" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+    "TRA_CAR" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA_TAB" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA_MEN" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "DRA" : "tcpos.DRA.DATE",
+    "TRA_PAY" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA_POI" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "HIST_STO" : "tcpos.HIST_STO.STOCK_DATE",
+    "TRA_ART_DIS" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "TRA_ART_PRO" : "tcpos.TRA.BOOKKEEPING_DATE",
+    "SHO_S" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+    "TRA_PAY_AGG" : "tcpos.SHO_S.BOOKKEEPING_DATE",
+    "TRA_ART" : "tcpos.TRA.BOOKKEEPING_DATE"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Datum",
+      "category" : "Datum und Zeit",
+      "comment" : "Datum der Transaktion"
+    },
+    "EN" : {
+      "name" : "Date",
+      "category" : "Date and time",
+      "comment" : "Date of the transaction"
+    },
+    "FR" : {
+      "name" : "Date",
+      "category" : "Date et heure",
+      "comment" : "Date de la transaction"
+    }
+  },
+  "path" : "tcpos.bookkeeping_date",
+  "data_type" : "DATE",
+  "auto_mappings" : [ "tcpos.SHO_S.BOOKKEEPING_DATE", "tcpos.TRA.BOOKKEEPING_DATE", "tcpos.DRA.DATE", "tcpos.HIST_STO.STOCK_DATE" ],
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Effektiver Betrag der Linie",
+      "category" : "Tickets - Menüs",
+      "comment" : "Effektiver Preis, zu dem Menüs dieser Linie verkauft wurden, unter Berücksichtigung von Rabatten und Werbeaktionen. Achtung: Wenn diese Ticketzeile eine Menümenge größer als 1 hat, ist der Betrag der Gesamtbetrag für die gesamte Menge, nicht der Einheitspreis."
+    },
+    "EN" : {
+      "name" : "Effective amount of line",
+      "category" : "Tickets - menus",
+      "comment" : "Effective price at which menus of this line have been sold, taking into account gratuities, discounts and promotions. Watch out: if this ticket line has an menu quantity greater than 1, the amount is the total amount for the entire quantity, not the unit price"
+    },
+    "FR" : {
+      "name" : "Montant effectif ligne",
+      "category" : "Tickets - menus",
+      "comment" : "Prix auquel les menus de cette ligne ont effectivement été vendus, en tenant compte des gratuités, rabais et promotions. Attention, si cette ligne porte sur plusieurs menus le montant affiché est le prix total pour tous les menus pas le prix à l'unité"
+    }
+  },
+  "name" : "Montant effectif ligne",
+  "category" : "Tickets - menus",
+  "comment" : "Prix auquel les menus de cette ligne ont effectivement été vendus, en tenant compte des gratuités, rabais et promotions. Attention, si cette ligne porte sur plusieurs menus le montant affiché est le prix total pour tous les menus pas le prix à l'unité",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | _SYS_",
+  "sql" : "{{TRA_MEN}}.`AMOUNT`",
+  "path" : "tcpos.TRA_MEN.AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

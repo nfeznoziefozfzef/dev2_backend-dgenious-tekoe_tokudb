@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültige Kampagne",
+      "category" : "Punkte",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob die Kampagne gültig ist"
+    },
+    "EN" : {
+      "name" : "Valid campaign",
+      "category" : "Points",
+      "comment" : "Value of type TRUE/FALSE indicating if the campaign is valid"
+    },
+    "FR" : {
+      "name" : "Campagne valide",
+      "category" : "Points",
+      "comment" : "Indicateur de type vrai/faux qui indique si cette campagne de points est valide en ce moment"
+    }
+  },
+  "name" : "Campagne valide",
+  "category" : "Points",
+  "comment" : "Indicateur de type vrai/faux qui indique si cette campagne de points est valide en ce moment",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | _SYS_",
+  "sql" : "{{POI}}.`IS_VALID`",
+  "path" : "tcpos.POI.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

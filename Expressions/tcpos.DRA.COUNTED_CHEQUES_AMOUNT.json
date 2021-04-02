@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gezählte Schecks",
+      "category" : "Kassenladenzählung",
+      "comment" : "Betrag der gezählten Schecks"
+    },
+    "EN" : {
+      "name" : "Counted cheques",
+      "category" : "Drawer Counts",
+      "comment" : "Counted cheques amount"
+    },
+    "FR" : {
+      "name" : "Décompte des Paiements en Chèques",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Décompte des paiements en chèques"
+    }
+  },
+  "name" : "Décompte des Paiements en Chèques",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Décompte des paiements en chèques",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`COUNTED_CHEQUES_AMOUNT`",
+  "path" : "tcpos.DRA.COUNTED_CHEQUES_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

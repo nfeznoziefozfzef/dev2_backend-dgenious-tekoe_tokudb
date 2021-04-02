@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Region",
+      "category" : "Shops"
+    },
+    "EN" : {
+      "name" : "UID Region",
+      "category" : "Shops"
+    },
+    "FR" : {
+      "name" : "UID région",
+      "category" : "Etablissements"
+    }
+  },
+  "name" : "UID région",
+  "category" : "Etablissements",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA_VAT_AGG | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.SHO_SHO_T | auth.scheme.DRA | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.WIT_TRA | auth.scheme.TRA_ART_PRO | auth.scheme.SHO | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{REG}}.`REGION_ID`",
+  "path" : "tcpos.REG.REGION_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

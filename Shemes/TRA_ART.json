@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_ART" ],
+  "grants" : [ "auth.scheme.TRA_ART" ],
+  "name" : "Tickets - lignes",
+  "comment" : "Ce schéma part des articles vendus, et donne accès aux tickets, aux clients et aux établissements",
+  "translations" : {
+    "DE" : {
+      "name" : "Ticket-Zeilen",
+      "comment" : "Diese Schema zeigt alle verkauften Artikel und ermöglicht den Übergang zu den Tickets, Kunden und Shops."
+    },
+    "EN" : {
+      "name" : "Ticket lines",
+      "comment" : "Use this extraction to list all items of all tickets. Form ticket lines one can access tickets and customers"
+    },
+    "FR" : {
+      "name" : "Tickets - lignes",
+      "comment" : "Ce schéma part des articles vendus, et donne accès aux tickets, aux clients et aux établissements"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_ART",
+  "entry_table" : "TRA_ART",
+  "company" : "tekoe_tokudb"
+}

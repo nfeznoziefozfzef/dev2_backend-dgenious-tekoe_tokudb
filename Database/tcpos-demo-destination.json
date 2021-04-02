@@ -1,0 +1,2667 @@
+{
+  "name" : "tcpos-demo-destination",
+  "comment" : "tekoe_tokudb destination database",
+  "tables" : [ {
+    "name" : "ARTICLE_CAUSALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "CAUSAL_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "CAUSAL_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "GROUP_A_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_B_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_C_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_D_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "ARTICLE_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "SOLD_BY_WEIGHT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(7,2) UNSIGNED"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(7,2) UNSIGNED"
+    }, {
+      "name" : "IS_TURNOVER",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "ARTICLE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_A_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_B_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_C_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_D_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "COMPANIES",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "COMPANY_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "COMPANY_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "CREDIT_CARDS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "CREDIT_CARD_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "CUSTOMERS",
+    "fields" : [ {
+      "name" : "ANNIVERSARY",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    }, {
+      "name" : "CARD_TYPE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "CATEGORY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(11)"
+    }, {
+      "name" : "CITY",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "CODE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    }, {
+      "name" : "COMPANY_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "COST_CENTER_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "COUNTRY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(3)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "EMAIL",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(100)"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "LANGUAGE_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "NATION",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    }, {
+      "name" : "OTHER_INFOS",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(255)"
+    }, {
+      "name" : "PHONE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "PREPAY_BALANCE_CASH",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(7,2) SIGNED"
+    }, {
+      "name" : "STREET",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(50)"
+    }, {
+      "name" : "TITLE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(10)"
+    }, {
+      "name" : "ZIP_CODE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(10)"
+    }, {
+      "name" : "LAST_TRANSACTION",
+      "nullable" : true,
+      "type" : "DATE"
+    } ],
+    "pks" : {
+      "fields" : [ "CUSTOMER_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CARD_NUM" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "DISCOUNTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DISCOUNT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "DISCOUNT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "DRAWER_COUNTS",
+    "fields" : [ {
+      "name" : "CLOSING_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "CLOSING_TIME",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TIME"
+    }, {
+      "name" : "CLOSING_TYPE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "COUNTED_CASH_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "COUNTED_CHEQUES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "COUNTED_CREDITCARDS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "COUNTED_CURRENCIES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "COUNTED_VOUCHERS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "DEPOSITS_TOTAL",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DIFFERENCE_CASH_AMOUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DIFFERENCE_CHEQUES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DIFFERENCE_CREDITCARDS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DIFFERENCE_CURRENCIES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DIFFERENCE_VOUCHERS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DRAWER_COUNT_AMOUNT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "DRAWER_COUNT_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "INITIAL_CASH_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "INITIAL_CURRENCIES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "INITIAL_OPERATOR_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "OPENING_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "PREPAY_CASH_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "PREPAY_CHEQUES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "PREPAY_CREDITCARDS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "PREPAY_VOUCHERS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "RETRIES",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "INTEGER",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "SOLD_CASH_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_CHEQUES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_CREDITCARDS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_CURRENCIES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_CUSTOMERCARDS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_DEBITORS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_SUBSIDIES_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "SOLD_VOUCHERS_AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "TILL_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TIME",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TIME"
+    }, {
+      "name" : "WITHDRAWALS_CHEQUES",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "WITHDRAWALS_CREDITCARDS",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "WITHDRAWALS_CURRENCIES",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "WITHDRAWALS_DEBITORS",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "WITHDRAWALS_TOTAL",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "WITHDRAWALS_VOUCHERS",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "DRAWER_COUNT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "DATE", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "GROUP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "GROUP_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "HIST_STOCKS",
+    "fields" : [ {
+      "name" : "AVERAGE_COST",
+      "nullable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,3) SIGNED"
+    }, {
+      "name" : "PRICE",
+      "nullable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,3) SIGNED"
+    }, {
+      "name" : "QUANTITY",
+      "nullable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(10,3) SIGNED"
+    }, {
+      "name" : "STOCK_DATE",
+      "nullable" : false,
+      "type" : "DATE"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "nullable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "nullable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_DATE", "STOCK_ARTICLE_ID", "STOCK_WAREHOUSE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "STOCK_ARTICLE_ID", "STOCK_DATE", "STOCK_WAREHOUSE_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "STOCK_WAREHOUSE_ID", "STOCK_ARTICLE_ID", "STOCK_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "STOCK_WAREHOUSE_ID", "STOCK_DATE", "STOCK_ARTICLE_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "LANGUAGES",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(2)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "LANGUAGE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "LANGUAGE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "LOCATIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "LOCATION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "REGION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "LOCATION_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "REGION_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "MENUS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "GROUP_A_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_B_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_C_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "MENU_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "GLOBAL_PRICE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(7,2) UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "MENU_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_A_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_B_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_C_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "OPERATORS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "ENABLED",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "OPERATOR_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "PAYMENTS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "PAYMENT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "PAYMENT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "PAYMENT_TYPE", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "PAYMENT_TYPES",
+    "fields" : [ {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "PAYMENT_TYPE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "PAYMENT_TYPE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "POINT_CAMPAIGNS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "POINT_CAMPAIGN_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "type" : "BOOLEAN"
+    } ],
+    "pks" : {
+      "fields" : [ "POINT_CAMPAIGN_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "PRICELEVELS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "PRICELEVEL_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "PROMOTIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "PROMOTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "VALID_FROM",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DATE"
+    }, {
+      "name" : "VALID_TO",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DATE"
+    } ],
+    "pks" : {
+      "fields" : [ "PROMOTION_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "REGIONS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "REGION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "REGION_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "SHOPS",
+    "fields" : [ {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "LOCATION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "SHOP_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "SHOPS_SHOP_TYPES",
+    "fields" : [ {
+      "name" : "SHOP_SHOP_TYPE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "SHOP_SHOP_TYPE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "SHOP_ID", "SHOP_TYPE_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_TYPE_ID", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "SHOP_STATS",
+    "fields" : [ {
+      "name" : "ARTICLE_COUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED",
+      "default" : 0
+    }, {
+      "name" : "AVG_GUEST_TURNOVER",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "AVG_TABLE_SIZE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(5,2) SIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DATE"
+    }, {
+      "name" : "GUEST_COUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "INTEGER",
+      "sql_type" : "SMALLINT UNSIGNED",
+      "default" : 0
+    }, {
+      "name" : "MENU_COUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "INTEGER",
+      "sql_type" : "SMALLINT",
+      "default" : 0
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TABLE_COUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "INTEGER",
+      "sql_type" : "SMALLINT SIGNED",
+      "default" : 0
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED",
+      "default" : 0
+    }, {
+      "name" : "TRANSACTION_COUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "INTEGER",
+      "sql_type" : "SMALLINT",
+      "default" : 0
+    }, {
+      "name" : "TURNOVER_AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED",
+      "default" : 0
+    } ],
+    "pks" : {
+      "fields" : [ "BOOKKEEPING_DATE", "SHOP_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "SHOP_TYPES",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "SHOP_TYPE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "SHOP_TYPE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "STOCK_ARTICLES",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "GROUP_A_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_B_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_C_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "GROUP_D_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "MEASURE_UNIT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "PRICE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,3) SIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_ARTICLE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_A_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_B_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_C_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "GROUP_D_ID", "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "STOCK_GROUPS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "STOCK_GROUP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_GROUP_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "STOCK_MEASURE_UNITS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "STOCK_MEASURE_UNIT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_MEASURE_UNIT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "STOCK_WAREHOUSE_ARTICLES",
+    "fields" : [ {
+      "name" : "AVERAGE_COST",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(10,3) SIGNED"
+    }, {
+      "name" : "DELIVERY_DATE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DATE"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ARTICLE_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "IS_VALID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "ORDERED_QUANTITY",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(10,3) SIGNED"
+    }, {
+      "name" : "REALTIME_STOCK",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(10,3) SIGNED"
+    }, {
+      "name" : "STOCK_ARTICLE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_ARTICLE_ID", "STOCK_WAREHOUSE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "STOCK_WAREHOUSE_ID", "STOCK_ARTICLE_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "STOCK_WAREHOUSES",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "STOCK_WAREHOUSE_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "STOCK_WAREHOUSE_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TILLS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "ENABLED",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TILL_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "TILL_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANSACTIONS",
+    "fields" : [ {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    }, {
+      "name" : "GUESTS_NUM",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "INTEGER",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TILL_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "TRANSACTION_CAUSAL_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TRANS_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_NUM",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    }, {
+      "name" : "ARTICLE_COUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED",
+      "default" : 0
+    }, {
+      "name" : "CUSTOMER_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "TOTAL_REBATE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED",
+      "default" : 0
+    }, {
+      "name" : "TURNOVER_AMOUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED",
+      "default" : 0
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "TRANSACTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "BOOKKEEPING_DATE", "SHOP_ID", "TRANSACTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "TRANSACTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CUSTOMER_ID", "BOOKKEEPING_DATE", "TRANSACTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CARD_NUM", "BOOKKEEPING_DATE", "TRANSACTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_ARTICLES",
+    "fields" : [ {
+      "name" : "ARTICLE_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "CAUSAL_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "DISCOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "MENU_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "OWNER_HASH_CODE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "PRICE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "REFERENCE_PRICE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "SUBSIDIZED",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "INTEGER",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "SUBSIDIZED_AMOUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(7,2) SIGNED"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "VAT_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "VAT_PERCENT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(5,4) SIGNED"
+    }, {
+      "name" : "WEIGHT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,3) SIGNED"
+    }, {
+      "name" : "AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "REBATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "GUESTS_NUM",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "INTEGER",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "QTY",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED",
+      "default" : 0
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TILL_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TOTAL_AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "TRANSACTION_CAUSAL_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TRANS_NUM",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "TRANSACTION_ID", "HASH_CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "ARTICLE_ID", "BOOKKEEPING_DATE", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "ARTICLE_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CUSTOMER_ID", "BOOKKEEPING_DATE", "ARTICLE_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_ARTICLE_DISCOUNTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "ARTICLE_HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "DISCOUNT_HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "DISCOUNT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "DISCOUNTED_QUANTITY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "MANUAL_INPUT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "PROMOTION_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SINGLE_ARTICLE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "ARTICLE_HASH_CODE", "DISCOUNT_HASH_CODE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "DISCOUNT_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_ARTICLE_PROMOTIONS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "ARTICLE_HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "FREE_QUANTITY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "PROMOTED_QUANTITY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(8,2) SIGNED"
+    }, {
+      "name" : "PROMOTION_HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "PROMOTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SINGLE_ARTICLE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "ARTICLE_HASH_CODE", "PROMOTION_HASH_CODE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "PROMOTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_CARDS",
+    "fields" : [ {
+      "name" : "BONUS_BALANCE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "CASH_AMOUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "CASH_BALANCE",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "CASH_LOAD",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "CARD_TYPE",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "CUST_COST_CENTER_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "nullable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "TRANSACTION_ID", "HASH_CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "BOOKKEEPING_DATE", "SHOP_ID", "CUSTOMER_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "CUSTOMER_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CUSTOMER_ID", "BOOKKEEPING_DATE", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_MENUS",
+    "fields" : [ {
+      "name" : "CAUSAL_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "DISCOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "MENU_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "PRICELEVEL_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "PROMOTION_DISCOUNT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "QTY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "AMOUNT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "REBATE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "nullable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "TRANSACTION_ID", "HASH_CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "MENU_ID", "BOOKKEEPING_DATE", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "MENU_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CUSTOMER_ID", "BOOKKEEPING_DATE", "MENU_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_PAYMENTS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "CREDIT_CARD_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "HASH_CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "IS_PREPAYMENT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "PAYMENT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "VOUCHER_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "CUSTOMER_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TILL_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TRANS_NUM",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "HASH_CODE" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "TRANSACTION_ID", "HASH_CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "BOOKKEEPING_DATE", "PAYMENT_ID", "TRANSACTION_ID", "HASH_CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_PAYMENTS_AGGR",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED",
+      "default" : 0
+    }, {
+      "name" : "PAYMENT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "IS_PREPAYMENT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "BOOLEAN"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "DATE"
+    } ],
+    "pks" : {
+      "fields" : [ "BOOKKEEPING_DATE", "SHOP_ID", "IS_PREPAYMENT", "PAYMENT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "IS_PREPAYMENT", "PAYMENT_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "PAYMENT_ID", "BOOKKEEPING_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "PAYMENT_ID", "SHOP_ID", "BOOKKEEPING_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_POINT_CAMPAIGNS",
+    "fields" : [ {
+      "name" : "POINT_CAMPAIGN_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "POINTS_BALANCE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "INTEGER",
+      "sql_type" : "INT SIGNED"
+    }, {
+      "name" : "POINTS_GAINED",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "INTEGER",
+      "sql_type" : "INT SIGNED"
+    }, {
+      "name" : "POINTS_SPENT",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "INTEGER",
+      "sql_type" : "INT SIGNED"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "CARD_NUM",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID", "POINT_CAMPAIGN_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CARD_NUM", "POINT_CAMPAIGN_ID", "BOOKKEEPING_DATE", "TRANSACTION_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ],
+    "where" : "TRANS_DELETED=0"
+  }, {
+    "name" : "TRANS_POINT_LAST",
+    "fields" : [ {
+      "name" : "CARD_NUM",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    }, {
+      "name" : "POINT_CAMPAIGN_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "POINTS_BALANCE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "INTEGER",
+      "sql_type" : "INT SIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    } ],
+    "pks" : {
+      "fields" : [ "CARD_NUM", "POINT_CAMPAIGN_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "POINT_CAMPAIGN_ID", "CARD_NUM" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "POINT_CAMPAIGN_ID", "POINTS_BALANCE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "POINTS_BALANCE", "POINT_CAMPAIGN_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_TABLES",
+    "fields" : [ {
+      "name" : "OPENING_TIME",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TIME"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "TABLE_NUM",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(10)"
+    }, {
+      "name" : "TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "INT UNSIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "TRANS_TIME",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TIME"
+    } ],
+    "pks" : {
+      "fields" : [ "TRANSACTION_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "TRANS_VATS_AGGR",
+    "fields" : [ {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "GROSS_AMOUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "VAT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "VAT_PERCENT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(5,4) SIGNED"
+    }, {
+      "name" : "VAT_AMOUNT",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "BOOKKEEPING_DATE", "SHOP_ID", "VAT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "VAT_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "VAT_ID", "BOOKKEEPING_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "VAT_ID", "SHOP_ID", "BOOKKEEPING_DATE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "VATS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(20)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "VAT_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "VAT_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "WITHDRAWAL_TRANSACTIONS",
+    "fields" : [ {
+      "name" : "AMOUNT",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(9,2) SIGNED"
+    }, {
+      "name" : "BOOKKEEPING_DATE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "DATE"
+    }, {
+      "name" : "COMMENT_TEXT",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(40)"
+    }, {
+      "name" : "CURRENCY",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(10)"
+    }, {
+      "name" : "CURRENCY_RATIO",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "DECIMAL",
+      "sql_type" : "NUMERIC(5,5)"
+    }, {
+      "name" : "WITHDRAWAL_TRANSACTION_ID",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "OPERATOR_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    }, {
+      "name" : "SHOP_ID",
+      "nullable" : true,
+      "indexable" : true,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "TILL_ID",
+      "nullable" : true,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "WITHDRAWAL_TYPE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "WITHDRAWAL_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "WITHDRAWAL_NUM",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "SMALLINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "WITHDRAWAL_TRANSACTION_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "BOOKKEEPING_DATE", "TILL_ID", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "BOOKKEEPING_DATE", "SHOP_ID", "TILL_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "SHOP_ID", "BOOKKEEPING_DATE", "TILL_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "TILL_ID", "BOOKKEEPING_DATE", "SHOP_ID" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  }, {
+    "name" : "WITHDRAWALS",
+    "fields" : [ {
+      "name" : "CODE",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(8)"
+    }, {
+      "name" : "DESCRIPTION",
+      "nullable" : false,
+      "indexable" : true,
+      "type" : "TEXT",
+      "sql_type" : "VARCHAR(30)"
+    }, {
+      "name" : "WITHDRAWAL_ID",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    }, {
+      "name" : "WITHDRAWAL_TYPE",
+      "nullable" : false,
+      "indexable" : false,
+      "type" : "ID",
+      "sql_type" : "TINYINT UNSIGNED"
+    } ],
+    "pks" : {
+      "fields" : [ "WITHDRAWAL_ID" ]
+    },
+    "indexes" : [ {
+      "fields" : [ "DESCRIPTION" ],
+      "options" : "`CLUSTERING`=YES"
+    }, {
+      "fields" : [ "CODE" ],
+      "options" : "`CLUSTERING`=YES"
+    } ]
+  } ],
+  "company" : "tekoe_tokudb",
+  "default_table_options" : "engine=tokuDB"
+}

@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.TRA_PAY", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.TRA_PAY" ],
+  "name" : "Tickets - paiements",
+  "comment" : "Ce schéma part des paiements pour aller vers les tickets. Il ne donne pas accès aux articles",
+  "translations" : {
+    "DE" : {
+      "name" : "Zahlungen der Tickets",
+      "comment" : "Dieses Schema zeigt die Zahlungen der Tickets und ermöglicht den Übergang zu den Tickets und Kunden"
+    },
+    "EN" : {
+      "name" : "Ticket payments",
+      "comment" : "Lists payments for all tickets, and links to tickets and customers"
+    },
+    "FR" : {
+      "name" : "Tickets - paiements",
+      "comment" : "Ce schéma part des paiements pour aller vers les tickets. Il ne donne pas accès aux articles"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_PAY",
+  "entry_table" : "TRA_PAY",
+  "company" : "tekoe_tokudb"
+}

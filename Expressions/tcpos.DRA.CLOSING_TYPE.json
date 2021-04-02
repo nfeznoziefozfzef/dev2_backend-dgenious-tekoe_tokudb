@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Schichttyp",
+      "category" : "Kassenladenzählung",
+      "comment" : "Typ 0: Kein Tagesabschlussverfahren verfügbar. Typ 1: Pro Kasse. Alle Benutzer teilen den gleichen Umsatz. Das Feld Benutzer ID ist gleich null. Typ 2: Pro Kasse und Benutzer. Der Umsatz wird pro Benutzer und Kasse berechnet. Das Feld KassenID bestimmt die aktuelle Kasse und Benutzer ID den aktuellen Benutzer. Type 4: Gleicht dem Typ Pro Kasse mit Buchhaltungsdatum und den dazugehörenden Regeln."
+    },
+    "EN" : {
+      "name" : "Shift Type",
+      "category" : "Drawer Counts",
+      "comment" : "The closing type: 0 - The end of day procedure is not available. The bookkeeping date is changed using the end of day time defined at shop level. 1 - Session type by till: all operators share the same turnover. The field TillID is assigned to the current till and the field OperatorID is null. The DrawerUsed and BookkeepingDate fields are not used. 2 - Session type by till and operator: the turnover is calculated for each operator in the current till. The field TillID is the ID of the current till and the field OperatorID is the ID of the current operator. The DrawerUsed field contains the drawer number used by the operator when two drawers are present. The field BookkeepingDate is not used. 3 - Session type by operator: the turnover is calculated for each operator without any till dependancy. The field TillID is null and the field OperatorID is the ID of the current operator. The DrawerUsed and BookkeepingDate fields are not used. 4 - Works like the ByTill closing type with an extra bookkeeping date rules (only a shift per day) The bookkeeping date is saved in the BookkeepingDate field."
+    },
+    "FR" : {
+      "name" : "type de session",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Type de session: 0 - Procédure de fin de journée indisponible. 1 - type de session par caisse: tous les opérateurs partagent le même CA. Le champ  OperatorID est null. 2 - Session par caisse et opérateur: le CA est calculé pour chaque opérateur dans la caisse courante. Le champ TillID est l'identifiant de la caisse courante et le champ OperatorID est l'identifiant de l'opérateur courant. 3 - Session par opérateur: Le CA est calculé pour chaque opérateur sans référence à une caisse. 4 - Identitique aux sessions par caisse avec des régles sur la date de comptabilité"
+    }
+  },
+  "name" : "type de session",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Type de session: 0 - Procédure de fin de journée indisponible. 1 - type de session par caisse: tous les opérateurs partagent le même CA. Le champ  OperatorID est null. 2 - Session par caisse et opérateur: le CA est calculé pour chaque opérateur dans la caisse courante. Le champ TillID est l'identifiant de la caisse courante et le champ OperatorID est l'identifiant de l'opérateur courant. 3 - Session par opérateur: Le CA est calculé pour chaque opérateur sans référence à une caisse. 4 - Identitique aux sessions par caisse avec des régles sur la date de comptabilité",
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`CLOSING_TYPE`",
+  "path" : "tcpos.DRA.CLOSING_TYPE",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

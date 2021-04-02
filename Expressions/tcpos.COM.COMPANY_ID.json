@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Firma",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "UID Company",
+      "category" : "Customers"
+    },
+    "FR" : {
+      "name" : "UID entreprise",
+      "category" : "Clients"
+    }
+  },
+  "name" : "UID entreprise",
+  "category" : "Clients",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{COM}}.`COMPANY_ID`",
+  "path" : "tcpos.COM.COMPANY_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "CUS" : "{{CUS}}.`COMPANY_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

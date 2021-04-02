@@ -1,0 +1,24 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Währung"
+    },
+    "EN" : {
+      "name" : "Currency",
+      "category" : "Withdrawals"
+    },
+    "FR" : {
+      "name" : "Devise",
+      "category" : "Retraits"
+    }
+  },
+  "name" : "Devise",
+  "category" : "Retraits",
+  "requires" : "graph.tcpos;auth.scheme.WIT_TRA | _SYS_",
+  "sql" : "{{WIT_TRA}}.`CURRENCY`",
+  "path" : "tcpos.WIT_TRA.CURRENCY",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

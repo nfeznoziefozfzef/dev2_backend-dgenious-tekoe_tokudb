@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menge im Angebot",
+      "category" : "Angebot"
+    },
+    "EN" : {
+      "name" : "Promoted quantity",
+      "category" : "Promotions"
+    },
+    "FR" : {
+      "name" : "Quantité en promotion",
+      "category" : "Promotions"
+    }
+  },
+  "name" : "Quantité en promotion",
+  "category" : "Promotions",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_PRO | _SYS_",
+  "sql" : "{{TRA_ART_PRO}}.`PROMOTED_QUANTITY`",
+  "path" : "tcpos.TRA_ART_PRO.PROMOTED_QUANTITY",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

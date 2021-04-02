@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Benutzer",
+      "category" : "Benutzer"
+    },
+    "EN" : {
+      "name" : "UID closing operator",
+      "category" : "Drawer Counts"
+    },
+    "FR" : {
+      "name" : "UID opérateur clôture",
+      "category" : "Comptage tiroirs"
+    }
+  },
+  "name" : "UID opérateur clôture",
+  "category" : "Comptage tiroirs",
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{OPE_DRA_CLOSE}}.`OPERATOR_ID`",
+  "path" : "tcpos.OPE_DRA_CLOSE.OPERATOR_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "DRA" : "{{DRA}}.`OPERATOR_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

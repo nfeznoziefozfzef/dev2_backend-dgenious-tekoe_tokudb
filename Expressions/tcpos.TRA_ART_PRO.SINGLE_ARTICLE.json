@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel alleine",
+      "category" : "Angebot"
+    },
+    "EN" : {
+      "name" : "Single article",
+      "category" : "Promotions"
+    },
+    "FR" : {
+      "name" : "Article seul",
+      "category" : "Promotions"
+    }
+  },
+  "name" : "Article seul",
+  "category" : "Promotions",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_PRO | _SYS_",
+  "sql" : "{{TRA_ART_PRO}}.`SINGLE_ARTICLE`",
+  "path" : "tcpos.TRA_ART_PRO.SINGLE_ARTICLE",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

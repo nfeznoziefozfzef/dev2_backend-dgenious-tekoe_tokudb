@@ -1,0 +1,33 @@
+{
+  "name" : "Article",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.ART.DESCRIPTION",
+    "HIST_STO" : "tcpos.SART.DESCRIPTION",
+    "TRA_ART_DIS" : "tcpos.ART.DESCRIPTION",
+    "TRA_ART_PRO" : "tcpos.ART.DESCRIPTION",
+    "SWA_ART" : "tcpos.SART.DESCRIPTION",
+    "TRA_ART" : "tcpos.ART.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Article",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Article",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.ART",
+  "data_type" : "TEXT",
+  "auto_mappings" : [ "tcpos.ART.DESCRIPTION", "tcpos.SART.DESCRIPTION" ],
+  "default_mapping" : "ART",
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

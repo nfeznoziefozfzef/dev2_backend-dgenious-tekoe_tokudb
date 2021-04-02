@@ -1,0 +1,39 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Ticket",
+      "category" : "Tickets",
+      "comment" : "Ticket-id"
+    },
+    "EN" : {
+      "name" : "UID ticket",
+      "category" : "Tickets",
+      "comment" : "Unique ticket identifier"
+    },
+    "FR" : {
+      "name" : "UID ticket",
+      "category" : "Tickets",
+      "comment" : "Identifiant unique du ticket"
+    }
+  },
+  "name" : "UID ticket",
+  "category" : "Tickets",
+  "comment" : "Identifiant unique du ticket",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`TRANSACTION_ID`",
+  "path" : "tcpos.TRA.TRANSACTION_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_CAR" : "{{TRA_CAR}}.`TRANSACTION_ID`",
+    "TRA_TAB" : "{{TRA_TAB}}.`TRANSACTION_ID`",
+    "TRA_MEN" : "{{TRA_MEN}}.`TRANSACTION_ID`",
+    "TRA_PAY" : "{{TRA_PAY}}.`TRANSACTION_ID`",
+    "TRA_POI" : "{{TRA_POI}}.`TRANSACTION_ID`",
+    "TRA_ART_DIS" : "{{TRA_ART_DIS}}.`TRANSACTION_ID`",
+    "TRA_ART_PRO" : "{{TRA_ART_PRO}}.`TRANSACTION_ID`",
+    "TRA_ART" : "{{TRA_ART}}.`TRANSACTION_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

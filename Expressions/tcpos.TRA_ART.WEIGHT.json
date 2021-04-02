@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kilos",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Menge in Kilo"
+    },
+    "EN" : {
+      "name" : "Kilos",
+      "category" : "Ticket lines",
+      "comment" : "Quantity in kilos"
+    },
+    "FR" : {
+      "name" : "Kilos",
+      "category" : "Tickets - lignes",
+      "comment" : "Quantité en kilos"
+    }
+  },
+  "name" : "Kilos",
+  "category" : "Tickets - lignes",
+  "comment" : "Quantité en kilos",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`WEIGHT`",
+  "path" : "tcpos.TRA_ART.WEIGHT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

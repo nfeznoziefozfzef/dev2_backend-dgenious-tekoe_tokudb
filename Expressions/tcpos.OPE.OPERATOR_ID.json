@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Benutzer",
+      "category" : "Benutzer"
+    },
+    "EN" : {
+      "name" : "UID operator",
+      "category" : "Operators"
+    },
+    "FR" : {
+      "name" : "UID opérateur",
+      "category" : "Opérateurs"
+    }
+  },
+  "name" : "UID opérateur",
+  "category" : "Opérateurs",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.OPE | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.WIT_TRA | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{OPE}}.`OPERATOR_ID`",
+  "path" : "tcpos.OPE.OPERATOR_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_TAB" : "{{TRA_TAB}}.`OPERATOR_ID`",
+    "TRA" : "{{TRA}}.`OPERATOR_ID`",
+    "TRA_PAY" : "{{TRA_PAY}}.`OPERATOR_ID`",
+    "WIT_TRA" : "{{WIT_TRA}}.`OPERATOR_ID`",
+    "TRA_ART" : "{{TRA_ART}}.`OPERATOR_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

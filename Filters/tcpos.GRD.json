@@ -1,0 +1,33 @@
+{
+  "name" : "Group D",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.GRD.DESCRIPTION",
+    "HIST_STO" : "tcpos.SGRD.DESCRIPTION",
+    "TRA_ART_DIS" : "tcpos.GRD.DESCRIPTION",
+    "TRA_ART_PRO" : "tcpos.GRD.DESCRIPTION",
+    "SWA_ART" : "tcpos.SGRD.DESCRIPTION",
+    "TRA_ART" : "tcpos.GRD.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe D",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group D",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe D",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.GRD",
+  "data_type" : "TEXT",
+  "auto_mappings" : [ "tcpos.GRD.DESCRIPTION", "tcpos.SGRD.DESCRIPTION" ],
+  "default_mapping" : "ART",
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

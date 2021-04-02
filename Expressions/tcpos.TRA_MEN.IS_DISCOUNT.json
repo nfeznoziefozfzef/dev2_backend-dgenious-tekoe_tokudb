@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menü mit Rabatt",
+      "category" : "Tickets - Menüs",
+      "comment" : "Wert vom Typ WAHR/FALSCH der angibt, ob ein Rabatt auf diese Ticketlinie gewährt wurde."
+    },
+    "EN" : {
+      "name" : "Menu with discount",
+      "category" : "Tickets - menus",
+      "comment" : "Value of type TRUE/FALSE indicating whether a discount was granted on this ticket line"
+    },
+    "FR" : {
+      "name" : "menu avec rabais",
+      "category" : "Tickets - menus",
+      "comment" : "Valeur de type vrai/faux qui indique si un rabais a été appliqué sur cette ligne"
+    }
+  },
+  "name" : "menu avec rabais",
+  "category" : "Tickets - menus",
+  "comment" : "Valeur de type vrai/faux qui indique si un rabais a été appliqué sur cette ligne",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | _SYS_",
+  "sql" : "case when coalesce({{TRA_MEN}}.`DISCOUNT`, 0) = 0 then 0 else 1 end",
+  "path" : "tcpos.TRA_MEN.IS_DISCOUNT",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

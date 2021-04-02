@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gewonnene Punkte",
+      "category" : "Punkte",
+      "comment" : "Durch die Transaktion gewonnene Punkte"
+    },
+    "EN" : {
+      "name" : "Points gained",
+      "category" : "Points",
+      "comment" : "Points gained with the transaction"
+    },
+    "FR" : {
+      "name" : "Points gagnés",
+      "category" : "Points",
+      "comment" : "Points gagnés avec la transaction"
+    }
+  },
+  "name" : "Points gagnés",
+  "category" : "Points",
+  "comment" : "Points gagnés avec la transaction",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI | _SYS_",
+  "sql" : "{{TRA_POI}}.`POINTS_GAINED`",
+  "path" : "tcpos.TRA_POI.POINTS_GAINED",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

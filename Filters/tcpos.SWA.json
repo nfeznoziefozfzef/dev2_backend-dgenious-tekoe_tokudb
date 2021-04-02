@@ -1,0 +1,30 @@
+{
+  "name" : "Entrepôt",
+  "category" : "Stocks",
+  "mappings" : {
+    "HIST_STO" : "tcpos.SWA.DESCRIPTION",
+    "SWA_ART" : "tcpos.SWA.DESCRIPTION",
+    "SWA" : "tcpos.SWA.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Lagern",
+      "category" : "Lagern"
+    },
+    "EN" : {
+      "name" : "Warehouses",
+      "category" : "Stock warehouses"
+    },
+    "FR" : {
+      "name" : "Entrepôts",
+      "category" : "Stocks"
+    }
+  },
+  "path" : "tcpos.SWA",
+  "data_type" : "TEXT",
+  "auto_mappings" : [ "tcpos.SWA.DESCRIPTION" ],
+  "default_mapping" : "SWA",
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

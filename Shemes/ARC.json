@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.ARC", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.ARC" ],
+  "name" : "Offres et pertes",
+  "comment" : "Ce schéma énumère les raisons pour lesquelles une transaction peut-être effectuée à titre gratuit",
+  "translations" : {
+    "DE" : {
+      "name" : "Angebote und Verluste",
+      "comment" : "Diese Schema zeigt eine Liste der Gründe warum ein Artikel kostenlos vergeben werden kann"
+    },
+    "EN" : {
+      "name" : "Gratuities",
+      "comment" : "Lists possible reasons for which items can be given away for free (damaged, ...)"
+    },
+    "FR" : {
+      "name" : "Offres et pertes",
+      "comment" : "Ce schéma énumère les raisons pour lesquelles une transaction peut-être effectuée à titre gratuit"
+    }
+  },
+  "visible" : false,
+  "graph" : "tcpos",
+  "scheme" : "ARC",
+  "entry_table" : "ARC",
+  "company" : "tekoe_tokudb"
+}

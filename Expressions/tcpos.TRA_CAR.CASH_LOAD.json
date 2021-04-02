@@ -1,0 +1,33 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Auszahlungsbetrag",
+      "category" : "Ticket - Kartentransaktionen"
+    },
+    "EN" : {
+      "name" : "Cash load",
+      "category" : "Ticket - card transactions"
+    },
+    "FR" : {
+      "name" : "Montant versé",
+      "category" : "Tickets - paiements par badge"
+    }
+  },
+  "name" : "Montant versé",
+  "category" : "Tickets - paiements par badge",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{TRA_CAR}}.`CASH_LOAD`",
+  "path" : "tcpos.TRA_CAR.CASH_LOAD",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

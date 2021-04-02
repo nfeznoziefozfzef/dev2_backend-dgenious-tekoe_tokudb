@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Punktekampagne",
+      "category" : "Punkte"
+    },
+    "EN" : {
+      "name" : "Points campaign",
+      "category" : "Points"
+    },
+    "FR" : {
+      "name" : "Campagne de points",
+      "category" : "Points"
+    }
+  },
+  "name" : "Campagne de points",
+  "category" : "Points",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | _SYS_",
+  "sql" : "{{POI}}.`DESCRIPTION`",
+  "path" : "tcpos.POI.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

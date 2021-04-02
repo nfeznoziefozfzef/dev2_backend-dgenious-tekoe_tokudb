@@ -1,0 +1,24 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Buchungsdatum"
+    },
+    "EN" : {
+      "name" : "Accounting date",
+      "category" : "Withdrawals"
+    },
+    "FR" : {
+      "name" : "Date comptable",
+      "category" : "Retraits"
+    }
+  },
+  "name" : "Date comptable",
+  "category" : "Retraits",
+  "requires" : "graph.tcpos;auth.scheme.WIT_TRA | _SYS_",
+  "sql" : "{{WIT_TRA}}.`BOOKKEEPING_DATE`",
+  "path" : "tcpos.WIT_TRA.BOOKKEEPING_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

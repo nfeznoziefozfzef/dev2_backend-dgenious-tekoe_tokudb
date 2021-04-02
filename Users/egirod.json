@@ -1,0 +1,18 @@
+{
+  "username" : "egirod",
+  "company" : "tekoe_tokudb",
+  "name" : "Emmanuel Girod",
+  "language" : "FR",
+  "email" : "e.girod@dgenious.com",
+  "visible" : false,
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : -680815084,
+  "editable" : true
+}

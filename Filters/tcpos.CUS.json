@@ -1,0 +1,38 @@
+{
+  "name" : "Customer",
+  "category" : "Customers",
+  "mappings" : {
+    "TRA_CAR" : "tcpos.CUS.DESCRIPTION",
+    "TRA_TAB" : "tcpos.CUS.DESCRIPTION",
+    "CUS" : "tcpos.CUS.DESCRIPTION",
+    "TRA" : "tcpos.CUS.DESCRIPTION",
+    "TRA_MEN" : "tcpos.CUS.DESCRIPTION",
+    "TRA_PAY" : "tcpos.CUS.DESCRIPTION",
+    "TRA_POI" : "tcpos.CUS.DESCRIPTION",
+    "TRA_POI_LAST" : "tcpos.CUS.DESCRIPTION",
+    "TRA_ART_DIS" : "tcpos.CUS.DESCRIPTION",
+    "TRA_ART_PRO" : "tcpos.CUS.DESCRIPTION",
+    "TRA_ART" : "tcpos.CUS.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Kunde",
+      "category" : "Kunden"
+    },
+    "EN" : {
+      "name" : "Customer",
+      "category" : "Customers"
+    },
+    "FR" : {
+      "name" : "Client",
+      "category" : "Clients"
+    }
+  },
+  "path" : "tcpos.CUS",
+  "data_type" : "TEXT",
+  "auto_mappings" : [ "tcpos.CUS.DESCRIPTION" ],
+  "default_mapping" : "CUS",
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

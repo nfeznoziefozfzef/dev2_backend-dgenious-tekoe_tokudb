@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gedecke pro Tisch",
+      "category" : "Statistik",
+      "comment" : "Durchschnittliche Anzahl von Gedecken. Berechnet für Tickets, die einem Tisch zugeordnet sind und mit einer Anzahl Gästen die grösser als null ist."
+    },
+    "EN" : {
+      "name" : "Place settings per table",
+      "category" : "Statistics",
+      "comment" : "Average number of place settings per table for the day. Calculation based on tickets assigned to a table with a number of hosts superior to zero"
+    },
+    "FR" : {
+      "name" : "Couverts par table",
+      "category" : "Statistiques",
+      "comment" : "Nombre moyen de couverts par table. Calculé sur les tickets affectés à une table et avec un nombre de couverts supérieur à 0"
+    }
+  },
+  "name" : "Couverts par table",
+  "category" : "Statistiques",
+  "comment" : "Nombre moyen de couverts par table. Calculé sur les tickets affectés à une table et avec un nombre de couverts supérieur à 0",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`AVG_TABLE_SIZE`",
+  "path" : "tcpos.SHO_S.AVG_TABLE_SIZE",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

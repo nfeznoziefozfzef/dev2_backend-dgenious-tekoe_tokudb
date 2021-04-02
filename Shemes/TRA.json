@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.TRA", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.TRA" ],
+  "name" : "Tickets",
+  "comment" : "Ce schéma donne accès à la liste des tickets, mais pas au détail de leurs lignes",
+  "translations" : {
+    "DE" : {
+      "name" : "Tickets",
+      "comment" : "Diese Schema zeigt die Liste der Tickets, aber nicht den Inhalt der einzelnen Linien"
+    },
+    "EN" : {
+      "name" : "Tickets",
+      "comment" : "Lists tickets but not their content. From tickets one can go to customers, terminals, shops, cashiers..."
+    },
+    "FR" : {
+      "name" : "Tickets",
+      "comment" : "Ce schéma donne accès à la liste des tickets, mais pas au détail de leurs lignes"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA",
+  "entry_table" : "TRA",
+  "company" : "tekoe_tokudb"
+}

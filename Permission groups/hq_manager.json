@@ -1,0 +1,36 @@
+{
+  "paths" : [ "permissions.hq", "graph.tcpos", "scheme.*" ],
+  "name" : "HQ manager",
+  "comment" : "This set of permissions gives access to all data and all shops. Documents can be edited and downloads are not restricted",
+  "translations" : {
+    "EN" : {
+      "name" : "HQ manager",
+      "comment" : "This set of permissions grants access to data from all shops"
+    },
+    "FR" : {
+      "name" : "HQ manager",
+      "comment" : "Ce groupe de permissions donne accès à toutes les données de tous les établissements"
+    }
+  },
+  "alias" : "hq_manager",
+  "admin_profile" : {
+    "regular_sharer" : true,
+    "mandatory_sharer" : true,
+    "document_editor" : true,
+    "limited_exporter" : true,
+    "full_exporter" : true,
+    "execution_delegator" : true,
+    "user_manager" : false,
+    "debugger" : false,
+    "task_editor" : true
+  },
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "company" : "tekoe_tokudb"
+}

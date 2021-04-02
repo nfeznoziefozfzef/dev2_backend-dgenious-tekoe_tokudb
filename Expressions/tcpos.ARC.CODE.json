@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gratis Code",
+      "category" : "Rabatte",
+      "comment" : "Code der angibt, aus welchem Grund ein Artikel gratis vergeben wurde"
+    },
+    "EN" : {
+      "name" : "Article gratuity code",
+      "category" : "Discounts",
+      "comment" : "Code indicating the reason why an article has been given away for free"
+    },
+    "FR" : {
+      "name" : "Code gratuité d'article",
+      "category" : "Discounts",
+      "comment" : "Code désignant la raison pour laquelle la vente d'un article a été effectuée à titre gratuit"
+    }
+  },
+  "name" : "Code gratuité d'article",
+  "category" : "Discounts",
+  "comment" : "Code désignant la raison pour laquelle la vente d'un article a été effectuée à titre gratuit",
+  "requires" : "graph.tcpos;auth.scheme.ARC | auth.scheme.TRA_MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ARC}}.`CODE`",
+  "path" : "tcpos.ARC.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

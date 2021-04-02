@@ -1,0 +1,35 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Bareinzahlung",
+      "category" : "Kassenladenzählung",
+      "comment" : "Gesamte Bareinzahlung"
+    },
+    "EN" : {
+      "name" : "Deposits total",
+      "category" : "Drawer Counts",
+      "comment" : "Total cash deposits"
+    },
+    "FR" : {
+      "name" : "Total de Dépôts",
+      "category" : "Comptages Tiroirs"
+    }
+  },
+  "name" : "Total de Dépôts",
+  "category" : "Comptages Tiroirs",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`DEPOSITS_TOTAL`",
+  "path" : "tcpos.DRA.DEPOSITS_TOTAL",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

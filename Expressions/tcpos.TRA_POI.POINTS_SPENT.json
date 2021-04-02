@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Verwendete Punkte",
+      "category" : "Punkte",
+      "comment" : "Punkte, die bei der Transaktion verwendet wurden"
+    },
+    "EN" : {
+      "name" : "Points used",
+      "category" : "Points",
+      "comment" : "Points used with the transaction"
+    },
+    "FR" : {
+      "name" : "Points utilisés",
+      "category" : "Points",
+      "comment" : "Points utilisés par la transaction"
+    }
+  },
+  "name" : "Points utilisés",
+  "category" : "Points",
+  "comment" : "Points utilisés par la transaction",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI | _SYS_",
+  "sql" : "{{TRA_POI}}.`POINTS_SPENT`",
+  "path" : "tcpos.TRA_POI.POINTS_SPENT",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

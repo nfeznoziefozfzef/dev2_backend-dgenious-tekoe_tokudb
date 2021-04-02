@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Lagerhaus-Code",
+      "category" : "Bestand"
+    },
+    "EN" : {
+      "name" : "Warehouse code",
+      "category" : "Inventory"
+    },
+    "FR" : {
+      "name" : "Code entrepôt",
+      "category" : "Stocks"
+    }
+  },
+  "name" : "Code entrepôt",
+  "category" : "Stocks",
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | auth.scheme.SWA | _SYS_",
+  "sql" : "{{SWA}}.`CODE`",
+  "path" : "tcpos.SWA.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

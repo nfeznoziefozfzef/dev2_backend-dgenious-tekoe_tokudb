@@ -1,0 +1,33 @@
+{
+  "name" : "Group C",
+  "category" : "Articles",
+  "mappings" : {
+    "ART" : "tcpos.GRC.DESCRIPTION",
+    "HIST_STO" : "tcpos.SGRC.DESCRIPTION",
+    "TRA_ART_DIS" : "tcpos.GRC.DESCRIPTION",
+    "TRA_ART_PRO" : "tcpos.GRC.DESCRIPTION",
+    "SWA_ART" : "tcpos.SGRC.DESCRIPTION",
+    "TRA_ART" : "tcpos.GRC.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe C",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group C",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe C",
+      "category" : "Articles"
+    }
+  },
+  "path" : "tcpos.GRC",
+  "data_type" : "TEXT",
+  "auto_mappings" : [ "tcpos.GRC.DESCRIPTION", "tcpos.SGRC.DESCRIPTION" ],
+  "default_mapping" : "ART",
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

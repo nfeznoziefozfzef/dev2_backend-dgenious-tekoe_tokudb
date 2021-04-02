@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe B",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group B",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Groupe B",
+      "category" : "Articles"
+    }
+  },
+  "name" : "Groupe B",
+  "category" : "Articles",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{GRB}}.`DESCRIPTION`",
+  "path" : "tcpos.GRB.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

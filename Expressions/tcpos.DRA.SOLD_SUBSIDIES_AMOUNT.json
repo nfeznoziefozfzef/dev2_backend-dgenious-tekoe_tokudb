@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Subventionierte Verkäufe",
+      "category" : "Kassenladenzählung",
+      "comment" : "Betrag subventionierter Verkäufe"
+    },
+    "EN" : {
+      "name" : "Sales in subsidies",
+      "category" : "Drawer Counts",
+      "comment" : "Amount of subsidized sales"
+    },
+    "FR" : {
+      "name" : "Montant des ventes conventionnées",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Montant des ventes conventionnées"
+    }
+  },
+  "name" : "Montant des ventes conventionnées",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Montant des ventes conventionnées",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`SOLD_SUBSIDIES_AMOUNT`",
+  "path" : "tcpos.DRA.SOLD_SUBSIDIES_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

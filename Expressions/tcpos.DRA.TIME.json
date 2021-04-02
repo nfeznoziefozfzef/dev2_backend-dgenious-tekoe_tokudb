@@ -1,0 +1,30 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Zeit",
+      "category" : "Kassenladenzählung",
+      "comment" : "Zeit der Bewegungen"
+    },
+    "EN" : {
+      "name" : "Time",
+      "category" : "Drawer Counts",
+      "comment" : "Time of movements"
+    },
+    "FR" : {
+      "name" : "Heure du décompte",
+      "category" : "Comptages Tiroirs"
+    }
+  },
+  "name" : "Heure du décompte",
+  "category" : "Comptages Tiroirs",
+  "properties" : {
+    "format" : "HH:mm"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`TIME`",
+  "path" : "tcpos.DRA.TIME",
+  "type" : "TIME",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

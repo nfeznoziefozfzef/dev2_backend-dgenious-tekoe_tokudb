@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Abschliessender Benutzer",
+      "category" : "Kassenladenzählung",
+      "comment" : "Benutzer, der verantwortlich für die Zählung der Lade bei der Schliessung der Kasse ist"
+    },
+    "EN" : {
+      "name" : "Closing operator",
+      "category" : "Drawer Counts",
+      "comment" : "Operator in charge of the final drawer count"
+    },
+    "FR" : {
+      "name" : "Opérateur clôture",
+      "category" : "Comptage tiroirs",
+      "comment" : "Opérateur en charge du comptage à lc clôture"
+    }
+  },
+  "name" : "Opérateur clôture",
+  "category" : "Comptage tiroirs",
+  "comment" : "Opérateur en charge du comptage à lc clôture",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{OPE_DRA_CLOSE}}.`DESCRIPTION`",
+  "path" : "tcpos.OPE_DRA_CLOSE.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

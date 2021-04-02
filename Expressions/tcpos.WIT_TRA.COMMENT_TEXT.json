@@ -1,0 +1,24 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Beschreibung"
+    },
+    "EN" : {
+      "name" : "Description",
+      "category" : "Withdrawals"
+    },
+    "FR" : {
+      "name" : "Description",
+      "category" : "Retraits"
+    }
+  },
+  "name" : "Description",
+  "category" : "Retraits",
+  "requires" : "graph.tcpos;auth.scheme.WIT_TRA | _SYS_",
+  "sql" : "{{WIT_TRA}}.`COMMENT_TEXT`",
+  "path" : "tcpos.WIT_TRA.COMMENT_TEXT",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

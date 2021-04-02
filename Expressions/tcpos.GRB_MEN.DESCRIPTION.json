@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe B (Menüs)",
+      "category" : "Menüs"
+    },
+    "EN" : {
+      "name" : "Group B (menu)",
+      "category" : "Menus"
+    },
+    "FR" : {
+      "name" : "Groupe B Menu",
+      "category" : "Menus"
+    }
+  },
+  "name" : "Groupe B Menu",
+  "category" : "Menus",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{GRB_MEN}}.`DESCRIPTION`",
+  "path" : "tcpos.GRB_MEN.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "im Umsatz inbegriffen",
+      "category" : "Artikel",
+      "comment" : "Zeigt an, ob dieser Artikel in die Umsatzberechnung mit einbezogen wird"
+    },
+    "EN" : {
+      "name" : "included in the turnover",
+      "category" : "Articles",
+      "comment" : "Indicates if the article is taken into account for calculating the turnover"
+    },
+    "FR" : {
+      "name" : "dans le CA",
+      "category" : "Articles",
+      "comment" : "Indique si l'article est pris en compte dans le calcul du chiffre d'affaires"
+    }
+  },
+  "name" : "dans le CA",
+  "category" : "Articles",
+  "comment" : "Indique si l'article est pris en compte dans le calcul du chiffre d'affaires",
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ART}}.`IS_TURNOVER`",
+  "path" : "tcpos.ART.IS_TURNOVER",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

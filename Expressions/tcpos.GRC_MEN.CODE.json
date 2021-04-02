@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe C Code (Menüs)",
+      "category" : "Menüs"
+    },
+    "EN" : {
+      "name" : "Group C code (menu)",
+      "category" : "Menus"
+    },
+    "FR" : {
+      "name" : "Code Groupe C Menu",
+      "category" : "Menus"
+    }
+  },
+  "name" : "Code Groupe C Menu",
+  "category" : "Menus",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{GRC_MEN}}.`CODE`",
+  "path" : "tcpos.GRC_MEN.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

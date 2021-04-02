@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_CAR" ],
+  "grants" : [ "auth.scheme.TRA_CAR" ],
+  "name" : "Tickets - paiements par badge",
+  "comment" : "Ce schéma part des cartes de paiement, et donne accès aux tickets, aux clients et aux établissements",
+  "translations" : {
+    "DE" : {
+      "name" : "Ticket - Kartentransaktionen",
+      "comment" : "Verwenden Sie diese Extraktion, um alle Artikel aller Tickets aufzulisten, bei denen eine Karte zur Zahlung verwendet wurde. Von den Ticketlinien aus kann man auf Tickets und Kunden zugreifen."
+    },
+    "EN" : {
+      "name" : "Ticket - card transactions",
+      "comment" : "Use this extraction to list all items of all tickets where a card was used for payment. From ticket lines one can access tickets and customers"
+    },
+    "FR" : {
+      "name" : "Tickets - paiements par badge",
+      "comment" : "Ce schéma part des cartes de paiement, et donne accès aux tickets, aux clients et aux établissements"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_CAR",
+  "entry_table" : "TRA_CAR",
+  "company" : "tekoe_tokudb"
+}

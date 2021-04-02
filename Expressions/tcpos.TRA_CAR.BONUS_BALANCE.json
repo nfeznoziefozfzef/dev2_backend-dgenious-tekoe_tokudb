@@ -1,0 +1,33 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Bonusguthaben",
+      "category" : "Ticket - Kartentransaktionen"
+    },
+    "EN" : {
+      "name" : "Bonus balance",
+      "category" : "Ticket - card transactions"
+    },
+    "FR" : {
+      "name" : "Solde de bonus",
+      "category" : "Tickets - paiements par badge"
+    }
+  },
+  "name" : "Solde de bonus",
+  "category" : "Tickets - paiements par badge",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{TRA_CAR}}.`BONUS_BALANCE`",
+  "path" : "tcpos.TRA_CAR.BONUS_BALANCE",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

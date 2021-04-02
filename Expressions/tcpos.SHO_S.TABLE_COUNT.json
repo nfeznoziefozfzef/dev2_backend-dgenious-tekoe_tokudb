@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Besetzte Tische",
+      "category" : "Statistik",
+      "comment" : "Anzahl der an dem Tag besetzten Tische, per Shop"
+    },
+    "EN" : {
+      "name" : "Occupied tables",
+      "category" : "Statistics",
+      "comment" : "Number of occupied tables during the day, per shop"
+    },
+    "FR" : {
+      "name" : "Tables occupées",
+      "category" : "Statistiques",
+      "comment" : "Nombre de tables occupées dans la journée, par établissement"
+    }
+  },
+  "name" : "Tables occupées",
+  "category" : "Statistiques",
+  "comment" : "Nombre de tables occupées dans la journée, par établissement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`TABLE_COUNT`",
+  "path" : "tcpos.SHO_S.TABLE_COUNT",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

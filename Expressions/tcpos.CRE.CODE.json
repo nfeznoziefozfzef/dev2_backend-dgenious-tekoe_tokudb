@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kreditkartentyp -Code",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "Credit card code",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "Code carte de crédit",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "Code carte de crédit",
+  "category" : "Paiements",
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{CRE}}.`CODE`",
+  "path" : "tcpos.CRE.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

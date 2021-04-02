@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Saldo Vorauszahlung",
+      "category" : "Kunden",
+      "comment" : "Bargeldstand auf der Kundenkarte"
+    },
+    "EN" : {
+      "name" : "Prepayment balance",
+      "category" : "Customers",
+      "comment" : "Cash balance on the customer card"
+    },
+    "FR" : {
+      "name" : "Solde prépaiement",
+      "category" : "Clients",
+      "comment" : "Solde cash sur la carte du client"
+    }
+  },
+  "name" : "Solde prépaiement",
+  "category" : "Clients",
+  "comment" : "Solde cash sur la carte du client",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`PREPAY_BALANCE_CASH`",
+  "path" : "tcpos.CUS.PREPAY_BALANCE_CASH",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

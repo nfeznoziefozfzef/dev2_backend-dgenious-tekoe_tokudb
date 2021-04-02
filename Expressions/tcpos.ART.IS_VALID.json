@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiger Artikel",
+      "category" : "Artikel",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob dieser Artikel gültig ist"
+    },
+    "EN" : {
+      "name" : "Valid Article",
+      "category" : "Articles",
+      "comment" : "Value of type TRUE/FALSE indicating if the article is valid"
+    },
+    "FR" : {
+      "name" : "Article valide",
+      "category" : "Articles",
+      "comment" : "Valeur de type vrai/faux qui indique si l'article est marqué comme valide"
+    }
+  },
+  "name" : "Article valide",
+  "category" : "Articles",
+  "comment" : "Valeur de type vrai/faux qui indique si l'article est marqué comme valide",
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{ART}}.`IS_VALID`",
+  "path" : "tcpos.ART.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,31 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "MwSt.-Satz der Linie",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Mehrwertsteuersatz, der für diese Linie auf dem Ticket angewendet wurde"
+    },
+    "EN" : {
+      "name" : "VAT rate ticket line",
+      "category" : "Ticket lines",
+      "comment" : "VAT rate applied on this ticket line"
+    },
+    "FR" : {
+      "name" : "Taux TVA ligne",
+      "category" : "Tickets - lignes"
+    }
+  },
+  "name" : "Taux TVA ligne",
+  "category" : "Tickets - lignes",
+  "properties" : {
+    "format" : "0.00%",
+    "format_type" : "percent"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`VAT_PERCENT`",
+  "path" : "tcpos.TRA_ART.VAT_PERCENT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

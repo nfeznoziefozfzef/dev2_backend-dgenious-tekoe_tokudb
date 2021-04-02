@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Masseinheit",
+      "category" : "Bestand"
+    },
+    "EN" : {
+      "name" : "Unit of measurement",
+      "category" : "Inventory"
+    },
+    "FR" : {
+      "name" : "Unité de mesure",
+      "category" : "Stocks"
+    }
+  },
+  "name" : "Unité de mesure",
+  "category" : "Stocks",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SMU}}.`DESCRIPTION`",
+  "path" : "tcpos.SMU.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

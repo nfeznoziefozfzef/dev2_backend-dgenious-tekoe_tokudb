@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.WIT", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.WIT" ],
+  "name" : "Retraits ou dépôts",
+  "comment" : "Ce schéma donne accès à la liste des retraits ou dépôts en caisse",
+  "translations" : {
+    "DE" : {
+      "name" : "Abhebungen",
+      "comment" : "Dieses Schema zeigt die Liste der Barabhebungen an"
+    },
+    "EN" : {
+      "name" : "Withdrawals",
+      "comment" : "The scheme gives the details of cash withdrawals"
+    },
+    "FR" : {
+      "name" : "Retraits ou dépôts",
+      "comment" : "Ce schéma donne accès à la liste des retraits ou dépôts en caisse"
+    }
+  },
+  "visible" : false,
+  "graph" : "tcpos",
+  "scheme" : "WIT",
+  "entry_table" : "WIT",
+  "company" : "tekoe_tokudb"
+}

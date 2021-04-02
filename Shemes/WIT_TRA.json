@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.WIT_TRA", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.WIT_TRA" ],
+  "name" : "Retraits",
+  "comment" : "Ce schéma donne accès à la liste des retraits de caisse",
+  "translations" : {
+    "DE" : {
+      "name" : "Abhebungen",
+      "comment" : "Dieses Schema zeigt die Liste der Barabhebungen an"
+    },
+    "EN" : {
+      "name" : "Withdrawals",
+      "comment" : "The scheme gives the details of cash withdrawals"
+    },
+    "FR" : {
+      "name" : "Retraits",
+      "comment" : "Ce schéma donne accès à la liste des retraits de caisse"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "WIT_TRA",
+  "entry_table" : "WIT_TRA",
+  "company" : "tekoe_tokudb"
+}

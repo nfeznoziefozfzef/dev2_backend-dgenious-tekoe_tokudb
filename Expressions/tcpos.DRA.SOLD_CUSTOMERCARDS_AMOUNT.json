@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Verkauf Kundenkarte",
+      "category" : "Kassenladenzählung",
+      "comment" : "Betrag der Verkäufe, die mit Kundenkarte bezahlt wurden"
+    },
+    "EN" : {
+      "name" : "Sales in customer card",
+      "category" : "Drawer Counts",
+      "comment" : "Amount of sales paid in customer card"
+    },
+    "FR" : {
+      "name" : "Montant des ventes en cartes client",
+      "category" : "Comptages Tiroirs",
+      "comment" : "Montant des ventes en cartes client"
+    }
+  },
+  "name" : "Montant des ventes en cartes client",
+  "category" : "Comptages Tiroirs",
+  "comment" : "Montant des ventes en cartes client",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`SOLD_CUSTOMERCARDS_AMOUNT`",
+  "path" : "tcpos.DRA.SOLD_CUSTOMERCARDS_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

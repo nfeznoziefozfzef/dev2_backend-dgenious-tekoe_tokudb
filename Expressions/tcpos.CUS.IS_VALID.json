@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiger Kunde",
+      "category" : "Kunden",
+      "comment" : "Wert des Typs WAHR/FALSCH, der anzeigt, ob der Kunde gültig ist"
+    },
+    "EN" : {
+      "name" : "Valid Customer",
+      "category" : "Customers",
+      "comment" : "Value of type TRUE/FALSE indicating if the customer is valid"
+    },
+    "FR" : {
+      "name" : "Client valide",
+      "category" : "Clients",
+      "comment" : "Valeur de type vrai/faux qui indique si le client est marqué comme étant valide"
+    }
+  },
+  "name" : "Client valide",
+  "category" : "Clients",
+  "comment" : "Valeur de type vrai/faux qui indique si le client est marqué comme étant valide",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{CUS}}.`IS_VALID`",
+  "path" : "tcpos.CUS.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

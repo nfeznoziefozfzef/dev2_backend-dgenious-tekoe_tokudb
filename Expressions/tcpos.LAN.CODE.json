@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Sprache Code",
+      "category" : "Sprachen"
+    },
+    "EN" : {
+      "name" : "Language code",
+      "category" : "Languages"
+    },
+    "FR" : {
+      "name" : "Code langue",
+      "category" : "Langues"
+    }
+  },
+  "name" : "Code langue",
+  "category" : "Langues",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.CUS | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_POI_LAST | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{LAN}}.`CODE`",
+  "path" : "tcpos.LAN.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

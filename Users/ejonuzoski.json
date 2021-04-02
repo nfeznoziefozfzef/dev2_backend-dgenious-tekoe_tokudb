@@ -1,0 +1,20 @@
+{
+  "username" : "ejonuzoski",
+  "company" : "tekoe_tokudb",
+  "name" : "Edvin Jonuzoski",
+  "language" : "FR",
+  "email" : "e.jonuzoski@dgenious.com",
+  "phone" : "+41 78 219 87 08",
+  "visible" : true,
+  "permission_groups" : [ "sys_admin" ],
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : -1672190049,
+  "editable" : true
+}

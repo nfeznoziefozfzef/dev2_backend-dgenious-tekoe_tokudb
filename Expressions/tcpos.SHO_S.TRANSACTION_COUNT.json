@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Transaktionen des Tages",
+      "category" : "Statistik",
+      "comment" : "Anzahl der Transaktionen an diesem Tag"
+    },
+    "EN" : {
+      "name" : "Transactions of the day",
+      "category" : "Statistics",
+      "comment" : "Number of transactions on that day"
+    },
+    "FR" : {
+      "name" : "Transactions jour",
+      "category" : "Statistiques",
+      "comment" : "Nombre de transactions de la journée, par établissement"
+    }
+  },
+  "name" : "Transactions jour",
+  "category" : "Statistiques",
+  "comment" : "Nombre de transactions de la journée, par établissement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`TRANSACTION_COUNT`",
+  "path" : "tcpos.SHO_S.TRANSACTION_COUNT",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

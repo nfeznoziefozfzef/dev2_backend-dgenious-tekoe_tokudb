@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kassenname",
+      "category" : "Kassen",
+      "comment" : "Name der Kasse"
+    },
+    "EN" : {
+      "name" : "Cash desk name",
+      "category" : "Cash desks",
+      "comment" : "Name of the cash desk"
+    },
+    "FR" : {
+      "name" : "Nom caisse",
+      "category" : "Caisses",
+      "comment" : "Nom de la caisse"
+    }
+  },
+  "name" : "Nom caisse",
+  "category" : "Caisses",
+  "comment" : "Nom de la caisse",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.DRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TIL | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.WIT_TRA | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TIL}}.`DESCRIPTION`",
+  "path" : "tcpos.TIL.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

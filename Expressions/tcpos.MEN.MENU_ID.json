@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID-Menü",
+      "category" : "Menüs"
+    },
+    "EN" : {
+      "name" : "UID menu",
+      "category" : "Menus"
+    },
+    "FR" : {
+      "name" : "UID menu",
+      "category" : "Menus"
+    }
+  },
+  "name" : "UID menu",
+  "category" : "Menus",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{MEN}}.`MENU_ID`",
+  "path" : "tcpos.MEN.MENU_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_MEN" : "{{TRA_MEN}}.`MENU_ID`",
+    "TRA_ART" : "{{TRA_ART}}.`MENU_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

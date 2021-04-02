@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "MwSt. Name",
+      "category" : "MwSt."
+    },
+    "EN" : {
+      "name" : "VAT name",
+      "category" : "VAT"
+    },
+    "FR" : {
+      "name" : "Nom TVA",
+      "category" : "TVA"
+    }
+  },
+  "name" : "Nom TVA",
+  "category" : "TVA",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{VAT_TRA_ART}}.`DESCRIPTION`",
+  "path" : "tcpos.VAT_TRA_ART.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

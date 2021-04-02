@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menü",
+      "category" : "Menüs"
+    },
+    "EN" : {
+      "name" : "Menu",
+      "category" : "Menus"
+    },
+    "FR" : {
+      "name" : "Menu",
+      "category" : "Menus"
+    }
+  },
+  "name" : "Menu",
+  "category" : "Menus",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{MEN}}.`DESCRIPTION`",
+  "path" : "tcpos.MEN.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

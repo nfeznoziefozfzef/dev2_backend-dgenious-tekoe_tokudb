@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Umsatz",
+      "category" : "Tickets",
+      "comment" : "Umsatz des Tickets, inkl. MwSt., Rabatte, Gratisartikel und Angebote abgezogen. Dieser Betrag enthält keine Elemente, die nicht zum Umsatz zählen, wie z.B. das Aufladen von Kundenkarten"
+    },
+    "EN" : {
+      "name" : "Turnover",
+      "category" : "Tickets",
+      "comment" : "Turnover of the ticket, amount, including VAT, gratuities, discounts and promotions deduced. This amount does not includes elements that are not part of the turnover, such as charging of client cards."
+    },
+    "FR" : {
+      "name" : "CA ticket",
+      "category" : "Tickets",
+      "comment" : "Chiffre d'affaire du ticket, TVA comprise, déduction faite des gratuités, rabais et promotions. Ce montant ne comprend pas les éléments hors CA tels que chargements de cartes"
+    }
+  },
+  "name" : "CA ticket",
+  "category" : "Tickets",
+  "comment" : "Chiffre d'affaire du ticket, TVA comprise, déduction faite des gratuités, rabais et promotions. Ce montant ne comprend pas les éléments hors CA tels que chargements de cartes",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`TURNOVER_AMOUNT`",
+  "path" : "tcpos.TRA.TURNOVER_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

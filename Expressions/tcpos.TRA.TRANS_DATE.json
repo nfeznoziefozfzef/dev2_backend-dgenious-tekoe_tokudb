@@ -1,0 +1,27 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Ticket Datum",
+      "category" : "Tickets"
+    },
+    "EN" : {
+      "name" : "Ticket date",
+      "category" : "Tickets"
+    },
+    "FR" : {
+      "name" : "Date du ticket",
+      "category" : "Tickets",
+      "comment" : "Date à laquelle le ticket a été généré"
+    }
+  },
+  "name" : "Date du ticket",
+  "category" : "Tickets",
+  "comment" : "Date à laquelle le ticket a été généré",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`TRANS_DATE`",
+  "path" : "tcpos.TRA.TRANS_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

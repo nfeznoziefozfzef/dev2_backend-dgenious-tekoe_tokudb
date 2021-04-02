@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Historische Menge",
+      "category" : "Historischer Bestand"
+    },
+    "EN" : {
+      "name" : "Historic quantity",
+      "category" : "Historic stock"
+    },
+    "FR" : {
+      "name" : "Quantité historique",
+      "category" : "Stock historique"
+    }
+  },
+  "name" : "Quantité historique",
+  "category" : "Stock historique",
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | _SYS_",
+  "sql" : "{{HIST_STO}}.`QUANTITY`",
+  "path" : "tcpos.HIST_STO.QUANTITY",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

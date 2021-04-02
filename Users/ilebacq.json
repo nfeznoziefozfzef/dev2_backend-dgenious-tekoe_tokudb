@@ -1,0 +1,18 @@
+{
+  "username" : "ilebacq",
+  "company" : "tekoe_tokudb",
+  "name" : "Isabel Lebacq",
+  "language" : "FR",
+  "email" : "i.lebacq@dgenious.com",
+  "phone" : "+41 78 907 54 56",
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : -309016112,
+  "editable" : true
+}

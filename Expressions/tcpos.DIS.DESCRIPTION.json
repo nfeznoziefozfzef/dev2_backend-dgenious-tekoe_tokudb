@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Rabatt",
+      "category" : "Rabatte",
+      "comment" : "Beschreibung des Rabatts"
+    },
+    "EN" : {
+      "name" : "Discount",
+      "category" : "Discounts",
+      "comment" : "Name of the promotion"
+    },
+    "FR" : {
+      "name" : "Remise",
+      "category" : "Remises",
+      "comment" : "Description de la remise"
+    }
+  },
+  "name" : "Remise",
+  "category" : "Remises",
+  "comment" : "Description de la remise",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{DIS}}.`DESCRIPTION`",
+  "path" : "tcpos.DIS.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

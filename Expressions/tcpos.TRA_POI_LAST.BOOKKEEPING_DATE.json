@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Datum der Punktebilanz",
+      "category" : "Punkte",
+      "comment" : "Datum, an welchem die Punktebilanz dieser Punktkampagne festgestellt wurde"
+    },
+    "EN" : {
+      "name" : "Points balance date",
+      "category" : "Points",
+      "comment" : "Date at which the point balance for this point campaign has been observed"
+    },
+    "FR" : {
+      "name" : "Date du solde",
+      "category" : "Points",
+      "comment" : "Date à laquelle le solde de points pour cette campagne a été observé"
+    }
+  },
+  "name" : "Date du solde",
+  "category" : "Points",
+  "comment" : "Date à laquelle le solde de points pour cette campagne a été observé",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI_LAST | _SYS_",
+  "sql" : "{{TRA_POI_LAST}}.`BOOKKEEPING_DATE`",
+  "path" : "tcpos.TRA_POI_LAST.BOOKKEEPING_DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

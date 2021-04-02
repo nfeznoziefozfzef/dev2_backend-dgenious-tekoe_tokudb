@@ -1,0 +1,31 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "MwSt. Name",
+      "category" : "MwSt.",
+      "comment" : "Name dieses Mehrwertsteuersatzes (normal, reduziert, freigestellt…)"
+    },
+    "EN" : {
+      "name" : "VAT name",
+      "category" : "VAT",
+      "comment" : "name of this VAT rate (normal, reduced, exempted, ...)"
+    },
+    "FR" : {
+      "name" : "Nom TVA",
+      "category" : "TVA",
+      "comment" : "Nom de ce taux de TVA (normal, réduit, exempté, ...)"
+    }
+  },
+  "name" : "Nom TVA",
+  "category" : "TVA",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.VAT | _SYS_",
+  "sql" : "{{VAT}}.`DESCRIPTION`",
+  "path" : "tcpos.VAT.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

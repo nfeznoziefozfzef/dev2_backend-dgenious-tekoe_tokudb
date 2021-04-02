@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.SWA" ],
+  "grants" : [ "auth.scheme.SWA" ],
+  "name" : "Entrepôts",
+  "comment" : "Liste des entrepôts",
+  "translations" : {
+    "DE" : {
+      "name" : "Lager",
+      "comment" : "Dieses Schema zeig die Liste der Lagern"
+    },
+    "EN" : {
+      "name" : "Warehouses",
+      "comment" : "Lists all stock warehouses"
+    },
+    "FR" : {
+      "name" : "Entrepôts",
+      "comment" : "Liste des entrepôts"
+    }
+  },
+  "visible" : false,
+  "graph" : "tcpos",
+  "scheme" : "SWA",
+  "entry_table" : "SWA",
+  "company" : "tekoe_tokudb"
+}

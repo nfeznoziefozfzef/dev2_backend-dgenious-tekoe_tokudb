@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Tatsächlicher Betrag der Linie",
+      "category" : "Ticket-Zeilen",
+      "comment" : "Preis, zu dem die Artikel dieser Linie tatsächlich verkauft wurden, unter Berücksichtigung von Rabatten und Aktionen. Achtung, wenn diese Zeile mehrere Artikel umfasst, ist der angezeigte Betrag der Gesamtpreis für alle Artikel und nicht der Stückpreis."
+    },
+    "EN" : {
+      "name" : "Effective amount of line",
+      "category" : "Ticket lines",
+      "comment" : "Effective price at which articles of this line have been sold, taking into account gratuities, discounts and promotions. Watch out: if this ticket line has an article quantity greater than 1, the amount is the total amount for the entire quantity, not the unit price"
+    },
+    "FR" : {
+      "name" : "Montant effectif ligne",
+      "category" : "Tickets - lignes",
+      "comment" : "Prix auquel les articles de cette ligne ont effectivement été vendus, en tenant compte des gratuités, rabais et promotions. Attention, si cette ligne porte sur plusieurs articles le montant affiché est le prix total pour tous les articles, pas le prix à l'unité"
+    }
+  },
+  "name" : "Montant effectif ligne",
+  "category" : "Tickets - lignes",
+  "comment" : "Prix auquel les articles de cette ligne ont effectivement été vendus, en tenant compte des gratuités, rabais et promotions. Attention, si cette ligne porte sur plusieurs articles le montant affiché est le prix total pour tous les articles, pas le prix à l'unité",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`AMOUNT`",
+  "path" : "tcpos.TRA_ART.AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

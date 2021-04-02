@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Manuell eingegebener Rabatt",
+      "category" : "Rabatte"
+    },
+    "EN" : {
+      "name" : "Discount entered manually",
+      "category" : "Discounts"
+    },
+    "FR" : {
+      "name" : "Remise saisie manuellement",
+      "category" : "Remises"
+    }
+  },
+  "name" : "Remise saisie manuellement",
+  "category" : "Remises",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{TRA_ART_DIS}}.`MANUAL_INPUT`",
+  "path" : "tcpos.TRA_ART_DIS.MANUAL_INPUT",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

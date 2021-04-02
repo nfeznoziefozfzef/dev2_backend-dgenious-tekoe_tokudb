@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_POI_LAST" ],
+  "grants" : [ "auth.scheme.TRA_POI_LAST" ],
+  "name" : "Soldes de points",
+  "comment" : "Ce schéma donne le solde le plus récent de points pour tous les clients et toutes les campagnes de points",
+  "translations" : {
+    "DE" : {
+      "name" : "Punktesaldo",
+      "comment" : "Dieses Schema zeigt den letzten Punktestand aller Kunden und aller Punktekampagnen an"
+    },
+    "EN" : {
+      "name" : "Points balance",
+      "comment" : "Shows the most recent point balance for all customers and all point campaigns"
+    },
+    "FR" : {
+      "name" : "Soldes de points",
+      "comment" : "Ce schéma donne le solde le plus récent de points pour tous les clients et toutes les campagnes de points"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "TRA_POI_LAST",
+  "entry_table" : "TRA_POI_LAST",
+  "company" : "tekoe_tokudb"
+}

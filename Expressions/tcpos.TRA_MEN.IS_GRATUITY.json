@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kostenloses Menü",
+      "category" : "Tickets - Menüs",
+      "comment" : "Wert vom Typ WAHR/FALSCH, der angibt, ob dieses Menü kostenlos angeboten wurde."
+    },
+    "EN" : {
+      "name" : "Free menu",
+      "category" : "Tickets - menus",
+      "comment" : "Value of type TRUE/FALSE indicating if this menu was given for free"
+    },
+    "FR" : {
+      "name" : "menu gratuit",
+      "category" : "Tickets - menus",
+      "comment" : "Valeur de type vrai/faux qui indique si cet menu a été donné gratuitement"
+    }
+  },
+  "name" : "menu gratuit",
+  "category" : "Tickets - menus",
+  "comment" : "Valeur de type vrai/faux qui indique si cet menu a été donné gratuitement",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | _SYS_",
+  "sql" : "case when coalesce({{TRA_MEN}}.`CAUSAL_ID`,0)=0 then 0 else 1 end",
+  "path" : "tcpos.TRA_MEN.IS_GRATUITY",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

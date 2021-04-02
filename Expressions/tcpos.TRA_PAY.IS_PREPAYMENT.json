@@ -1,0 +1,12 @@
+{
+  "name" : "Prépaiement",
+  "category" : "Paiements",
+  "comment" : "Indique si le paiement est un prépaiement sur la carte ou un paiement normal",
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{TRA_PAY}}.`IS_PREPAYMENT`",
+  "path" : "tcpos.TRA_PAY.IS_PREPAYMENT",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

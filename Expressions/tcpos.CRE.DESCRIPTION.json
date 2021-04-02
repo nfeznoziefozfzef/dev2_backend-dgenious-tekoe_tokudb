@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kreditkartentyp",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "Credit card",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "Carte de crédit",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "Carte de crédit",
+  "category" : "Paiements",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{CRE}}.`DESCRIPTION`",
+  "path" : "tcpos.CRE.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Code Gruppe A",
+      "category" : "Bestandsposten"
+    },
+    "EN" : {
+      "name" : "Code Group A",
+      "category" : "Inventory items"
+    },
+    "FR" : {
+      "name" : "Code Groupe A",
+      "category" : "Articles du stock"
+    }
+  },
+  "name" : "Code Groupe A",
+  "category" : "Articles du stock",
+  "requires" : "graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SGRA}}.`CODE`",
+  "path" : "tcpos.SGRA.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

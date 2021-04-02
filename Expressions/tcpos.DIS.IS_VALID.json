@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gültiger Rabatt",
+      "category" : "Rabatte",
+      "comment" : "Wert vom Typ whar/falsch, der angibt, ob der Rabatt gültig ist."
+    },
+    "EN" : {
+      "name" : "Valid discount",
+      "category" : "Discounts",
+      "comment" : "Value of type TRUE/FALSE indicating whether the discount is valid"
+    },
+    "FR" : {
+      "name" : "Remise valide",
+      "category" : "Remises",
+      "comment" : "Valeur vrai/faux qui indique si la remise est valide"
+    }
+  },
+  "name" : "Remise valide",
+  "category" : "Remises",
+  "comment" : "Valeur vrai/faux qui indique si la remise est valide",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | _SYS_",
+  "sql" : "{{DIS}}.`IS_VALID`",
+  "path" : "tcpos.DIS.IS_VALID",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

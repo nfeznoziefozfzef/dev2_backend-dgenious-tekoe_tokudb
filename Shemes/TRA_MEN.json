@@ -1,0 +1,25 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.TRA_MEN" ],
+  "grants" : [ "auth.scheme.TRA_MEN" ],
+  "name" : "Tickets - menus",
+  "comment" : "Ce schéma part des menus vendus, et donne accès aux tickets, aux clients et aux établissements",
+  "translations" : {
+    "DE" : {
+      "name" : "Tickets - Menüs",
+      "comment" : "Verwenden Sie diese Extraktion, um alle Menüpunkte aller Tickets aufzulisten. Von den Ticketlinien aus kann man auf Tickets und Kunden zugreifen."
+    },
+    "EN" : {
+      "name" : "Tickets - menus",
+      "comment" : "Use this extraction to list all menu items of all tickets. From ticket lines one can access tickets and customers"
+    },
+    "FR" : {
+      "name" : "Tickets - menus",
+      "comment" : "Ce schéma part des menus vendus, et donne accès aux tickets, aux clients et aux établissements"
+    }
+  },
+  "visible" : false,
+  "graph" : "tcpos",
+  "scheme" : "TRA_MEN",
+  "entry_table" : "TRA_MEN",
+  "company" : "tekoe_tokudb"
+}

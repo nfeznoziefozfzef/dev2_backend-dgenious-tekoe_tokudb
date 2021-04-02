@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Zahlungsmittel",
+      "category" : "Zahlungen"
+    },
+    "EN" : {
+      "name" : "UID means of payment",
+      "category" : "Payments"
+    },
+    "FR" : {
+      "name" : "UID moyen de paiement",
+      "category" : "Paiements"
+    }
+  },
+  "name" : "UID moyen de paiement",
+  "category" : "Paiements",
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{PAY}}.`PAYMENT_ID`",
+  "path" : "tcpos.PAY.PAYMENT_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_PAY" : "{{TRA_PAY}}.`PAYMENT_ID`",
+    "TRA_PAY_AGG" : "{{TRA_PAY_AGG}}.`PAYMENT_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,17 @@
+{
+  "username" : "ghelsmoortel",
+  "company" : "tekoe_tokudb",
+  "name" : "Gaëlle Helsmoortel",
+  "language" : "EN",
+  "email" : "g.helsmoortel@dgenious.com",
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "all_values" : true
+    },
+    "tcpos.SHO" : {
+      "all_values" : true
+    }
+  },
+  "user_id" : 751812926,
+  "editable" : true
+}

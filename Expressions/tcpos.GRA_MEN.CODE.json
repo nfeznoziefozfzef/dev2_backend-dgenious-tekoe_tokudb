@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe A Code (Menüs)",
+      "category" : "Menüs"
+    },
+    "EN" : {
+      "name" : "Group A code (menu)",
+      "category" : "Menus"
+    },
+    "FR" : {
+      "name" : "Code Groupe A Menu",
+      "category" : "Menus"
+    }
+  },
+  "name" : "Code Groupe A Menu",
+  "category" : "Menus",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{GRA_MEN}}.`CODE`",
+  "path" : "tcpos.GRA_MEN.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

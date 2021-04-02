@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Höhe der Rabatte und Promotionen",
+      "category" : "Tickets - Menüs",
+      "comment" : "Anzahl der auf dieser Ticketlinie gewährten Rabatte und Aktionen"
+    },
+    "EN" : {
+      "name" : "Amount of discounts and promotions",
+      "category" : "Tickets - menus",
+      "comment" : "Amount of discounts and promotions granted on this ticket line"
+    },
+    "FR" : {
+      "name" : "Rabais et promotions accordés sur cette ligne d'menus du ticket",
+      "category" : "Tickets - menus",
+      "comment" : "Rabais et promotions accordés sur cette ligne d'menus du ticket"
+    }
+  },
+  "name" : "Rabais et promotions accordés sur cette ligne d'menus du ticket",
+  "category" : "Tickets - menus",
+  "comment" : "Rabais et promotions accordés sur cette ligne d'menus du ticket",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | _SYS_",
+  "sql" : "{{TRA_MEN}}.`REBATE`",
+  "path" : "tcpos.TRA_MEN.REBATE",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

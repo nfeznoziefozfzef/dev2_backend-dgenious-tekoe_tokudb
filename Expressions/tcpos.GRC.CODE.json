@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppe C Code",
+      "category" : "Artikel"
+    },
+    "EN" : {
+      "name" : "Group C code",
+      "category" : "Articles"
+    },
+    "FR" : {
+      "name" : "Code Groupe C",
+      "category" : "Articles"
+    }
+  },
+  "name" : "Code Groupe C",
+  "category" : "Articles",
+  "requires" : "graph.tcpos;auth.scheme.ART | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{GRC}}.`CODE`",
+  "path" : "tcpos.GRC.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

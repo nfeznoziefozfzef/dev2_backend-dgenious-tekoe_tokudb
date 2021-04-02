@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.ART", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.ART" ],
+  "name" : "Articles",
+  "comment" : "Ce schéma donne accès à la liste des articles dans le système",
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel",
+      "comment" : "Diese Schema zeigt die Liste aller Artikel im System"
+    },
+    "EN" : {
+      "name" : "Articles",
+      "comment" : "Lists all articles in the system and their groups. For information about which articles have been sold at what price, use an extraction of type 'Ticket items' instead"
+    },
+    "FR" : {
+      "name" : "Articles",
+      "comment" : "Ce schéma donne accès à la liste des articles dans le système"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "ART",
+  "entry_table" : "ART",
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,11 @@
+{
+  "requires" : [ "graph.tcpos", "scheme.SHO_SHO_T" ],
+  "grants" : [ "auth.scheme.SHO_SHO_T" ],
+  "name" : "Attributs des établissements",
+  "comment" : "Ce schéma lie les établissements aux types d'étblissements",
+  "visible" : false,
+  "graph" : "tcpos",
+  "scheme" : "SHO_SHO_T",
+  "entry_table" : "SHO_SHO_T",
+  "company" : "tekoe_tokudb"
+}

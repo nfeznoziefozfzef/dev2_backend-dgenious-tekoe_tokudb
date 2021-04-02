@@ -1,0 +1,37 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Betrag exkl. MwSt.",
+      "category" : "MwSt.",
+      "comment" : "Betrag, exkl. MwSt., mit dem geltenden Mehrwertsteuersatz für diesen Shop und dieses Datum"
+    },
+    "EN" : {
+      "name" : "Amount VAT excl.",
+      "category" : "VAT",
+      "comment" : "Amount, VAT excluded, submitted to this VAT rate for this shop and this date"
+    },
+    "FR" : {
+      "name" : "Montant HTVA",
+      "category" : "TVA",
+      "comment" : "Montant hors TVA soumis à un taux de TVA déterminé pour cet établissement et ce jour"
+    }
+  },
+  "name" : "Montant HTVA",
+  "category" : "TVA",
+  "comment" : "Montant hors TVA soumis à un taux de TVA déterminé pour cet établissement et ce jour",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | _SYS_",
+  "sql" : "{{TRA_VAT_AGG}}.`GROSS_AMOUNT`-{{TRA_VAT_AGG}}.`VAT_AMOUNT`",
+  "path" : "tcpos.TRA_VAT_AGG.NET_AMOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Kartentyp",
+      "category" : "Ticket - Kartentransaktionen",
+      "comment" : "1"
+    },
+    "EN" : {
+      "name" : "Card type",
+      "category" : "Ticket - card transactions",
+      "comment" : "1"
+    },
+    "FR" : {
+      "name" : "Type de carte",
+      "category" : "Tickets - paiements par badge",
+      "comment" : "1"
+    }
+  },
+  "name" : "Type de carte",
+  "category" : "Tickets - paiements par badge",
+  "comment" : "1",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_PAY | _SYS_",
+  "sql" : "{{TRA_CAR}}.`CARD_TYPE`",
+  "path" : "tcpos.TRA_CAR.CARD_TYPE",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gruppenbeschreibung",
+      "category" : "Gruppen"
+    },
+    "EN" : {
+      "name" : "Group Description",
+      "category" : "Groups"
+    },
+    "FR" : {
+      "name" : "Description Groupe",
+      "category" : "Groupes"
+    }
+  },
+  "name" : "Description Groupe",
+  "category" : "Groupes",
+  "properties" : {
+    "width" : 250.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.GRP | _SYS_",
+  "sql" : "{{GRP}}.`DESCRIPTION`",
+  "path" : "tcpos.GRP.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,25 @@
+{
+  "requires" : [ "scheme.GRP", "graph.tcpos" ],
+  "grants" : [ "auth.scheme.GRP" ],
+  "name" : "Articles - groupes",
+  "comment" : "Ce schéma donne accès à la liste des groupes d'articles dans le système",
+  "translations" : {
+    "DE" : {
+      "name" : "Artikel Gruppen",
+      "comment" : "Dieses Schema zeigt die Liste aller Gruppen im System"
+    },
+    "EN" : {
+      "name" : "Article groups",
+      "comment" : "List all article groups in the system. This extraction is typically used in for-each joins"
+    },
+    "FR" : {
+      "name" : "Articles - groupes",
+      "comment" : "Ce schéma donne accès à la liste des groupes d'articles dans le système"
+    }
+  },
+  "visible" : true,
+  "graph" : "tcpos",
+  "scheme" : "GRP",
+  "entry_table" : "GRP",
+  "company" : "tekoe_tokudb"
+}

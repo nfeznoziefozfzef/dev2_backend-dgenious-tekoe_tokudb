@@ -1,0 +1,29 @@
+{
+  "paths" : [ "graph.tcpos", "scheme.*" ],
+  "name" : "Shop manager",
+  "comment" : "This set of permissions gives access to all data for specific shops. Documents can be edited and limited downloads are available",
+  "translations" : {
+    "EN" : {
+      "name" : "Shop manager",
+      "comment" : "This set of permissions grants access to a limited set of shops"
+    },
+    "FR" : {
+      "name" : "Manager d'établissement",
+      "comment" : "Ce groupe de permissions donne accès aux données de certains établissements uniquement."
+    }
+  },
+  "alias" : "shop_manager",
+  "admin_profile" : {
+    "regular_sharer" : false,
+    "mandatory_sharer" : false,
+    "document_editor" : true,
+    "limited_exporter" : true,
+    "full_exporter" : false,
+    "execution_delegator" : false,
+    "user_manager" : false,
+    "debugger" : true,
+    "task_editor" : true
+  },
+  "required_profile_keys" : [ "tcpos.SWA", "tcpos.SHO" ],
+  "company" : "tekoe_tokudb"
+}

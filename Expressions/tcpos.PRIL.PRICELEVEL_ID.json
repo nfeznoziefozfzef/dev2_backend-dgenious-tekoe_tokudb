@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Preisniveau",
+      "category" : "Ticket - Zeilen"
+    },
+    "EN" : {
+      "name" : "UID price level",
+      "category" : "Ticket lines"
+    },
+    "FR" : {
+      "name" : "UID niveau de prix",
+      "category" : "Tickets - lignes"
+    }
+  },
+  "name" : "UID niveau de prix",
+  "category" : "Tickets - lignes",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{PRIL}}.`PRICELEVEL_ID`",
+  "path" : "tcpos.PRIL.PRICELEVEL_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_MEN" : "{{TRA_MEN}}.`PRICELEVEL_ID`",
+    "TRA_ART" : "{{TRA_ART}}.`PRICELEVEL_ID`"
+  },
+  "company" : "tekoe_tokudb"
+}

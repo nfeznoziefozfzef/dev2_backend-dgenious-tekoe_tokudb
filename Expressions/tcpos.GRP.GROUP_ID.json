@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "UID Gruppe",
+      "category" : "Gruppen"
+    },
+    "EN" : {
+      "name" : "UID group",
+      "category" : "Groups"
+    },
+    "FR" : {
+      "name" : "UID groupe",
+      "category" : "Groupes"
+    }
+  },
+  "name" : "UID groupe",
+  "category" : "Groupes",
+  "requires" : "graph.tcpos;auth.scheme.GRP | _SYS_",
+  "sql" : "{{GRP}}.`GROUP_ID`",
+  "path" : "tcpos.GRP.GROUP_ID",
+  "type" : "ID",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

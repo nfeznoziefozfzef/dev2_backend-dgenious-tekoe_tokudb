@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Öffnender Benutzer",
+      "category" : "Kassenladenzählung",
+      "comment" : "Benutzer der verantwortlich für die Zählung der Lade bei der Öffnung der Kasse ist"
+    },
+    "EN" : {
+      "name" : "Opening operator",
+      "category" : "Drawer Counts",
+      "comment" : "Operator in charge  of the initial drawer count"
+    },
+    "FR" : {
+      "name" : "Opérateur ouverture",
+      "category" : "Comptage tiroirs",
+      "comment" : "Opérateur en charge du comptage à l'ouverture"
+    }
+  },
+  "name" : "Opérateur ouverture",
+  "category" : "Comptage tiroirs",
+  "comment" : "Opérateur en charge du comptage à l'ouverture",
+  "properties" : {
+    "width" : 200.0
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{OPE_DRA_OPEN}}.`DESCRIPTION`",
+  "path" : "tcpos.OPE_DRA_OPEN.DESCRIPTION",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

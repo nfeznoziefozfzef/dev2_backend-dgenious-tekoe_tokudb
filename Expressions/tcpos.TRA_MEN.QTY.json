@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Menge",
+      "category" : "Tickets - Menüs",
+      "comment" : "Menge dieses Menüs, die in dieser Ticketzeile verkauft wird, ausgedrückt in der Menüeinheit (Einheiten, Kilo,....)."
+    },
+    "EN" : {
+      "name" : "Quantity",
+      "category" : "Tickets - menus",
+      "comment" : "Quantity of this menu sold in this ticket line, expressed in the menu unit (units, kilos,...)"
+    },
+    "FR" : {
+      "name" : "Quantité",
+      "category" : "Tickets - menus",
+      "comment" : "Quantité vendue dans cette ligne du ticket"
+    }
+  },
+  "name" : "Quantité",
+  "category" : "Tickets - menus",
+  "comment" : "Quantité vendue dans cette ligne du ticket",
+  "requires" : "graph.tcpos;auth.scheme.TRA_MEN | _SYS_",
+  "sql" : "{{TRA_MEN}}.`QTY`",
+  "path" : "tcpos.TRA_MEN.QTY",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,20 @@
+{
+  "name" : "Prépaiement",
+  "category" : "Statistiques",
+  "comment" : "Indique si le paiement est un prépaiement sur la carte ou un paiement normal",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{TRA_PAY_AGG}}.`IS_PREPAYMENT`",
+  "path" : "tcpos.TRA_PAY_AGG.IS_PREPAYMENT",
+  "type" : "BOOLEAN",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

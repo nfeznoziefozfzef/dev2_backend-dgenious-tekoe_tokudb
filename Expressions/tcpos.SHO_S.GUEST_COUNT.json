@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Anzahl Gedecke",
+      "category" : "Statistik",
+      "comment" : "Anzahl Gedecke für den Tag. Berechnet für Tickets, die einem Tisch zugeordnet sind"
+    },
+    "EN" : {
+      "name" : "Number of place settings",
+      "category" : "Statistics",
+      "comment" : "Number of place settings for the day. Calculated based on the tickets assigned to a table"
+    },
+    "FR" : {
+      "name" : "Nombre de couverts",
+      "category" : "Statistiques",
+      "comment" : "Nombre de couverts à table, pour la journée. Calculé sur les tickets affectés à une table"
+    }
+  },
+  "name" : "Nombre de couverts",
+  "category" : "Statistiques",
+  "comment" : "Nombre de couverts à table, pour la journée. Calculé sur les tickets affectés à une table",
+  "requires" : "graph.tcpos;auth.scheme.TRA_VAT_AGG | auth.scheme.SHO_S | auth.scheme.TRA_PAY_AGG | _SYS_",
+  "sql" : "{{SHO_S}}.`GUEST_COUNT`",
+  "path" : "tcpos.SHO_S.GUEST_COUNT",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

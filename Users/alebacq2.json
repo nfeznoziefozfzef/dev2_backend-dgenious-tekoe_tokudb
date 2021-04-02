@@ -1,0 +1,17 @@
+{
+  "username" : "alebacq2",
+  "company" : "tekoe_tokudb",
+  "name" : "Antoine2",
+  "language" : "FR",
+  "email" : "a.lebacq@dgenious.com",
+  "profile_keys" : {
+    "tcpos.SWA" : {
+      "values" : [ "Lisboa", "Lyon", "Bruxelles" ]
+    },
+    "tcpos.SHO" : {
+      "values" : [ "Milan", "Madrid", "München" ]
+    }
+  },
+  "user_id" : -2066613854,
+  "editable" : true
+}

@@ -1,0 +1,25 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Artikelcode",
+      "category" : "Bestandsposten"
+    },
+    "EN" : {
+      "name" : "Article Code",
+      "category" : "Inventory items"
+    },
+    "FR" : {
+      "name" : "Code Article",
+      "category" : "Articles du stock"
+    }
+  },
+  "name" : "Code Article",
+  "category" : "Articles du stock",
+  "requires" : "!auth.scheme.TRAR;graph.tcpos;auth.scheme.HIST_STO | auth.scheme.SWA_ART | _SYS_",
+  "sql" : "{{SART}}.`CODE`",
+  "path" : "tcpos.SART.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

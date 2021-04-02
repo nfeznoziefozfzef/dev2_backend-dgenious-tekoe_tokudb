@@ -1,0 +1,32 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Gäste",
+      "category" : "Tickets",
+      "comment" : "Anzahl Gäste"
+    },
+    "EN" : {
+      "name" : "Guests",
+      "category" : "Tickets",
+      "comment" : "Number of guests"
+    },
+    "FR" : {
+      "name" : "Couverts",
+      "category" : "Tickets",
+      "comment" : "Nombre de couverts"
+    }
+  },
+  "name" : "Couverts",
+  "category" : "Tickets",
+  "comment" : "Nombre de couverts",
+  "requires" : "graph.tcpos;auth.scheme.TRA_CAR | auth.scheme.TRA_TAB | auth.scheme.TRA | auth.scheme.TRA_MEN | auth.scheme.TRA_PAY | auth.scheme.TRA_POI | auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA}}.`GUESTS_NUM`",
+  "path" : "tcpos.TRA.GUESTS_NUM",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "scheme_sql" : {
+    "TRA_ART" : "{{TRA_ART}}.`GUESTS_NUM`"
+  },
+  "company" : "tekoe_tokudb"
+}

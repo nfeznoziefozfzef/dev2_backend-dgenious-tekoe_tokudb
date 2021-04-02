@@ -1,0 +1,47 @@
+{
+  "name" : "Etablissement",
+  "category" : "Etablissement",
+  "comment" : "Etablissement dans lequel a eu lieu la transaction",
+  "mappings" : {
+    "TRA_CAR" : "tcpos.SHO.DESCRIPTION",
+    "TRA_TAB" : "tcpos.SHO.DESCRIPTION",
+    "TRA_VAT_AGG" : "tcpos.SHO.DESCRIPTION",
+    "TRA" : "tcpos.SHO.DESCRIPTION",
+    "TRA_MEN" : "tcpos.SHO.DESCRIPTION",
+    "SHO_SHO_T" : "tcpos.SHO.DESCRIPTION",
+    "DRA" : "tcpos.SHO.DESCRIPTION",
+    "TRA_PAY" : "tcpos.SHO.DESCRIPTION",
+    "TRA_POI" : "tcpos.SHO.DESCRIPTION",
+    "TRA_ART_DIS" : "tcpos.SHO.DESCRIPTION",
+    "WIT_TRA" : "tcpos.SHO.DESCRIPTION",
+    "TRA_ART_PRO" : "tcpos.SHO.DESCRIPTION",
+    "SHO" : "tcpos.SHO.DESCRIPTION",
+    "SHO_S" : "tcpos.SHO.DESCRIPTION",
+    "TRA_PAY_AGG" : "tcpos.SHO.DESCRIPTION",
+    "TRA_ART" : "tcpos.SHO.DESCRIPTION"
+  },
+  "requires" : [ "graph.tcpos" ],
+  "translations" : {
+    "DE" : {
+      "name" : "Shop",
+      "category" : "Shop",
+      "comment" : "Shop, in der die Transaktion stattgefunden hat"
+    },
+    "EN" : {
+      "name" : "Shop",
+      "category" : "Shop",
+      "comment" : "Shop where the transaction did take place"
+    },
+    "FR" : {
+      "name" : "Etablissement",
+      "category" : "Etablissement",
+      "comment" : "Etablissement dans lequel a eu lieu la transaction"
+    }
+  },
+  "path" : "tcpos.SHO",
+  "data_type" : "TEXT",
+  "auto_mappings" : [ "tcpos.SHO.DESCRIPTION" ],
+  "default_mapping" : "TRA",
+  "company" : "tekoe_tokudb",
+  "graph" : "tcpos"
+}

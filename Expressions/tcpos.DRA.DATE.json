@@ -1,0 +1,27 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Datum",
+      "category" : "Kassenladenzählung",
+      "comment" : "Datum der Kassenbewegungen"
+    },
+    "EN" : {
+      "name" : "Date",
+      "category" : "Drawer Counts",
+      "comment" : "Date of movements"
+    },
+    "FR" : {
+      "name" : "Date",
+      "category" : "Comptages Tiroirs"
+    }
+  },
+  "name" : "Date",
+  "category" : "Comptages Tiroirs",
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`DATE`",
+  "path" : "tcpos.DRA.DATE",
+  "type" : "DATE",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

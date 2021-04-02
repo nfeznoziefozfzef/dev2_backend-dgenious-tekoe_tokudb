@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Angebotscode",
+      "category" : "Angebote",
+      "comment" : "Code des Angebots"
+    },
+    "EN" : {
+      "name" : "Promotion code",
+      "category" : "Promotions",
+      "comment" : "Code of the promotion"
+    },
+    "FR" : {
+      "name" : "Code promotion",
+      "category" : "Promotions",
+      "comment" : "Code de la promotion"
+    }
+  },
+  "name" : "Code promotion",
+  "category" : "Promotions",
+  "comment" : "Code de la promotion",
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | _SYS_",
+  "sql" : "{{PRO}}.`CODE`",
+  "path" : "tcpos.PRO.CODE",
+  "type" : "TEXT",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,29 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Bilanz nach der Transaktion",
+      "category" : "Punkte",
+      "comment" : "Punktebilanz für diese Punktekampagne nach der Transaktion"
+    },
+    "EN" : {
+      "name" : "Balance after transaction",
+      "category" : "Points",
+      "comment" : "Point balance for this point campaign after the transaction"
+    },
+    "FR" : {
+      "name" : "Solde après transaction",
+      "category" : "Points",
+      "comment" : "Solde de points pour cette campagne de points après la transaction"
+    }
+  },
+  "name" : "Solde après transaction",
+  "category" : "Points",
+  "comment" : "Solde de points pour cette campagne de points après la transaction",
+  "requires" : "graph.tcpos;auth.scheme.TRA_POI | _SYS_",
+  "sql" : "{{TRA_POI}}.`POINTS_BALANCE`",
+  "path" : "tcpos.TRA_POI.POINTS_BALANCE",
+  "type" : "INTEGER",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

@@ -1,0 +1,28 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Schichtschluss",
+      "category" : "Kassenladenzählung"
+    },
+    "EN" : {
+      "name" : "Shift closing time",
+      "category" : "Drawer Counts"
+    },
+    "FR" : {
+      "name" : "Heure clôture Session",
+      "category" : "Comptages Tiroirs"
+    }
+  },
+  "name" : "Heure clôture Session",
+  "category" : "Comptages Tiroirs",
+  "properties" : {
+    "format" : "HH:mm"
+  },
+  "requires" : "graph.tcpos;auth.scheme.DRA | _SYS_",
+  "sql" : "{{DRA}}.`CLOSING_TIME`",
+  "path" : "tcpos.DRA.CLOSING_TIME",
+  "type" : "TIME",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}

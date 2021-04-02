@@ -1,0 +1,33 @@
+{
+  "translations" : {
+    "DE" : {
+      "name" : "Linienrabatt",
+      "category" : "Ticket-Zeilen"
+    },
+    "EN" : {
+      "name" : "Line rebate",
+      "category" : "Ticket lines"
+    },
+    "FR" : {
+      "name" : "Montant remise",
+      "category" : "Tickets - lignes"
+    }
+  },
+  "name" : "Montant remise",
+  "category" : "Tickets - lignes",
+  "properties" : {
+    "format" : "0,0.00",
+    "format_unit" : "CHF",
+    "format_pos" : "prefix",
+    "format_dec_length" : 2,
+    "format_mand_decimals" : true,
+    "format_type" : "unit"
+  },
+  "requires" : "graph.tcpos;auth.scheme.TRA_ART_DIS | auth.scheme.TRA_ART_PRO | auth.scheme.TRA_ART | _SYS_",
+  "sql" : "{{TRA_ART}}.`DISCOUNT`",
+  "path" : "tcpos.TRA_ART.DISCOUNT",
+  "type" : "DECIMAL",
+  "graph" : "tcpos",
+  "refers_to_table" : true,
+  "company" : "tekoe_tokudb"
+}
