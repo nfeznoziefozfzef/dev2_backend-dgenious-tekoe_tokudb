@@ -1,0 +1,13 @@
+{
+  "name" : "Nouveau rapport 1",
+  "modified" : "2020-12-17 14:27:11",
+  "requires" : [ "scheme.ART", "scheme.TRA_PAY", "graph.tcpos" ],
+  "username" : "ejonuzoski",
+  "document_id" : 163358894,
+  "type" : "REPORT",
+  "report" : {"properties":{"css":{"header":{"text-transform":"uppercase"}},"active_step":"s1"},"steps":[{"alias":"s0","grouping":false,"name":"Articles","properties":{"scheme":"Articles"},"chart":false,"scheme":"ART"},{"alias":"s1","columns":[{"alias":"s1_c0","name":"Date","expression":{"path":"tcpos.TRA.BOOKKEEPING_DATE","type":"DATE","resettable":false},"resettable":false},{"alias":"s1_c1","name":"Anniversaire","expression":{"path":"tcpos.CUS.ANNIVERSARY","type":"DATE","resettable":false},"resettable":false},{"alias":"s1_c2","name":"Date du ticket","expression":{"path":"tcpos.TRA.TRANS_DATE","type":"DATE","resettable":false},"resettable":false}],"grouping":false,"name":"Tickets - paiements","properties":{"scheme":"Tickets - paiements"},"chart":false,"scheme":"TRA_PAY"}] },
+  "company" : "tekoe_tokudb",
+  "translatable" : false,
+  "folder_id" : -1379701399,
+  "keep_version" : false
+}
