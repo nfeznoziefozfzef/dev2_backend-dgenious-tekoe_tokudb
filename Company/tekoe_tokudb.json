@@ -8,5 +8,6 @@
   "admin_profile_restrictions" : {
     "template_sharer" : false
   },
-  "graphs" : [ "tcpos" ]
+  "graphs" : [ "tcpos" ],
+  "equals_backup" : true
 }
