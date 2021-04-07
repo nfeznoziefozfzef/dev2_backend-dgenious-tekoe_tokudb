@@ -25,5 +25,6 @@
     "TRA_ART_DIS" : "{{TRA_ART_DIS}}.`PROMOTION_ID`",
     "TRA_ART_PRO" : "{{TRA_ART_PRO}}.`PROMOTION_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

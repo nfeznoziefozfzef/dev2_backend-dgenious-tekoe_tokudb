@@ -27,5 +27,6 @@
   "scheme_sql" : {
     "TRA_ART" : "{{TRA_ART}}.`ARTICLE_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

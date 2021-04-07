@@ -29,5 +29,6 @@
     "TRA_VAT_AGG" : "{{TRA_VAT_AGG}}.`BOOKKEEPING_DATE`",
     "TRA_PAY_AGG" : "{{TRA_PAY_AGG}}.`BOOKKEEPING_DATE`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

@@ -21,5 +21,6 @@
   "graph" : "tcpos",
   "scheme" : "ARC",
   "entry_table" : "ARC",
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

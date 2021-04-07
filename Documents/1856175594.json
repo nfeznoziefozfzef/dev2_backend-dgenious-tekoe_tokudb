@@ -1,0 +1,13 @@
+{
+  "name" : "New report 1",
+  "modified" : "2019-04-11 09:40:51",
+  "requires" : [ "graph.tcpos", "scheme.TRA_ART_DIS" ],
+  "username" : "egirod",
+  "document_id" : 1856175594,
+  "type" : "REPORT",
+  "report" : {"properties":{"css":{"header":{"text-transform":"uppercase"}},"active_step":"s0"},"steps":[{"alias":"s0","columns":[{"alias":"s0_c0","name":"Line amount before discounts","expression":{"path":"tcpos.TRA_ART.PRICE","type":"DECIMAL","resettable":false},"properties":{"format":"0,0.00","format_unit":"CHF","format_pos":"prefix","format_dec_length":2,"format_mand_decimals":true,"format_type":"unit"},"resettable":false},{"alias":"s0_c1","name":"Line amount before discounts","expression":{"path":"tcpos.TRA_ART.PROMOTION_DISCOUNT","type":"DECIMAL","resettable":false},"properties":{"format":"0,0.00","format_unit":"CHF","format_pos":"prefix","format_dec_length":2,"format_mand_decimals":true,"format_type":"unit"},"resettable":false}],"grouping":false,"name":"Ticket line discounts","properties":{"scheme":"Ticket line discounts"},"chart":false,"scheme":"TRA_ART_DIS"}] },
+  "company" : "tekoe_tokudb",
+  "translatable" : false,
+  "folder_id" : 1381845795,
+  "keep_version" : false
+}

@@ -25,5 +25,6 @@
     "HIST_STO" : "{{HIST_STO}}.`STOCK_ARTICLE_ID`",
     "SWA_ART" : "{{SWA_ART}}.`STOCK_ARTICLE_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

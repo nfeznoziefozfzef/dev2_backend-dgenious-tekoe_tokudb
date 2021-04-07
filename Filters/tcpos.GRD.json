@@ -29,5 +29,6 @@
   "auto_mappings" : [ "tcpos.GRD.DESCRIPTION", "tcpos.SGRD.DESCRIPTION" ],
   "default_mapping" : "ART",
   "company" : "tekoe_tokudb",
+  "equals_backup" : true,
   "graph" : "tcpos"
 }

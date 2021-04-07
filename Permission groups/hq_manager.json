@@ -32,5 +32,6 @@
       "all_values" : true
     }
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

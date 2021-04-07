@@ -28,5 +28,6 @@
     "WIT_TRA" : "{{WIT_TRA}}.`TILL_ID`",
     "TRA_ART" : "{{TRA_ART}}.`TILL_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

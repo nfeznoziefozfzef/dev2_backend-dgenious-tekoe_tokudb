@@ -28,5 +28,6 @@
     "TRA_PAY" : "{{TRA_PAY}}.`TRANS_NUM`",
     "TRA_ART" : "{{TRA_ART}}.`TRANS_NUM`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

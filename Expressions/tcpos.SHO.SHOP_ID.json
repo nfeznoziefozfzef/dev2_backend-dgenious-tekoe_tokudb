@@ -34,5 +34,6 @@
     "TRA_PAY_AGG" : "{{TRA_PAY_AGG}}.`SHOP_ID`",
     "TRA_ART" : "{{TRA_ART}}.`SHOP_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

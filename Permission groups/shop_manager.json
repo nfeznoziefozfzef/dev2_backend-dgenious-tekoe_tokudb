@@ -25,5 +25,6 @@
     "task_editor" : true
   },
   "required_profile_keys" : [ "tcpos.SWA", "tcpos.SHO" ],
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

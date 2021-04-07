@@ -24,5 +24,6 @@
   "scheme_sql" : {
     "WIT_TRA" : "{{WIT_TRA}}.`WITHDRAWAL_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

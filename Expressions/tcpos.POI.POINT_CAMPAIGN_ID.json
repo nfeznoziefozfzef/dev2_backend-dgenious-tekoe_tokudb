@@ -26,5 +26,6 @@
     "TRA_POI" : "{{TRA_POI}}.`POINT_CAMPAIGN_ID`",
     "TRA_POI_LAST" : "{{TRA_POI_LAST}}.`POINT_CAMPAIGN_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

@@ -21,5 +21,6 @@
   "graph" : "tcpos",
   "scheme" : "SWA_ART",
   "entry_table" : "SWA_ART",
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

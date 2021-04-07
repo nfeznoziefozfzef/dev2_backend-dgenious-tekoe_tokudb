@@ -21,5 +21,6 @@
   "graph" : "tcpos",
   "scheme" : "DRA",
   "entry_table" : "DRA",
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

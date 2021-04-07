@@ -40,5 +40,6 @@
   "data_type" : "DATE",
   "auto_mappings" : [ "tcpos.SHO_S.BOOKKEEPING_DATE", "tcpos.TRA.BOOKKEEPING_DATE", "tcpos.DRA.DATE", "tcpos.HIST_STO.STOCK_DATE" ],
   "company" : "tekoe_tokudb",
+  "equals_backup" : true,
   "graph" : "tcpos"
 }

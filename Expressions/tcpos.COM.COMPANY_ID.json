@@ -24,5 +24,6 @@
   "scheme_sql" : {
     "CUS" : "{{CUS}}.`COMPANY_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

@@ -7,5 +7,6 @@
   "graph" : "tcpos",
   "scheme" : "SHO_SHO_T",
   "entry_table" : "SHO_SHO_T",
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

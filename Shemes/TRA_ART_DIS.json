@@ -21,5 +21,6 @@
   "graph" : "tcpos",
   "scheme" : "TRA_ART_DIS",
   "entry_table" : "TRA_ART_DIS",
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

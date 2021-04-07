@@ -6,6 +6,7 @@
   } ],
   "company" : "tekoe_tokudb",
   "db_log_level" : "INFO",
+  "equals_backup" : true,
   "job" : 1744721757,
   "name" : "another job",
   "production" : false,

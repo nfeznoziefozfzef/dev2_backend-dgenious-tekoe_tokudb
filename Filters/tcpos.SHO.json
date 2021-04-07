@@ -43,5 +43,6 @@
   "auto_mappings" : [ "tcpos.SHO.DESCRIPTION" ],
   "default_mapping" : "TRA",
   "company" : "tekoe_tokudb",
+  "equals_backup" : true,
   "graph" : "tcpos"
 }

@@ -12,6 +12,7 @@
       "all_values" : true
     }
   },
+  "equals_backup" : true,
   "user_id" : 751812926,
   "editable" : true
 }

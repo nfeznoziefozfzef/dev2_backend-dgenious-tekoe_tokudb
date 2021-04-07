@@ -25,5 +25,6 @@
     "TRA_PAY" : "{{TRA_PAY}}.`PAYMENT_ID`",
     "TRA_PAY_AGG" : "{{TRA_PAY_AGG}}.`PAYMENT_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

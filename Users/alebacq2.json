@@ -12,6 +12,7 @@
       "values" : [ "Milan", "Madrid", "München" ]
     }
   },
+  "equals_backup" : true,
   "user_id" : -2066613854,
   "editable" : true
 }

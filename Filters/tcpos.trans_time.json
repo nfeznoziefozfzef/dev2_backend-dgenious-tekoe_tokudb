@@ -35,5 +35,6 @@
   "data_type" : "TIME",
   "auto_mappings" : [ "tcpos.TRA.TRANS_TIME" ],
   "company" : "tekoe_tokudb",
+  "equals_backup" : true,
   "graph" : "tcpos"
 }

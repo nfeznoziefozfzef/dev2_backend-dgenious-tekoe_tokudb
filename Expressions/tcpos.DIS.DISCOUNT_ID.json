@@ -24,5 +24,6 @@
   "scheme_sql" : {
     "TRA_ART_DIS" : "{{TRA_ART_DIS}}.`DISCOUNT_ID`"
   },
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

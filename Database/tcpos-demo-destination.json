@@ -2663,5 +2663,6 @@
     } ]
   } ],
   "company" : "tekoe_tokudb",
-  "default_table_options" : "engine=tokuDB"
+  "default_table_options" : "engine=tokuDB",
+  "equals_backup" : true
 }

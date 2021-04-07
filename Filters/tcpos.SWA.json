@@ -26,5 +26,6 @@
   "auto_mappings" : [ "tcpos.SWA.DESCRIPTION" ],
   "default_mapping" : "SWA",
   "company" : "tekoe_tokudb",
+  "equals_backup" : true,
   "graph" : "tcpos"
 }

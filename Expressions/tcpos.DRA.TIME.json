@@ -26,5 +26,6 @@
   "type" : "TIME",
   "graph" : "tcpos",
   "refers_to_table" : true,
-  "company" : "tekoe_tokudb"
+  "company" : "tekoe_tokudb",
+  "equals_backup" : true
 }

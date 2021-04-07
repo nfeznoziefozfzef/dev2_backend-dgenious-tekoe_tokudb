@@ -13,6 +13,7 @@
       "all_values" : true
     }
   },
+  "equals_backup" : true,
   "user_id" : -680815084,
   "editable" : true
 }

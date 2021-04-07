@@ -4,6 +4,7 @@
   "name" : "tester123",
   "language" : "FR",
   "email" : "e.jonuzoski@dgenious.com",
+  "equals_backup" : true,
   "user_id" : -2108345382,
   "editable" : true
 }
