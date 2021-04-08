@@ -1,0 +1,13 @@
+{
+  "name" : "Nouveau rapport 3",
+  "modified" : "2019-04-11 09:40:52",
+  "requires" : [ "graph.tcpos", "scheme.TRA_ART" ],
+  "username" : "alebacq",
+  "document_id" : -1054258689,
+  "type" : "REPORT",
+  "report" : {"properties":{"css":{"header":{"text-transform":"uppercase"}},"active_step":"s1"},"steps":[{"alias":"s0","steps":[{"alias":"s1","columns":[{"alias":"s1_c0","name":"UID ticket","grouping":"DISTINCT","expression":{"path":"source.s0_c0","type":"ID","resettable":false},"properties":{"grouping":"DISTINCT"},"resettable":false}],"grouping":true,"name":"Etape 2","chart":false}],"columns":[{"alias":"s0_c0","name":"UID ticket","expression":{"path":"tcpos.TRA.TRANSACTION_ID","type":"ID","resettable":false},"resettable":false},{"alias":"s0_c1","name":"Montant ticket","expression":{"path":"tcpos.TRA.TOTAL_AMOUNT","type":"DECIMAL","resettable":false},"filter":{"items":[{"comparator":"IS_GREATER_OR_EQUAL","expression":{"type":"DECIMAL","value":"100"},"display":"100"}],"and_or":"AND"},"properties":{"format":"0,0.00","format_unit":"CHF","format_pos":"prefix","format_dec_length":2,"format_mand_decimals":true,"format_type":"unit"},"resettable":false}],"grouping":false,"name":"Tickets - lignes","properties":{"scheme":"Tickets - lignes"},"chart":false,"scheme":"TRA_ART"}] },
+  "company" : "tekoe_tokudb",
+  "translatable" : false,
+  "folder_id" : -1833453596,
+  "keep_version" : false
+}
