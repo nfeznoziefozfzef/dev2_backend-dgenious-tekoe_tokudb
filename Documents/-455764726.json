@@ -1,0 +1,13 @@
+{
+  "name" : "bug filter pushdown",
+  "modified" : "2019-07-19 11:19:44",
+  "requires" : [ "graph.tcpos", "scheme.SHO_S" ],
+  "username" : "alebacq",
+  "document_id" : -455764726,
+  "type" : "REPORT",
+  "report" : {"properties":{"css":{"header":{"text-transform":"uppercase"}},"active_step":"s2"},"steps":[{"alias":"s0","steps":[{"alias":"s1","steps":[{"alias":"s2","columns":[{"alias":"s2_c0","name":"Date","expression":{"path":"source.s1_c0","type":"DATE","resettable":false},"resettable":false},{"alias":"s2_c1","name":"Chiffre d'affaires jour","expression":{"path":"source.s1_c1","type":"DECIMAL","resettable":false},"properties":{"format":"0,0.00","format_unit":"CHF","format_pos":"prefix","format_dec_length":2,"format_mand_decimals":true,"format_type":"unit"},"resettable":false},{"alias":"s2_c2","name":"Moyenne X derniers - strict (Chiffre d'affaires jour, 20)","expression":{"path":"source.s1_c2","type":"DECIMAL","resettable":false},"filter":{"items":[{"comparator":"IS_NOT_NULL","expression":{}}],"and_or":"AND"},"resettable":false}],"grouping":false,"name":"Etape 3","chart":false}],"columns":[{"alias":"s1_c0","name":"Date","grouping":"GROUP","expression":{"path":"source.s0_c0","type":"DATE","resettable":false},"resettable":false},{"alias":"s1_c1","name":"Chiffre d'affaires jour","grouping":"SUM","expression":{"path":"source.s0_c1","type":"DECIMAL","resettable":false},"properties":{"format":"0,0.00","format_unit":"CHF","format_pos":"prefix","format_dec_length":2,"format_mand_decimals":true,"format_type":"unit"},"resettable":false},{"alias":"s1_c2","name":"Moyenne X derniers - strict (Chiffre d'affaires jour, 20)","expression":{"path":"shared.avg_last_x_strict","parameters":[{"path":"this.s1_c1","type":"DECIMAL","resettable":false},{"type":"INTEGER","value":"20"}],"type":"DECIMAL","resettable":true},"resettable":true}],"orderings":[{"column":"s1_c0","order":"ASCENDING"}],"grouping":true,"name":"Etape 2","chart":false}],"columns":[{"alias":"s0_c0","name":"Date","expression":{"path":"tcpos.SHO_S.BOOKKEEPING_DATE","type":"DATE","resettable":false},"resettable":false},{"alias":"s0_c1","name":"Chiffre d'affaires jour","expression":{"path":"tcpos.SHO_S.TURNOVER_AMOUNT","type":"DECIMAL","resettable":false},"properties":{"format":"0,0.00","format_unit":"CHF","format_pos":"prefix","format_dec_length":2,"format_mand_decimals":true,"format_type":"unit"},"resettable":false}],"grouping":false,"name":"Stats par jour par établissement","properties":{"scheme":"Stats par jour par établissement"},"chart":false,"scheme":"SHO_S"}] },
+  "company" : "tekoe_tokudb",
+  "translatable" : false,
+  "folder_id" : 4798266,
+  "keep_version" : false
+}
